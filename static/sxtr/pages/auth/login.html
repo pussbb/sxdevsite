@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="login" class="form-horizontal" novalidate method="post">
+            <fieldset>
+                <legend class="text-center header">Log In</legend>
+                <form-group field-errors="errors.__all__" ng-show="errors.__all__">
+                    <form-group-body>&nbsp;</form-group-body>
+                </form-group>
+                <form-group field-errors="errors.username">
+                    <form-group-label>
+                        <i class="fa fa-user bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                        <input id="username" name="username" type="text"
+                               placeholder="Username"
+                               class="form-control" ng-model="user.username">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.password">
+                    <form-group-label>
+                        <i class="fa fa-lock bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                        <input id="password" name="password" type="password"
+                               placeholder="Password"
+                               class="form-control" ng-model="user.password">
+                    </form-group-body>
+                </form-group>
+
+                <form-group>
+                    <form-group-label>
+                         &nbsp;
+                    </form-group-label>
+                    <form-group-body>
+                         <a href="#/reset_password" class="">
+                             I forgot my password
+                         </a>
+                    </form-group-body>
+                </form-group>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="submit()" ng-disabled="success" class="btn btn-primary btn-lg">
+                            Login
+                        </button>
+                        <a href="#/register" class="btn btn-primary btn-lg">Register</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

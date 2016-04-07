@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert" ng-show="success">
+            <h3>Settings updated.</h3>
+        </div>
+        <form name="login" class="form-horizontal" novalidate method="post">
+            <fieldset ng-disabled="isDisabled">
+                <legend class="text-center header">Details</legend>
+                <form-group field-errors="errors.__all__" ng-show="errors.__all__">
+                    <form-group-body>&nbsp;</form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.first_name">
+                    <form-group-label>
+                        Frist name
+                    </form-group-label>
+                    <form-group-body>
+                         <input id="first_name" name="first_name" type="text" placeholder="First name"
+                               class="form-control" ng-model="user.first_name" ng-value="user.first_name">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.last_name">
+                    <form-group-label>
+                         Last name
+                    </form-group-label>
+                    <form-group-body>
+                        <input id="last_name" name="last_name" type="text" placeholder="Last name"
+                               class="form-control" ng-model="user.last_name" ng-value="user.last_name">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.email">
+                    <form-group-label>
+                        <i class="fa fa-envelope-o bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                        <input id="email" name="email" type="email" placeholder="Email"
+                               class="form-control" ng-model="user.email" ng-value="user.email">
+                    </form-group-body>
+                </form-group>
+
+
+                <form-group field-errors="errors.password">
+                    <form-group-body>
+                        <a href="#/change_password" class="">Change password</a>
+                    </form-group-body>
+                </form-group>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="submit()" ng-disabled="isDisabled" class="btn btn-primary btn-lg">
+                            Save
+                        </button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>

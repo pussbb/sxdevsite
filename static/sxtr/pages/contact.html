@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert" ng-show="success">
+            <h3>Thank you!. We will contact with you soon.</h3>
+        </div>
+        <form name="contact-us" class="form-horizontal" novalidate method="post">
+            <fieldset ng-disabled="isDisabled">
+                <legend class="text-center header">Contact us</legend>
+
+                <form-group field-errors="errors.__all__" ng-show="errors.__all__">
+                    <form-group-body>&nbsp;</form-group-body>
+                </form-group>
+
+
+                <form-group field-errors="errors.name">
+                    <form-group-label>
+                        <i class="fa fa-user bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                        <input id="name" name="name" type="text" placeholder="Name" class="form-control"
+                               ng-model="contact.name">
+                    </form-group-body>
+                </form-group>
+
+
+                <form-group field-errors="errors.email">
+                    <form-group-label>
+                         <i class="fa fa-envelope-o bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                         <input id="email" name="email" type="text" placeholder="Email Address"
+                               class="form-control" ng-model="contact.email">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.message">
+                    <form-group-label>
+                        <i class="fa fa-pencil-square-o bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                        <textarea class="form-control"
+                                  id="message"
+                                  name="message"
+                                  placeholder="Enter your massage for us here. We will get back to you within 2 business days."
+                                  rows="7"
+                                  ng-model="contact.message">
+
+                        </textarea>
+                    </form-group-body>
+                </form-group>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="submit()" ng-disabled="isDisabled"
+                                class="btn btn-primary btn-lg">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

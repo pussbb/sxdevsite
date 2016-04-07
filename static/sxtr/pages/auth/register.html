@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="login" class="form-horizontal" novalidate method="post">
+            <fieldset ng-disabled="isDisabled">
+                <legend class="text-center header">Register</legend>
+                <form-group field-errors="errors.__all__" ng-show="errors.__all__">
+                    <form-group-body>&nbsp;</form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.username">
+                    <form-group-label>
+                         <i class="fa fa-envelope-o bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                         <input id="username" name="username" type="text" placeholder="Username"
+                               class="form-control" ng-model="user.username">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.password1">
+                    <form-group-label>
+                         <i class="fa fa-lock bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                         <input id="password1" name="password1" type="password"
+                                placeholder="Password"
+                                class="form-control" ng-model="user.password1">
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.password2">
+                    <form-group-label>
+                         <i class="fa fa-lock bigicon"></i>
+                    </form-group-label>
+                    <form-group-body>
+                         <input id="password2" name="password2" type="password"
+                                placeholder="Password Confirmation"
+                                class="form-control" ng-model="user.password2">
+                    </form-group-body>
+                </form-group>
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="submit()" ng-disabled="isDisabled" class="btn btn-primary btn-lg">
+                            Register
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
