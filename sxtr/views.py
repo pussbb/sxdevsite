@@ -2,14 +2,19 @@
 """
 
 """
+import os
+
 from django.http import HttpResponse
 from django.shortcuts import render
 
 from django.http import JsonResponse
+from django.views.generic import View
 from django.views.generic.edit import FormView
 
 from sxdevsite.request.utils import get_post_data
+from sxtr import TEMPLATE_TR_FILES_DIR
 from sxtr.apps import SxTrConfig
+from sxtr.sx_translations import SacTr
 from .forms import ContactForm
 #from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -27,7 +32,6 @@ JS_APP_FILES = [
     'sxtr/services/Session.js',
     'sxtr/services/Requests.js',
 ]
-
 
 def index(request):
     context = {
@@ -58,3 +62,11 @@ class ContactView(JsonRequestForm):
     def form_valid(self, form):
         form.send_email()
         return super().form_valid(form)
+
+
+
+class TranslationView(View):
+
+    def get(self, request, package=None):
+        sactr = SacTr(open(os.path.join(TEMPLATE_TR_FILES_DIR, 'Strings_de.js')))
+        return JsonResponse(dict(sactr.items()))
