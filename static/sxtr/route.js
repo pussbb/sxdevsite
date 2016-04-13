@@ -44,12 +44,13 @@
   config = function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.when('/', {
       title: 'Index',
-      templateUrl: pageUrl("home.html"),
-      controller: 'mainController'
-    }).when('', {
-      title: 'Index',
-      templateUrl: pageUrl("home.html"),
-      controller: 'mainController'
+      templateUrl: pageUrl("index.html"),
+      controller: 'mainController',
+      resolve: {
+        translations: function($q, Requests) {
+          return Requests.get('translations');
+        }
+      }
     }).when('/forbidden', {
       title: 'Access Denied',
       templateUrl: pageUrl("home.html"),
@@ -104,6 +105,23 @@
       title: 'About',
       templateUrl: pageUrl("home.html"),
       controller: 'aboutController'
+    }).when('/translation/:id', {
+      title: 'About',
+      templateUrl: pageUrl("translation.html"),
+      controller: 'translationController'
+    }).when('/new_translation', {
+      title: 'Add new translation',
+      templateUrl: pageUrl("new_translation.html"),
+      controller: 'newTranslationController',
+      resolve: {
+        locales: function($q, Requests) {
+          return Requests.get('locales');
+        },
+        applications: function($q, Requests) {
+          return Requests.get('apps');
+        },
+        auth: AuthorizedUserResolver
+      }
     }).when('/contact', {
       title: 'Contact',
       templateUrl: pageUrl("contact.html"),

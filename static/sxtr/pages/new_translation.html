@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="login" class="form-horizontal" novalidate method="post">
+            <fieldset>
+                <legend class="text-center header">
+                    New Translation
+                </legend>
+                <form-group field-errors="errors.__all__" ng-show="errors.__all__">
+                    <form-group-body>&nbsp;</form-group-body>
+                </form-group>
+                <form-group field-errors="errors.locale">
+                    <form-group-label>
+                        Locale
+                    </form-group-label>
+                    <form-group-body>
+                        <select name="locale" id="locale" ng-model="model.locale">
+                             <option ng-repeat="locale in locales" value="{{locale.id}}">{{locale.locale}} - {{ locale.name }}</option>
+                        </select>
+                    </form-group-body>
+                </form-group>
+
+                <form-group field-errors="errors.locale">
+                    <form-group-label>
+                        Locale
+                    </form-group-label>
+                    <form-group-body>
+                        <select name="app" id="app" ng-model="model.application">
+                             <option ng-repeat="app in applications" value="{{app.id}}">{{app.name}}({{ app.abbreviation }})</option>
+                        </select>
+                    </form-group-body>
+                </form-group>
+
+
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="submit()" ng-disabled="success" class="btn btn-primary btn-lg">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

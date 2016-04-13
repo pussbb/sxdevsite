@@ -15,11 +15,15 @@ class Locales(models.Model):
 
     class Meta:
         unique_together = ('name', 'locale')
+        ordering = ('locale',)
 
 
 class Applications(models.Model):
     name = models.CharField(max_length=250)
     abbreviation = models.CharField(max_length=250)
+
+    class Meta:
+        ordering = ('name',)
 
 
 class Translations(models.Model):
@@ -33,3 +37,4 @@ class Translations(models.Model):
         permissions = (
             ('edit_tr', 'Edit Translation'),
         )
+        unique_together = ('application', 'locale')

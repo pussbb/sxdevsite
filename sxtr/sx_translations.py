@@ -3,6 +3,7 @@
 
 """
 import os
+from collections import OrderedDict
 
 from . import TEMPLATE_TR_FILES_DIR
 
@@ -32,7 +33,7 @@ class SacTr(SxTr):
         self._tr = self._parse(tr_data)
 
     def _parse(self, data):
-        result = {}
+        result = OrderedDict()
         for line in data:
             if not line.startswith('UIstrings.'):
                 continue

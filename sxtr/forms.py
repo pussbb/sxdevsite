@@ -5,6 +5,9 @@
 from django import forms
 # our new form
 from django.core.mail import mail_admins
+from django.forms import ModelForm
+
+from sxtr.models import Translations
 
 
 class ContactForm(forms.Form):
@@ -21,3 +24,9 @@ class ContactForm(forms.Form):
         subject = self.cleaned_data['name'] + ' ' + self.cleaned_data['email']
         message = self.cleaned_data['message']
         mail_admins(subject, message)
+
+
+class TranslationForm(ModelForm):
+    class Meta:
+        model = Translations
+        fields = ('locale', 'application')

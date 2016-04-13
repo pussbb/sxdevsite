@@ -30,12 +30,11 @@ config = ($routeProvider, $locationProvider, $httpProvider) ->
   $routeProvider
     .when '/',
       title: 'Index'
-      templateUrl: pageUrl("home.html")
+      templateUrl: pageUrl("index.html")
       controller: 'mainController'
-    .when '',
-      title: 'Index'
-      templateUrl: pageUrl("home.html")
-      controller: 'mainController'
+      resolve:
+        translations: ($q, Requests)->
+          return Requests.get 'translations'
     .when '/forbidden',
       title: 'Access Denied'
       templateUrl: pageUrl("home.html")
@@ -81,6 +80,20 @@ config = ($routeProvider, $locationProvider, $httpProvider) ->
       title: 'About'
       templateUrl: pageUrl("home.html")
       controller: 'aboutController'
+    .when '/translation/:id',
+      title: 'About'
+      templateUrl: pageUrl("translation.html")
+      controller: 'translationController'
+    .when '/new_translation',
+      title: 'Add new translation'
+      templateUrl: pageUrl("new_translation.html")
+      controller: 'newTranslationController'
+      resolve:
+        locales: ($q, Requests)->
+          return Requests.get 'locales'
+        applications: ($q, Requests)->
+          return Requests.get 'apps'
+        auth: AuthorizedUserResolver
     .when '/contact',
       title: 'Contact'
       templateUrl: pageUrl("contact.html")
