@@ -7,8 +7,8 @@ from django.conf import settings
 def init_apps(apps, schema_editor):
     apps_cls = apps.get_model('sxtr', 'Applications')
     apps = [
-        {'name': 'swa', 'abbreviation': 'Scalix Webmail Access'},
-        {'name': 'sac', 'abbreviation': 'Scalix Administration Access'},
+        {'abbreviation': 'swa', 'name': 'Scalix Webmail Access'},
+        {'abbreviation': 'sac', 'name': 'Scalix Administration Access'},
     ]
     for app in apps:
         apps_cls(**app).save()

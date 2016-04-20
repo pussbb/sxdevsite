@@ -1,9 +1,17 @@
 <div class="jumbotron text-center">
     <a href="#new_translation">Add new translation</a>
-    <ul class="list-unstyled">
-        <li ng-repeat="translation in translations">
-            {{ translation }}
-        </li>
-        <li ng-hide="translations.length">There are no translations</li>
-    </ul>
+    <div class="list-group">
+        <a href="#/translation/{{translation.id}}" class="list-group-item" ng-repeat="translation in translations">
+            <h4 class="list-group-item-heading">
+                {{ translation.application.name }} ({{ translation.application.abbreviation }})
+
+            </h4>
+            <p class="list-group-item-text">
+                Locale: {{ translation.locale.locale }} , {{ translation.locale.name }}
+            </p>
+        </a>
+        <a href="#" class="list-group-item disabled" ng-hide="translations.length">
+            There are no translations
+        </a>
+    </div>
 </div>

@@ -34,7 +34,7 @@
       scope: {
         'fieldErrors': '='
       },
-      template: '<div class="form-group" ng-class="{ \'has-error\' : fieldErrors }"> <span class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span> <div class="col-md-8"> <div ng-transclude="body"></div> <span class="help-block " ng-show="fieldErrors"> <ul> <li ng-repeat="error in fieldErrors">{{ error }}</li> </ul> </span> </div> </div>'
+      template: '<div class="form-group" ng-class="{ \'has-error\' : fieldErrors }"> <span ng-if="label" class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span> <div ng-class="label.length > 0 ? \'col-md-8\' : \'\' "> <div ng-transclude="body"></div> <span class="help-block " ng-show="fieldErrors"> <ul> <li ng-repeat="error in fieldErrors">{{ error }}</li> </ul> </span> </div > </div>'
     };
   };
 

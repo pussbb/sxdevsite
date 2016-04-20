@@ -26,7 +26,7 @@ AuthorizedUserResolver = ($q, $location, Auth, $route) ->
   $q.resolve()
 AuthorizedUserResolver.$inject = ['$q', '$location', 'Auth']
 
-config = ($routeProvider, $locationProvider, $httpProvider) ->
+config = ($routeProvider, $locationProvider, $httpProvider, $compileProvider) ->
   $routeProvider
     .when '/',
       title: 'Index'
@@ -81,7 +81,7 @@ config = ($routeProvider, $locationProvider, $httpProvider) ->
       templateUrl: pageUrl("home.html")
       controller: 'aboutController'
     .when '/translation/:id',
-      title: 'About'
+      title: 'Translation'
       templateUrl: pageUrl("translation.html")
       controller: 'translationController'
     .when '/new_translation',
@@ -108,6 +108,7 @@ config = ($routeProvider, $locationProvider, $httpProvider) ->
     $httpProvider.defaults.xsrfCookieName = 'csrftoken'
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
     $httpProvider.interceptors.push 'AuthInterceptor'
+    $compileProvider.debugInfoEnabled(false);
 
 angular
   .module 'sxTrApp'

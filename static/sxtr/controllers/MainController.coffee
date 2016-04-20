@@ -11,7 +11,6 @@ NewTranslationController = ($scope, locales, applications, $location, Requests) 
   $scope.model = {}
   $scope.errors = {}
   $scope.applications = applications
-  console.log $scope
   $scope.submit = ->
     Requests.post 'translations/', $scope.model
      .then (data)->
@@ -24,12 +23,26 @@ NewTranslationController.$inject = [
     '$scope', 'locales', 'applications', '$location', 'Requests'
 ]
 
-TranslationController = ($scope, $location, $routeParams) ->
+TranslationController = ($scope, $location, $routeParams, Requests, $interval) ->
   if not $routeParams?.id
     return $location.path '/'
+  $scope.loading = true
+  $scope.model = {}
+  $scope.errors = {}
+  Requests.get "translations/#{$routeParams.id}"
+    .then (translation)->
+      $scope.translation = translation
+      $interval ->
+        console.log($scope.model)
+      , 600
+      $scope
+    , (errors)->
+      $scope.errors = errors
+    .then -> $scope.loading = false
 
-
-TranslationController.$inject = ['$scope', '$location', '$routeParams']
+TranslationController.$inject = [
+    '$scope', '$location', '$routeParams', 'Requests', '$interval'
+]
 
 angular
   .module 'sxTrApp'

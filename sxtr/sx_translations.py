@@ -23,7 +23,7 @@ class SxTr(object):
 
     def items(self):
         for key, value in self._origin.items():
-            yield key, {'tr': self._tr.get(key), 'origin': value}
+            yield {'key': key, 'tr': self._tr.get(key), 'origin': value}
 
 
 class SacTr(SxTr):

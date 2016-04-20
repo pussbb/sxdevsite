@@ -41,7 +41,7 @@
 
   AuthorizedUserResolver.$inject = ['$q', '$location', 'Auth'];
 
-  config = function($routeProvider, $locationProvider, $httpProvider) {
+  config = function($routeProvider, $locationProvider, $httpProvider, $compileProvider) {
     $routeProvider.when('/', {
       title: 'Index',
       templateUrl: pageUrl("index.html"),
@@ -106,7 +106,7 @@
       templateUrl: pageUrl("home.html"),
       controller: 'aboutController'
     }).when('/translation/:id', {
-      title: 'About',
+      title: 'Translation',
       templateUrl: pageUrl("translation.html"),
       controller: 'translationController'
     }).when('/new_translation', {
@@ -138,7 +138,8 @@
     });
     $httpProvider.defaults.xsrfCookieName = 'csrftoken';
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
-    return $httpProvider.interceptors.push('AuthInterceptor');
+    $httpProvider.interceptors.push('AuthInterceptor');
+    return $compileProvider.debugInfoEnabled(false);
   };
 
   angular.module('sxTrApp').config(config);
