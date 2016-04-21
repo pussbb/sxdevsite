@@ -34,12 +34,16 @@ class SacTr(SxTr):
 
     def __init__(self, tr_data):
         self._origin = self._parse(open(SAC_TR_FILE))
-        self._tr = self._parse(tr_data.split("\n"))
+        self._tr = self._parse(
+            tr_data.split("\n"),
+            self._origin.fromkeys(self._origin.keys())
+        )
         super().__init__()
-        print(self._tr)
 
-    def _parse(self, data):
-        result = OrderedDict()
+    def _parse(self, data, default=None):
+        if not default:
+            default = OrderedDict()
+        result = default
         for line in data:
             if not line.startswith('UIstrings.'):
                 continue

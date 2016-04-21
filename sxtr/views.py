@@ -132,7 +132,6 @@ class TranslationView(View):
                 {'errors': {'__all__': 'Application not supported'}},
                 status=400
             )
-        print(get_post_data(self.request))
         parser.update(get_post_data(self.request))
         model.translation = parser.to_string()
         model.save()
