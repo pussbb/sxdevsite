@@ -25,23 +25,29 @@
   NewTranslationController.$inject = ['$scope', 'locales', 'applications', '$location', 'Requests'];
 
   TranslationController = function($scope, $location, $routeParams, Requests, $interval) {
+    var trUrl;
     if (!($routeParams != null ? $routeParams.id : void 0)) {
       return $location.path('/');
     }
     $scope.loading = true;
     $scope.model = {};
+    $scope.saving = false;
     $scope.errors = {};
-    return Requests.get("translations/" + $routeParams.id).then(function(translation) {
-      $scope.translation = translation;
-      $interval(function() {
-        return console.log($scope.model);
-      }, 600);
-      return $scope;
+    trUrl = "translations/" + $routeParams.id;
+    Requests.get(trUrl).then(function(translation) {
+      return $scope.translation = translation;
     }, function(errors) {
       return $scope.errors = errors;
     }).then(function() {
       return $scope.loading = false;
     });
+    return $scope.onSubmit = function() {
+      return Requests.post(trUrl, $scope.model).then(function() {
+        return $scope.saving = false;
+      }, function(errors) {
+        return $scope.errors = errors;
+      });
+    };
   };
 
   TranslationController.$inject = ['$scope', '$location', '$routeParams', 'Requests', '$interval'];

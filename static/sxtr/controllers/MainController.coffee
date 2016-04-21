@@ -28,17 +28,25 @@ TranslationController = ($scope, $location, $routeParams, Requests, $interval) -
     return $location.path '/'
   $scope.loading = true
   $scope.model = {}
+  $scope.saving = false
   $scope.errors = {}
-  Requests.get "translations/#{$routeParams.id}"
+  trUrl = "translations/#{$routeParams.id}"
+  Requests.get trUrl
     .then (translation)->
       $scope.translation = translation
-      $interval ->
-        console.log($scope.model)
-      , 600
-      $scope
+      #$interval ->
+      #
+      #, 600
     , (errors)->
       $scope.errors = errors
     .then -> $scope.loading = false
+  $scope.onSubmit = ->
+    Requests.post trUrl, $scope.model
+     .then ->
+        $scope.saving = false
+      , (errors)->
+        $scope.errors = errors
+
 
 TranslationController.$inject = [
     '$scope', '$location', '$routeParams', 'Requests', '$interval'

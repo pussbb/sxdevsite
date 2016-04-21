@@ -109,7 +109,7 @@ class TranslationView(View):
         result = self.dump_tr_model(model)
 
         if model.application.abbreviation == 'sac':
-            result['translation'] = list(SacTr(model.translation).items())
+            result['translation'] = list(SacTr(model.translation).to_json())
         elif model.application.abbreviation == 'swa':
             pass
         else:
@@ -118,10 +118,32 @@ class TranslationView(View):
 
     @method_decorator(login_required)
     def post(self, request, locale_id=None):
+        if not locale_id:
+            return self.__create_new_translation(request)
+
+        model = get_object_or_404(Translations, pk=locale_id)
+        parser = None
+        if model.application.abbreviation == 'sac':
+            parser = SacTr(model.translation)
+        elif model.application.abbreviation == 'swa':
+            pass
+        else:
+            return JsonResponse(
+                {'errors': {'__all__': 'Application not supported'}},
+                status=400
+            )
+        print(get_post_data(self.request))
+        parser.update(get_post_data(self.request))
+        model.translation = parser.to_string()
+        model.save()
+        return self.get(request, locale_id)
+
+    def __create_new_translation(self, request):
         translation = Translations(author=request.user, translation='')
         form = TranslationForm(get_post_data(self.request),
                                instance=translation)
-        if form.is_valid():
-            translation.save()
-            return JsonResponse(model_to_dict(translation), safe=False)
-        return JsonResponse({'errors': form.errors}, status=400)
+        if not form.is_valid():
+            return JsonResponse({'errors': form.errors}, status=400)
+
+        translation.save()
+        return JsonResponse(model_to_dict(translation), safe=False)

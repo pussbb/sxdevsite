@@ -28,12 +28,18 @@
                                placeholder="Translation"
                                class="form-control"
                                ng-model="model[value.key]"
-                               ng-value="{{value.tr}}"
+                               ng-value="value.tr"
                         >
                     </form-group-body>
                 </form-group>
 
-
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <button ng-click="onSubmit()" class="btn btn-primary btn-lg">
+                            Submit
+                        </button>
+                    </div>
+                </div>
             </fieldset>
         </form>
 
