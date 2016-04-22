@@ -97,7 +97,7 @@ class TranslationView(View):
         result['application'] = model_to_dict(item.application)
         return result
 
-    def get(self, request, locale_id=None):
+    def get(self, request, locale_id=None, action=None):
         # JsonResponse(Translations.objects.all(), safe=False)
         # error = [] is not JSON serializable
 
@@ -105,35 +105,43 @@ class TranslationView(View):
             return JsonResponse(self.translation_list(), safe=False)
 
         model = get_object_or_404(Translations, pk=locale_id)
+        try:
+            translation = self.__get_translation_class(model)
+        except Exception as exp:
+            return HttpResponseNotFound(exp)
+
+        #  for now we dont care about any additional action name
+        #  the same behaviour for all actions if not None
+        if action:
+            response = HttpResponse(translation, translation.content_type)
+            response['Content-Disposition'] = 'attachment; filename=test.js'
+            return response
 
         result = self.dump_tr_model(model)
-
-        if model.application.abbreviation == 'sac':
-            result['translation'] = list(SacTr(model.translation).to_json())
-        elif model.application.abbreviation == 'swa':
-            pass
-        else:
-            return HttpResponseNotFound('Application not supported')
+        result['translation'] = list(translation.to_json())
         return JsonResponse(result, safe=False)
 
+    def __get_translation_class(self, model: Translations):
+        if model.application.abbreviation == 'sac':
+            return SacTr(model.translation)
+        elif model.application.abbreviation == 'swa':
+            pass
+        raise Exception('Application not supported')
+
     @method_decorator(login_required)
-    def post(self, request, locale_id=None):
+    def post(self, request, locale_id=None, action=None):
         if not locale_id:
             return self.__create_new_translation(request)
 
         model = get_object_or_404(Translations, pk=locale_id)
-        parser = None
-        if model.application.abbreviation == 'sac':
-            parser = SacTr(model.translation)
-        elif model.application.abbreviation == 'swa':
-            pass
-        else:
-            return JsonResponse(
-                {'errors': {'__all__': 'Application not supported'}},
-                status=400
-            )
-        parser.update(get_post_data(self.request))
-        model.translation = parser.to_string()
+
+        try:
+            translation = self.__get_translation_class(model)
+        except Exception as exp:
+            return JsonResponse({'errors': {'__all__': str(exp)}}, status=400)
+
+        translation.update(get_post_data(self.request))
+        model.translation = translation.to_string()
         model.save()
         return self.get(request, locale_id)
 

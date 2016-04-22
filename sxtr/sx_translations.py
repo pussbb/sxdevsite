@@ -11,17 +11,27 @@ from . import TEMPLATE_TR_FILES_DIR
 SAC_TR_FILE = os.path.join(TEMPLATE_TR_FILES_DIR, 'Strings.js')
 
 class SxTr(object):
+    content_type = 'text/plain'
 
-    def __init__(self):
-        if not self._tr:
-            self._tr = self._tr.fromkeys(self._origin.keys())
+    def __init__(self, tr_data):
+        self._origin = self._parse(self._origin_document())
+        self._tr = self._parse(
+            tr_data,
+            self._origin.fromkeys(self._origin.keys())
+        )
+
+    def _origin_document(self):
+        raise NotImplemented
+
+    def _parse(self):
+        raise NotImplemented
+
+    def to_string(self):
+        raise NotImplemented
 
     def to_json(self):
         for key, value in self._origin.items():
             yield {'key': key, 'tr': self._tr.get(key), 'origin': value}
-
-    def to_string(self):
-        raise NotImplemented
 
     def update(self, data: dict):
         self._tr.update(data)
@@ -32,13 +42,13 @@ class SxTr(object):
 
 class SacTr(SxTr):
 
+    content_type = 'application/javascript'
+
     def __init__(self, tr_data):
-        self._origin = self._parse(open(SAC_TR_FILE))
-        self._tr = self._parse(
-            tr_data.split("\n"),
-            self._origin.fromkeys(self._origin.keys())
-        )
-        super().__init__()
+        super().__init__(tr_data.split("\n"))
+
+    def _origin_document(self):
+        yield from open(SAC_TR_FILE)
 
     def _parse(self, data, default=None):
         if not default:
@@ -79,6 +89,6 @@ class SacTr(SxTr):
             value = self._tr.get(key)
             if not value:
                 value = ''
-            parts[-1] = '"{0}"'.format(value)
+            parts[-1] = '"{0}"'.format(value.replace('"', '\"'))
             result.append(' = '.join(parts))
         return "\n".join(result)

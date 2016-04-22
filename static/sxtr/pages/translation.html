@@ -6,7 +6,15 @@
 
 <div class="row" ng-show="!loading">
     <div class="col-md-12">
+        <div class="tr-panel ">
+            <a ng-click="onSubmit()" title="Save">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i>
+            </a>
+            <a href="{{trUrl}}/file" title="Save">
+                <i class="fa fa-download" aria-hidden="true"></i>
+            </a>
 
+        </div>
         <form name="login" class="form-horizontal" novalidate method="post">
             <fieldset>
                 <legend class="text-center header">
@@ -16,8 +24,7 @@
                     <form-group-body>&nbsp;</form-group-body>
                 </form-group>
 
-                <form-group field-errors="errors.locale" ng-repeat="value in translation.translation">
-                    <form-group-label></form-group-label>
+                <form-group field-errors="errors[value.key]" show-label="false" ng-repeat="value in translation.translation">
                     <form-group-body>
                     <span id="helpBlock" class="help-block well well-sm">
                         {{ value.origin }}

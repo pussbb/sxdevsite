@@ -21,10 +21,14 @@ FormGroup = ->
     'body': 'formGroupBody'
   scope:
     'fieldErrors': '='
+    'showLabel': '=?'
+  controller: ($scope) ->
+    if  angular.isUndefined $scope.showLabel
+      $scope.showLabel = true
   template: '
         <div class="form-group" ng-class="{ \'has-error\' : fieldErrors }">
-          <span ng-if="label" class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span>
-          <div ng-class="label.length > 0 ? \'col-md-8\' : \'\' ">
+          <span ng-show="showLabel" class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span>
+          <div ng-class="showLabel ? \'col-md-8\' : \'\' ">
               <div ng-transclude="body"></div>
               <span class="help-block " ng-show="fieldErrors">
                   <ul>

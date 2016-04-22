@@ -32,9 +32,15 @@
         'body': 'formGroupBody'
       },
       scope: {
-        'fieldErrors': '='
+        'fieldErrors': '=',
+        'showLabel': '=?'
       },
-      template: '<div class="form-group" ng-class="{ \'has-error\' : fieldErrors }"> <span ng-if="label" class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span> <div ng-class="label.length > 0 ? \'col-md-8\' : \'\' "> <div ng-transclude="body"></div> <span class="help-block " ng-show="fieldErrors"> <ul> <li ng-repeat="error in fieldErrors">{{ error }}</li> </ul> </span> </div > </div>'
+      controller: function($scope) {
+        if (angular.isUndefined($scope.showLabel)) {
+          return $scope.showLabel = true;
+        }
+      },
+      template: '<div class="form-group" ng-class="{ \'has-error\' : fieldErrors }"> <span ng-show="showLabel" class="col-md-1 col-md-offset-2 text-center" ng-transclude="label"></span> <div ng-class="showLabel ? \'col-md-8\' : \'\' "> <div ng-transclude="body"></div> <span class="help-block " ng-show="fieldErrors"> <ul> <li ng-repeat="error in fieldErrors">{{ error }}</li> </ul> </span> </div > </div>'
     };
   };
 

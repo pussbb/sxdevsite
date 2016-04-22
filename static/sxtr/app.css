@@ -8,3 +8,23 @@ form .bigicon {
     font-size: 35px;
     color: #36A0FF;
 }
+
+.tr-panel {
+    position: fixed;
+    top: 60px;
+    right: 20%;
+    z-index: 99999999;
+    font-size: 25px;
+    padding: 5px;
+    border: solid 1px #959595;
+    border-radius: 6px;
+    color: inherit;
+    background-color: #eee;
+}
+.tr-panel a {
+    margin: 1px;
+}
+.tr-panel a:hover,
+.tr-panel a:hover i{
+    text-decoration: none;
+}
