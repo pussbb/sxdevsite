@@ -141,9 +141,10 @@ class TranslationView(View):
         return self.get(request, tr_id)
 
     def __create_new_translation(self, request):
+
         form = TranslationForm(
             get_post_data(self.request),
-            Translations(author=request.user, translation='')
+            instance=Translations(author=request.user, translation='')
         )
         if not form.is_valid():
             return JsonResponse({'errors': form.errors}, status=400)

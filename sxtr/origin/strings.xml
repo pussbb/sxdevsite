@@ -1,6 +1,1924 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <stringlist>
 
-  <!-- Put here locale DEPENDENT strings -->
+  <!-- Put here language DEPENDENT strings. These strings
+       will be overriden by locale dependent strings. -->
 
+  <!-- Shared strings -->
+  <string id="shared_cut">Cut</string>
+  <string id="shared_cut_shortcut">Ctrl+X</string>
+  <string id="shared_copy">Copy</string>
+  <string id="shared_copy_shortcut">Ctrl+C</string>
+  <string id="shared_paste">Paste</string>
+  <string id="shared_paste_shortcut">Ctrl+V</string>
+  <string id="shared_select_all">Select All</string>
+  <string id="shared_select_all_shortcut">Ctrl+A</string>
+  <string id="shared_undo">Undo</string>
+  <string id="shared_undo_shortcut">Ctrl+Z</string>
+  <string id="shared_print">Print</string>
+  <string id="shared_print_shortcut">Ctrl+P</string>
+  <string id="shared_delete">Delete</string>
+  <string id="shared_delete_shortcut">Ctrl+D</string>
+  <string id="shared_save">Save</string>
+  <string id="shared_save_shortcut">Ctrl+S</string>
+  <string id="shared_send">Send</string>
+  <string id="shared_view">View</string>
+  <string id="shared_send_shortcut">Alt+S</string>
+  <string id="shared_close">Close</string>
+  <string id="shared_new">New</string>
+  <string id="shared_ok">OK</string>
+  <string id="shared_cancel">Cancel</string>
+  <string id="shared_yes">Yes</string>
+  <string id="shared_no">No</string>
+  <string id="shared_test">Test</string>
+  <string id="shared_untitled">Untitled</string>
+  <string id="shared_dont_show_again">Do not show this message again</string>
+  <string id="shared_of">of</string>
+
+  <!-- Login -->
+  <string id="login_window_title">Login to Scalix Web Access</string>
+  <string id="loading_login_page">Loading. Please wait...</string>
+  <string id="javascript_disabled">Scalix Web Access requires JavaScript to be enabled.</string>
+  <string id="please_log_in">Please log in.</string>
+  <string id="login_username">Username</string>
+  <string id="login_password">Password</string>
+  <string id="login_logging_in">Logging in. Please wait...</string>
+  <string id="login_successful">Login successful. You may close this window,%BRor click %A1here%A2 if you want to return to the login window.</string>
+  <string id="login_expired_pwd">Your password has expired.</string>
+  <string id="login_confirm_old_pwd">Confirm your old password</string>
+  <string id="login_enter_new_pwd">Type your new password</string>
+  <string id="login_confirm_new_pwd">Confirm your new password</string>
+  <string id="browser_reject">Your browser or version is not supported.%BR Firefox 3 and above, Internet Explorer 7,8,9,10, Google Chrome 26 and above, and Safari 4 and 5 are supported.</string>
+  <string id="login_timebomb">The evaluation period for this time-limited product has expired. Please contact support@scalix.com to upgrade.</string>
+  <string id="login_notauthorized">Your account has not been enabled for use with Scalix Web Access. Please contact your system administrator.</string>
+  <string id="login_locked">Your account has been locked. Please contact your system administrator.</string>
+  <string id="browser_version_dlg_title">Warning</string>
+  <string id="browser_version_dlg_warning">Your browser or version is not officially supported, but may work anyway. Firefox 3 and above, Internet Explorer 7,8,9,10, Google Chrome 26 and above, and Safari 4 and 5 are supported.</string>
+
+  <!-- Loading splash screen -->
+  <string id="loading_user_prefs">Loading user preferences</string>
+  <string id="loading_retrieving_folder_list">Retrieving folder list</string>
+  <string id="loading_accessing_mailbox">Accessing mailbox</string>
+
+  <!-- Main window menu -->
+  <string id="mainmenubar_file">File</string>
+  <string id="mainmenubar_file_menu_shortcut">F</string>
+  <string id="mainmenubar_file_new">New</string>
+  <string id="mainmenubar_file_new_message">Message</string>
+  <string id="mainmenubar_file_new_message_shortcut">Ctrl+N</string>
+  <string id="mainmenubar_file_new_post">Post in this Folder</string>
+  <string id="mainmenubar_file_new_post_shortcut">Ctrl+Shift+S</string>
+  <string id="mainmenubar_file_new_appointment">Appointment</string>
+  <string id="mainmenubar_file_new_appointment_shortcut">Ctrl+Shift+A</string>
+  <string id="mainmenubar_file_new_contact">Contact</string>
+  <string id="mainmenubar_file_new_contact_shortcut">Ctrl+Shift+C</string>
+  <string id="mainmenubar_file_new_distribution_list">Distribution List</string>
+  <string id="mainmenubar_file_new_distribution_list_shortcut">Ctrl+Shift+L</string>
+  <string id="mainmenubar_file_new_task">Task</string>
+  <string id="mainmenubar_file_new_task_shortcut">Ctrl+Shift+T</string>
+  <string id="mainmenubar_file_open">Open</string>
+  <string id="mainmenubar_file_open_shortcut">Enter</string>
+  <string id="mainmenubar_file_folder">Folder</string>
+  <string id="mainmenubar_file_new_folder">New</string>
+  <string id="mainmenubar_file_new_folder_shortcut">Ctrl+E</string>
+  <string id="mainmenubar_file_rename_folder">Rename</string>
+  <string id="mainmenubar_file_delete_folder">Delete</string>
+  <string id="mainmenubar_file_promote_folder">Promote</string>
+  <string id="mainmenubar_file_exit">Exit</string>
+  <string id="mainmenubar_edit">Edit</string>
+  <string id="mainmenubar_edit_menu_shortcut">E</string>
+  <string id="mainmenubar_edit_empty_deleted_items_folder">Empty "Deleted Items" Folder</string>
+  <string id="mainmenubar_view">View</string>
+  <string id="mainmenubar_view_menu_shortcut">V</string>
+  <string id="mainmenubar_view_toggle_folders_pane">Folders List</string>
+  <string id="mainmenubar_view_toggle_calendars_pane">Calendars List</string>
+  <string id="mainmenubar_view_toggle_message_pane">Preview Pane</string>
+  <string id="mainmenubar_view_toggle_events_pane">Upcoming Appointments</string>
+  <string id="mainmenubar_view_toggle_todo_pane">To Do List</string>
+  <string id="mainmenubar_view_toggle_mini_calendar_pane">Date Navigator</string>
+  <string id="mainmenubar_view_toggle_mode_pane">Modes</string>
+  <string id="mainmenubar_view_toggle_calendar_sets_pane">Calendar Sets</string>
+  <string id="mainmenubar_view_previous_message">Previous Message</string>
+  <string id="mainmenubar_view_previous_message_shortcut">Ctrl+&lt;</string>
+  <string id="mainmenubar_view_previous_view">Previous View</string>
+  <string id="mainmenubar_view_next_message">Next Message</string>
+  <string id="mainmenubar_view_next_message_shortcut">Ctrl+&gt;</string>
+  <string id="mainmenubar_view_next_view">Next View</string>
+  <string id="mainmenubar_view_view_full_headers">View Full Headers</string>
+  <string id="mainmenubar_view_view_raw_message">View Raw Message</string>
+  <string id="mainmenubar_actions">Actions</string>
+  <string id="mainmenubar_actions_menu_shortcut">A</string>
+  <string id="mainmenubar_actions_reply_to_sender">Reply</string>
+  <string id="mainmenubar_actions_reply_to_sender_shortcut">Ctrl+R</string>
+  <string id="mainmenubar_actions_reply_to_all">Reply All</string>
+  <string id="mainmenubar_actions_reply_to_all_shortcut">Ctrl+Shift+R</string>
+  <string id="mainmenubar_actions_forward_message">Forward</string>
+  <string id="mainmenubar_actions_forward_message_shortcut">Ctrl+F</string>
+  <string id="mainmenubar_actions_reply_to_post">Post Reply</string>
+  <string id="mainmenubar_actions_reply_to_post_shortcut">Ctrl+Shift+Q</string>
+  <string id="mainmenubar_actions_download_email">Download Message...</string>
+  <string id="mainmenubar_actions_mark">Mark</string>
+  <string id="mainmenubar_actions_as_read">As Read</string>
+  <string id="mainmenubar_actions_as_unread">As Unread</string>
+  <string id="mainmenubar_actions_all_read">All Read</string>
+  <string id="mainmenubar_actions_as_private">As Private</string>
+  <string id="mainmenubar_actions_label">Label</string>
+  <string id="mainmenubar_actions_show_time_as">Show Time As</string>
+  <string id="mainmenubar_tools">Tools</string>
+  <string id="mainmenubar_tools_menu_shortcut">T</string>
+  <string id="mainmenubar_tools_send_and_receive">Send and Receive</string>
+  <string id="mainmenubar_tools_send_and_receive_all">Send and Receive All</string>
+  <string id="mainmenubar_tools_send_and_receive_all_shortcut">Ctrl+M</string>
+  <string id="mainmenubar_tools_receive_all">Receive All</string>
+  <string id="mainmenubar_tools_send_all">Send All</string>
+  <string id="mainmenubar_tools_address_search">Address Book</string>
+  <string id="mainmenubar_tools_change_password">Change Password</string>
+  <string id="mainmenubar_tools_open_oof_assistant">Out of Office...</string>
+  <string id="mainmenubar_tools_add_additional_mailboxes">Add Additional Mailboxes</string>
+  <string id="mainmenubar_tools_add_other_users_calendars">Add Other Users Calendars</string>
+  <string id="mainmenubar_tools_edit_delegates">Edit Delegates...</string>
+  <string id="mainmenubar_tools_search_appt">Search Appointment</string>
+  <string id="mainmenubar_tools_search_contact">Search Contact</string>
+  <string id="mainmenubar_tools_search_mail">Search Mail</string>
+  <string id="mainmenubar_tools_open_rules_wizard">Rules Wizard</string>
+  <string id="mainmenubar_tools_options">Options</string>
+  <string id="mainmenubar_help">Help</string>
+  <string id="mainmenubar_help_menu_shortcut">H</string>
+  <string id="mainmenubar_help_faq_help">Contents</string>
+  <string id="mainmenubar_help_about">About Scalix Web Access</string>
+
+  <!-- Message window menu -->
+  <string id="messagemenubar_file">File</string>
+  <string id="messagemenubar_file_menu_shortcut">F</string>
+  <string id="messagemenubar_file_new">New Message</string>
+  <string id="messagemenubar_file_new_shortcut">Ctrl+N</string>
+  <string id="messagemenubar_file_delete">Delete Message</string>
+  <string id="messagemenubar_file_delete_shortcut">Ctrl+D</string>
+  <string id="messagemenubar_edit">Edit</string>
+  <string id="messagemenubar_edit_menu_shortcut">E</string>
+  <string id="messagemenubar_edit_copy_shortcut">Ctrl+C</string>
+  <string id="messagemenubar_edit_select_all_shortcut">Ctrl+A</string>
+  <string id="messagemenubar_view">View</string>
+  <string id="messagemenubar_view_menu_shortcut">V</string>
+  <string id="messagemenubar_view_previous">Previous Message</string>
+  <string id="messagemenubar_view_previous_shortcut">Ctrl+&lt;</string>
+  <string id="messagemenubar_view_next">Next Message</string>
+  <string id="messagemenubar_view_next_shortcut">Ctrl+&gt;</string>
+  <string id="messagemenubar_view_full_headers">View Full Headers</string>
+  <string id="messagemenubar_view_view_raw_message">View Raw Message</string>
+  <string id="messagemenubar_actions">Actions</string>
+  <string id="messagemenubar_actions_menu_shortcut">A</string>
+  <string id="messagemenubar_actions_accept">Accept</string>
+  <string id="messagemenubar_actions_accept_shortcut">Alt+C</string>
+  <string id="messagemenubar_actions_tentative">Tentative</string>
+  <string id="messagemenubar_actions_tentative_shortcut">Alt+N</string>
+  <string id="messagemenubar_actions_decline">Decline</string>
+  <string id="messagemenubar_actions_decline_shortcut">Alt+D</string>
+  <string id="messagemenubar_actions_reply">Reply</string>
+  <string id="messagemenubar_actions_reply_shortcut">Ctrl+R</string>
+  <string id="messagemenubar_actions_reply_all">Reply to All</string>
+  <string id="messagemenubar_actions_reply_all_shortcut">Ctrl+Shift+R</string>
+  <string id="messagemenubar_actions_forward">Forward</string>
+  <string id="messagemenubar_actions_forward_shortcut">Ctrl+F</string>
+
+  <!-- New message window menu -->
+  <string id="newmessagemenubar_file">File</string>
+  <string id="newmessagemenubar_file_menu_shortcut">F</string>
+  <string id="newmessagemenubar_send_message">Send Message</string>
+  <string id="newmessagemenubar_save_message">Save As Draft</string>
+  <string id="newmessagemenubar_save_message_shortcut">Ctrl+S</string>
+  <string id="newmessagemenubar_post_message">Post</string>
+  <string id="newmessagemenubar_tools_clear_address_cache">Clear Previous Recipients List</string>
+  <string id="newmessagemenubar_close">Close</string>
+  <string id="newmessagemenubar_edit">Edit</string>
+  <string id="newmessagemenubar_edit_menu_shortcut">E</string>
+  <string id="newmessagemenubar_edit_undo">Undo</string>
+  <string id="newmessagemenubar_edit_undo_shortcut">Ctrl+Z</string>
+  <string id="newmessagemenubar_edit_cut">Cut</string>
+  <string id="newmessagemenubar_edit_cut_shortcut">Ctrl+X</string>
+  <string id="newmessagemenubar_edit_copy">Copy</string>
+  <string id="newmessagemenubar_edit_copy_shortcut">Ctrl+C</string>
+  <string id="newmessagemenubar_edit_paste">Paste</string>
+  <string id="newmessagemenubar_edit_paste_shortcut">Ctrl+V</string>
+  <string id="newmessagemenubar_edit_select_all">Select All</string>
+  <string id="newmessagemenubar_edit_select_all_shortcut">Ctrl+A</string>
+  <string id="newmessagemenubar_view">View</string>
+  <string id="newmessagemenubar_view_menu_shortcut">V</string>
+  <string id="newmessagemenubar_view_from">From</string>
+  <string id="newmessagemenubar_view_replyto">Reply-To</string>
+  <string id="newmessagemenubar_view_bcc">Bcc</string>
+  <string id="newmessagemenubar_insert">Insert</string>
+  <string id="newmessagemenubar_insert_menu_shortcut">I</string>
+  <string id="newmessagemenubar_insert_edit_attachments">File Attachment...</string>
+  <string id="newmessagemenubar_insert_horiz_line">Horizontal Line</string>
+  <string id="newmessagemenubar_insert_hyperlink">Hyperlink...</string>
+  <string id="newmessagemenubar_format">Format</string>
+  <string id="newmessagemenubar_format_menu_shortcut">o</string>
+  <string id="newmessagemenubar_format_incr_indent">Increase Indent</string>
+  <string id="newmessagemenubar_format_decr_indent">Decrease Indent</string>
+  <string id="newmessagemenubar_format_rich_text">Rich Text (HTML)</string>
+  <string id="newmessagemenubar_format_plain_text">Plain Text</string>
+  <string id="newmessagemenubar_actions">Actions</string>
+  <string id="newmessagemenubar_actions_menu_shortcut">A</string>
+  <string id="newmessagemenubar_actions_check_names">Check Names</string>
+  <string id="newmessagemenubar_actions_check_names_shortcut">Ctrl+K</string>
+  <string id="newmessagemenubar_actions_check_spelling">Check Spelling...</string>
+  <string id="newmessagemenubar_actions_importance">Importance</string>
+  <string id="newmessagemenubar_actions_importance_low">Low</string>
+  <string id="newmessagemenubar_actions_importance_medium">Normal</string>
+  <string id="newmessagemenubar_actions_importance_high">High</string>
+  <string id="newmessagemenubar_actions_sensitivity">Sensitivity</string>
+  <string id="newmessagemenubar_actions_sensitivity_normal">Normal</string>
+  <string id="newmessagemenubar_actions_sensitivity_personal">Personal</string>
+  <string id="newmessagemenubar_actions_sensitivity_private">Private</string>
+  <string id="newmessagemenubar_actions_sensitivity_confidential">Confidential</string>
+  <string id="newmessagemenubar_actions_return_receipt">Read Receipt</string>
+  <string id="newmessagemenubar_actions_delivery_receipt">Delivery Receipt</string>
+  <string id="newmessagemenubar_tools">Tools</string>
+  <string id="newmessagemenubar_tools_menu_shortcut">T</string>
+  <string id="newmessagemenubar_tools_add_from_address_book">Add recipients from address book</string>
+
+  <!-- Appointment window menu -->
+  <string id="eventeditormenubar_file">File</string>
+  <string id="eventeditormenubar_file_menu_shortcut">F</string>
+  <string id="eventeditormenubar_edit">Edit</string>
+  <string id="eventeditormenubar_edit_menu_shortcut">E</string>
+  <string id="eventeditormenubar_edit_undo_shortcut">Ctrl+Z</string>
+  <string id="eventeditormenubar_edit_cut_shortcut">Ctrl+X</string>
+  <string id="eventeditormenubar_edit_copy_shortcut">Ctrl+C</string>
+  <string id="eventeditormenubar_edit_paste_shortcut">Ctrl+V</string>
+  <string id="eventeditormenubar_edit_select_all_shortcut">Ctrl+A</string>
+  <string id="eventeditormenubar_insert">Insert</string>
+  <string id="eventeditormenubar_insert_menu_shortcut">I</string>
+  <string id="eventeditormenubar_insert_edit_attachments">Edit Attachments</string>
+  <string id="eventeditormenubar_insert_horizontal_line">Horizontal Line</string>
+  <string id="eventeditormenubar_insert_hyperlink">Hyperlink</string>
+  <string id="eventeditormenubar_format">Format</string>
+  <string id="eventeditormenubar_format_menu_shortcut">o</string>
+  <string id="eventeditormenubar_format_incr_indent">Increase Indent</string>
+  <string id="eventeditormenubar_format_decr_indent">Decrease Indent</string>
+  <string id="eventeditormenubar_format_rich_text">Rich Text (HTML)</string>
+  <string id="eventeditormenubar_format_plain_text">Plain Text</string>
+  <string id="eventeditormenubar_actions">Action</string>
+  <string id="eventeditormenubar_actions_menu_shortcut">A</string>
+  <string id="eventeditormenubar_actions_spelling">Check Spelling</string>
+  <string id="eventeditormenubar_actions_importance">Importance</string>
+  <string id="eventeditormenubar_actions_importance_low">Low</string>
+  <string id="eventeditormenubar_actions_importance_medium">Normal</string>
+  <string id="eventeditormenubar_actions_importance_high">High</string>
+  <string id="eventeditormenubar_actions_accept">Accept</string>
+  <string id="eventeditormenubar_actions_accept_shortcut">Alt+C</string>
+  <string id="eventeditormenubar_actions_tentative">Tentative</string>
+  <string id="eventeditormenubar_actions_tentative_shortcut">Alt+N</string>
+  <string id="eventeditormenubar_actions_decline">Decline</string>
+  <string id="eventeditormenubar_actions_decline_shortcut">Alt+D</string>
+  <string id="eventeditormenubar_tools">Tools</string>
+  <string id="eventeditormenubar_tools_menu_shortcut">T</string>
+  <string id="eventeditormenubar_tools_add_from_address_book">Add attendees from address book</string>
+
+  <!-- Contact window menu -->
+  <string id="contacteditormenubar_file">File</string>
+  <string id="contacteditormenubar_file_menu_shortcut">F</string>
+  <string id="contacteditormenubar_edit">Edit</string>
+  <string id="contacteditormenubar_edit_menu_shortcut">E</string>
+  <string id="contacteditormenubar_edit_undo_shortcut">Ctrl+Z</string>
+  <string id="contacteditormenubar_edit_cut_shortcut">Ctrl+X</string>
+  <string id="contacteditormenubar_edit_copy_shortcut">Ctrl+C</string>
+  <string id="contacteditormenubar_edit_paste_shortcut">Ctrl+V</string>
+  <string id="contacteditormenubar_edit_select_all_shortcut">Ctrl+A</string>
+  <string id="contacteditormenubar_insert">Insert</string>
+  <string id="contacteditormenubar_insert_menu_shortcut">I</string>
+  <string id="contacteditormenubar_insert_edit_attachments">Edit Attachments</string>
+  <string id="contacteditormenubar_actions">Action</string>
+  <string id="contacteditormenubar_actions_menu_shortcut">A</string>
+  <string id="contacteditormenubar_actions_spelling">Check Spelling</string>
+
+  <!-- Task window menu and menu -->
+  <string id="taskeditormenubar_file">File</string>
+  <string id="taskeditormenubar_edit">Edit</string>
+  <string id="taskeditormenubar_edit_undo_shortcut">Ctrl+Z</string>
+  <string id="taskeditormenubar_edit_select_all_shortcut">Ctrl+A</string>
+  <string id="taskeditormenubar_insert">Insert</string>
+  <string id="taskeditormenubar_insert_edit_attachments">Edit Attachments</string>
+  <string id="taskeditormenubar_actions">Action</string>
+  <string id="taskeditormenubar_actions_check_spelling">Check Spelling</string>
+  <string id="taskeditormenubar_actions_priority">Priority</string>
+  <string id="taskeditormenubar_actions_priority_low">Low</string>
+  <string id="taskeditormenubar_actions_priority_medium">Normal</string>
+  <string id="taskeditormenubar_actions_priority_high">High</string>
+  <string id="taskeditormenubar_tools">Tools</string>
+  <string id="taskeditormenubar_tools_add_from_address_book">Add attendees from address book</string>
+  <string id="task_inline_editor_new_task">New Task</string>
+  <string id="task_priority_low">Low</string>
+  <string id="task_priority_medium">Normal</string>
+  <string id="task_priority_high">High</string>
+  <string id="task_editor_label_recurrence_daily">Daily</string>
+  <string id="task_editor_label_recurrence_weekly">Weekly</string>
+  <string id="task_editor_label_recurrence_monthly">Monthly</string>
+  <string id="task_editor_label_recurrence_yearly">Yearly</string>
+  <string id="task_editor_percentage_complete_0">0%</string>
+  <string id="task_editor_percentage_complete_25">25%</string>
+  <string id="task_editor_percentage_complete_50">50%</string>
+  <string id="task_editor_percentage_complete_75">75%</string>
+  <string id="task_editor_percentage_complete_100">100%</string>
+  <string id="task_editor_duration_minutes">Minutes</string>
+  <string id="task_editor_duration_hours">Hours</string>
+  <string id="task_editor_duration_days">Days</string>
+  <string id="task_editor_duration_weeks">Weeks</string>
+  <string id="task_editor_duration_months">Months</string>
+  <string id="task_editor_recurrence_label">Recurrence</string>
+
+  <!-- Main toolbar -->
+  <string id="maintoolbar_tooltip_send_and_receive_all">Send and Receive All</string>
+  <string id="maintoolbar_caption_send_and_receive_all">Send/Receive</string>
+  <string id="maintoolbar_tooltip_new_message">New Message</string>
+  <string id="maintoolbar_caption_new_message">New</string>
+  <string id="maintoolbar_tooltip_reply_to_sender">Reply</string>
+  <string id="maintoolbar_caption_reply_to_sender">Reply</string>
+  <string id="maintoolbar_tooltip_reply_to_all">Reply to All</string>
+  <string id="maintoolbar_caption_reply_all">Reply All</string>
+  <string id="maintoolbar_tooltip_forward_message">Forward</string>
+  <string id="maintoolbar_caption_forward_message">Forward</string>
+  <string id="maintoolbar_tooltip_launch_address_search">Search Address Book</string>
+  <string id="maintoolbar_caption_launch_address_search">Address Book</string>
+
+  <!-- Mail tableview filters -->
+  <string id="tableview_filter_meeting_requests">Meetings</string>
+  <string id="tableview_filter_new">Unread</string>
+  <string id="tableview_filter_replied">Replied</string>
+  <string id="tableview_filter_forwarded">Forwarded</string>
+  <string id="tableview_filter_all">All</string>
+
+  <!--  Mail tableview info bar messages -->
+  <string id="tableview_infobar_loading_folder_content">Loading folder content...</string>
+  <string id="tableview_infobar_no_messages_in_folder">There are no messages in this folder.</string>
+  <string id="tableview_infobar_displaying_all_1">Displaying all </string>
+  <string id="tableview_infobar_displaying_all_2"> messages in this folder.</string>
+  <string id="tableview_infobar_displaying_time_range_1">Displaying </string>
+  <string id="tableview_infobar_displaying_time_range_2"> messages in this folder. </string>
+  <string id="tableview_infobar_displaying_time_range_3">Increase date range.</string>
+  <string id="tableview_infobar_displaying_filtered_view_1">Filtering messages. Displaying </string>
+  <string id="tableview_infobar_displaying_filtered_view_2">  messages in this folder that pass this filter.</string>
+
+
+  <!-- Modebar -->
+  <string id="modebar_tooltip_calendars">Calendar Mode</string>
+  <string id="modebar_tooltip_folders">Folder Mode</string>
+  <string id="modebar_tooltip_tasks">Task Mode</string>
+  <string id="modebar_tooltip_unread_count">Unread messages in Inbox.</string>
+  <string id="modebar_indicator_message_new_messages">You have received a new message</string>
+
+  <!-- Contacts toolbar -->
+  <string id="contactstoolbar_tooltip_new_contact">New Contact</string>
+  <string id="contactstoolbar_caption_new_contact">New</string>
+  <string id="contactstoolbar_tooltip_delete_contact">Delete</string>
+  <string id="contactstoolbar_caption_delete_contact">Delete</string>
+  <string id="contactstoolbar_tooltip_launch_address_search">Address Book</string>
+  <string id="contactstoolbar_caption_launch_address_search">Address Book</string>
+
+  <!-- Calendar toolbar -->
+  <string id="calendartoolbar_tooltip_new_event">New Appointment</string>
+  <string id="calendartoolbar_caption_new_event">New</string>
+  <string id="calendartoolbar_tooltip_delete_event">Delete</string>
+  <string id="calendartoolbar_caption_delete_event">Delete</string>
+  <string id="calendartoolbar_tooltip_calendar_go_to_today">Go to Today</string>
+  <string id="calendartoolbar_caption_calendar_go_to_today">Today</string>
+  <string id="calendartoolbar_tooltip_calendar_previous">Go to previous increment in view</string>
+  <string id="calendartoolbar_caption_calendar_previous">Previous</string>
+  <string id="calendartoolbar_tooltip_switch_to_day_view">Switch to day view</string>
+  <string id="calendartoolbar_caption_switch_to_day_view">Day view</string>
+  <string id="calendartoolbar_tooltip_switch_to_5_day_week_view">Switch to work week view</string>
+  <string id="calendartoolbar_caption_switch_to_5_day_week_view">Work week</string>
+  <string id="calendartoolbar_tooltip_switch_to_7_day_week_view">Switch to week view</string>
+  <string id="calendartoolbar_caption_switch_to_7_day_week_view">Week view</string>
+  <string id="calendartoolbar_tooltip_switch_to_month_view">Switch to month view</string>
+  <string id="calendartoolbar_caption_switch_to_month_view">Month view</string>
+
+  <string id="calendartoolbar_tooltip_standard_calendar_view">Switch to standard view</string>
+  <string id="calendartoolbar_caption_switch_to_standard_view">Standard view</string>
+  <string id="calendartoolbar_tooltip_planning_calendar_view">Switch to planning view</string>
+  <string id="calendartoolbar_caption_switch_to_planning_view">Planning view</string>
+
+  <string id="calendartoolbar_tooltip_calendar_next">Go to next increment in view</string>
+  <string id="calendartoolbar_caption_calendar_next">Next</string>
+
+  <!-- Rich text editor -->
+  <string id="edittoolbar_tooltip_bold">Bold</string>
+  <string id="edittoolbar_tooltip_italic">Italic</string>
+  <string id="edittoolbar_tooltip_underline">Underline</string>
+  <string id="edittoolbar_tooltip_decr_indent">Decrease Indentation</string>
+  <string id="edittoolbar_tooltip_incr_indent">Increase Indentation</string>
+  <string id="edittoolbar_tooltip_numbered_list">Numbered List</string>
+  <string id="edittoolbar_tooltip_bulleted_list">Bulleted List</string>
+  <string id="edittoolbar_tooltip_align_left">Align Left</string>
+  <string id="edittoolbar_tooltip_center">Center</string>
+  <string id="edittoolbar_tooltip_align_right">Align Right</string>
+  <string id="edittoolbar_tooltip_justify">Justify</string>
+  <string id="edittoolbar_tooltip_horiz_line">Insert Horizontal Line</string>
+  <string id="edittoolbar_tooltip_insert_hyperlink">Create a Hyperlink</string>
+  <string id="format_normal">Normal</string>
+  <string id="format_h1">Heading 1</string>
+  <string id="format_h2">Heading 2</string>
+  <string id="format_h3">Heading 3</string>
+  <string id="format_h4">Heading 4</string>
+  <string id="format_h5">Heading 5</string>
+  <string id="format_h6">Heading 6</string>
+  <string id="format_color_black">Black</string>
+  <string id="format_color_brown">Brown</string>
+  <string id="format_color_green">Green</string>
+  <string id="format_color_olive">Olive</string>
+  <string id="format_color_navy">Navy</string>
+  <string id="format_color_purple">Purple</string>
+  <string id="format_color_teal">Teal</string>
+  <string id="format_color_gray">Gray</string>
+  <string id="format_color_silver">Silver</string>
+  <string id="format_color_red">Red</string>
+  <string id="format_color_lime">Lime</string>
+  <string id="format_color_yellow">Yellow</string>
+  <string id="format_color_blue">Blue</string>
+  <string id="format_color_fuchsia">Fuchsia</string>
+  <string id="format_color_aqua">Aqua</string>
+  <string id="format_color_white">White</string>
+  <string id="format_font_1">Arial</string>
+  <string id="format_font_2">Bookman Old Style</string>
+  <string id="format_font_3">Courier New</string>
+  <string id="format_font_4">Garamond</string>
+  <string id="format_font_5">Lucida Console</string>
+  <string id="format_font_6">Tahoma</string>
+  <string id="format_font_7">Times New Roman</string>
+  <string id="format_font_8">Verdana</string>
+  <string id="format_size_1">8</string>
+  <string id="format_size_2">10</string>
+  <string id="format_size_3">12</string>
+  <string id="format_size_4">14</string>
+  <string id="format_size_5">18</string>
+  <string id="format_size_6">24</string>
+  <string id="format_size_7">36</string>
+  <string id="format_size_8">72</string>
+  <string id="enter_url">Enter a URL:</string>
+
+  <!-- Message window toolbar -->
+  <string id="messagetoolbar_tooltip_reply_to_sender">Reply</string>
+  <string id="messagetoolbar_caption_reply_to_sender">Reply</string>
+  <string id="messagetoolbar_tooltip_reply_to_all">Reply to All</string>
+  <string id="messagetoolbar_caption_reply_to_all">Reply All</string>
+  <string id="messagetoolbar_tooltip_forward_message">Forward</string>
+  <string id="messagetoolbar_caption_forward_message">Forward</string>
+  <string id="messagetoolbar_tooltip_delete_messages">Delete</string>
+  <string id="messagetoolbar_caption_delete_messages">Delete</string>
+  <string id="messagetoolbar_tooltip_previous_message">Previous</string>
+  <string id="messagetoolbar_caption_previous_message">Previous</string>
+  <string id="messagetoolbar_tooltip_next_message">Next</string>
+  <string id="messagetoolbar_caption_next_message">Next</string>
+
+  <!-- New message toolbar -->
+  <string id="newmessagetoolbar_tooltip_send_message">Send</string>
+  <string id="newmessagetoolbar_tooltip_send_message_locked">Please wait a moment. We cannot send the message until it is finished saving.</string>
+  <string id="newmessagetoolbar_caption_send_message">Send</string>
+  <string id="newmessagetoolbar_tooltip_post_message_locked">Please wait a moment. We cannot post the message until it is finished saving.</string>
+  <string id="newmessagetoolbar_tooltip_post_message">Post</string>
+  <string id="newmessagetoolbar_caption_post_message">Post</string>
+  <string id="newmessagetoolbar_tooltip_save_message">Save</string>
+  <string id="newmessagetoolbar_caption_save_message">Save</string>
+  <string id="newmessagetoolbar_tooltip_edit_attachments">File Attachments</string>
+  <string id="newmessagetoolbar_caption_edit_attachments">Attach</string>
+  <string id="newmessagetoolbar_tooltip_check_names">Check Names</string>
+  <string id="newmessagetoolbar_caption_check_names">Check Names</string>
+  <string id="newmessagetoolbar_tooltip_check_spelling">Check Spelling</string>
+  <string id="newmessagetoolbar_caption_check_spelling">Check Spelling</string>
+  <string id="newmessagetoolbar_tooltip_set_message_high_importance">Importance: High</string>
+  <string id="newmessagetoolbar_caption_set_message_high_importance">High</string>
+  <string id="newmessagetoolbar_tooltip_set_message_low_importance">Importance: Low</string>
+  <string id="newmessagetoolbar_caption_set_message_low_importance">Low</string>
+
+  <!-- Task window toolbar -->
+  <string id="taskeditortoolbar_tooltip_save_and_close_task">Save and Close</string>
+  <string id="taskeditortoolbar_tooltip_attachments">File Attachments</string>
+  <string id="taskeditortoolbar_tooltip_priority_high">High</string>
+  <string id="taskeditortoolbar_tooltip_priority_low">Low</string>
+  <string id="taskeditortoolbar_tooltip_check_spelling">Check Spelling</string>
+
+  <!-- Appointment window toolbar -->
+  <string id="eventeditortoolbar_tooltip_save_and_close_event">Save and Close</string>
+  <string id="eventeditortoolbar_caption_save_and_close_event">Save</string>
+  <string id="eventeditortoolbar_tooltip_send_and_close_event">Send update</string>
+  <string id="eventeditortoolbar_caption_send_and_close_event">Send</string>
+  <string id="eventeditortoolbar_tooltip_check_spelling">Check Spelling</string>
+  <string id="eventeditortoolbar_caption_check_spelling">Check Spelling</string>
+  <string id="eventeditortoolbar_tooltip_accept">Accept</string>
+  <string id="eventeditortoolbar_caption_accept">Accept</string>
+  <string id="eventeditortoolbar_tooltip_tentative">Tentative</string>
+  <string id="eventeditortoolbar_caption_tentative">Tentative</string>
+  <string id="eventeditortoolbar_tooltip_decline">Decline</string>
+  <string id="eventeditortoolbar_caption_decline">Decline</string>
+  <string id="eventeditortoolbar_tooltip_attachments">File Attachments</string>
+  <string id="eventeditortoolbar_caption_attachments">Attach</string>
+  <string id="eventeditortoolbar_tooltip_importance_high">Importance: High</string>
+  <string id="eventeditortoolbar_caption_importance_high">High</string>
+  <string id="eventeditortoolbar_tooltip_importance_low">Importance: Low</string>
+  <string id="eventeditortoolbar_caption_importance_low">Low</string>
+
+  <!-- Contact window toolbar -->
+  <string id="contacteditortoolbar_tooltip_save_and_close">Save and Close</string>
+  <string id="contacteditortoolbar_caption_save_and_close">Save</string>
+  <string id="contacteditortoolbar_tooltip_check_spelling">Check Spelling</string>
+  <string id="contacteditortoolbar_caption_check_spelling">Check Spelling</string>
+  <string id="contacteditortoolbar_tooltip_attachments">File Attachments</string>
+  <string id="contacteditortoolbar_caption_attachments">Attach</string>
+
+  <!-- Meeting request toolbar -->
+  <string id="meetingrequesttoolbar_tooltip_accept">Accept</string>
+  <string id="meetingrequesttoolbar_caption_accept">Accept</string>
+  <string id="meetingrequesttoolbar_tooltip_decline">Decline</string>
+  <string id="meetingrequesttoolbar_caption_decline">Decline</string>
+  <string id="meetingrequesttoolbar_tooltip_tentative">Tentative</string>
+  <string id="meetingrequesttoolbar_caption_tentative">Tentative</string>
+  <string id="meetingrequesttoolbar_tooltip_calendar">Calendar</string>
+  <string id="meetingrequesttoolbar_caption_calendar">Calendar</string>
+
+  <!-- Search toolbar -->
+  <string id="searchtoolbar_caption_search_mail">Search Mail</string>
+  <string id="searchtoolbar_caption_search_tasks">Search Tasks</string>
+  <string id="searchtoolbar_caption_search_contacts">Search Contacts</string>
+  <string id="searchtoolbar_caption_search_calendar">Search Calendar</string>
+  <string id="searchtoolbar_tooltip_clear_search_field">Clear Search Field</string>
+
+  <!-- Refinement toolbar -->
+  <string id="refinementtoolbar_mail_caption_search_all_mail_folders">All Mail Folders</string>
+  <string id="refinementtoolbar_mail_caption_search_current_folder">Only '%s' Folder</string>
+  <string id="refinementtoolbar_mail_select_caption_entire_message">Entire Message</string>
+  <string id="refinementtoolbar_mail_caption_from">Sender Only</string>
+  <string id="refinementtoolbar_mail_tooltip_from">Display Messages From</string>
+  <string id="refinementtoolbar_mail_caption_subject">Subjects Only</string>
+  <string id="refinementtoolbar_mail_tooltip_subject">Display Subjects Containing</string>
+  <string id="refinementtoolbar_mail_caption_body">Body Only</string>
+  <string id="refinementtoolbar_mail_tooltip_body">Display Message Body Containing</string>
+  <string id="refinementtoolbar_mail_caption_to">To: Recipients Only</string>
+  <string id="refinementtoolbar_mail_tooltip_to">Display Messages To</string>
+  <string id="refinementtoolbar_contacts_caption_search_entire_contact">Search Entire Contact</string>
+  <string id="refinementtoolbar_contacts_caption_name">Search By Name</string>
+  <string id="refinementtoolbar_contacts_tooltip_name">Display Names</string>
+  <string id="refinementtoolbar_contacts_caption_company">Search By Company</string>
+  <string id="refinementtoolbar_contacts_tooltip_company">Display Company</string>
+  <string id="refinementtoolbar_contacts_caption_email">Search By E-mail</string>
+  <string id="refinementtoolbar_contacts_tooltip_email">Display E-mail</string>
+  <string id="refinementtoolbar_contacts_caption_phone">Search By Phone</string>
+  <string id="refinementtoolbar_contacts_tooltip_phone">Display Phone</string>
+  <string id="refinementtoolbar_contacts_caption_address">Search By Address</string>
+  <string id="refinementtoolbar_contacts_tooltip_address">Display Address</string>
+  <string id="refinementtoolbar_contacts_caption_description">Search By Description</string>
+  <string id="refinementtoolbar_contacts_tooltip_description">Display Description</string>
+  <string id="refinementtoolbar_contacts_caption_member">Member</string>
+  <string id="refinementtoolbar_contacts_tooltip_member">Display Member</string>
+  <string id="refinementtoolbar_calendar_caption_search_entire_event">Search Entire Event</string>
+  <string id="refinementtoolbar_calendar_caption_subject">Search By Subject</string>
+  <string id="refinementtoolbar_calendar_tooltip_subject">Display Subject</string>
+  <string id="refinementtoolbar_calendar_caption_description">Search By Description</string>
+  <string id="refinementtoolbar_calendar_tooltip_description">Display Description</string>
+  <string id="refinementtoolbar_calendar_caption_location">Search By Location</string>
+  <string id="refinementtoolbar_calendar_tooltip_location">Display Location</string>
+  <string id="refinementtoolbar_calendar_caption_organizer">Search By Organizer</string>
+  <string id="refinementtoolbar_calendar_tooltip_organizer">Display Organizer</string>
+  <string id="refinementtoolbar_calendar_caption_invitees">Search By Invitees</string>
+  <string id="refinementtoolbar_calendar_tooltip_invitees">Display Invitees</string>
+  <string id="refinementtoolbar_calendar_caption_personal">Personal</string>
+  <string id="refinementtoolbar_calendar_tooltip_personal">Display Personal Appointments</string>
+  <string id="refinementtoolbar_calendar_caption_meetings">Meetings</string>
+  <string id="refinementtoolbar_calendar_tooltip_meetings">Display Meetings</string>
+  <string id="refinementtoolbar_calendar_caption_all_day">All-Day</string>
+  <string id="refinementtoolbar_calendar_tooltip_all_day">Display All-day Appointments</string>
+  <string id="refinementtoolbar_calendar_caption_recurring">Recurring</string>
+  <string id="refinementtoolbar_calendar_tooltip_recurring">Display Recurring Appointments</string>
+  <string id="refinementtoolbar_tooltip_high_importance">Importance: High</string>
+  <string id="refinementtoolbar_tooltip_low_importance">Importance: Low</string>
+  <string id="refinementtoolbar_tooltip_flagged">Flagged</string>
+  <string id="refinementtoolbar_tooltip_attachment">Has Attachment</string>
+  <string id="refinementtoolbar_select_any_time">Any Time</string>
+  <string id="refinementtoolbar_select_last_week">Last Week</string>
+  <string id="refinementtoolbar_select_last_month">Last Month</string>
+  <string id="refinementtoolbar_select_last_six_months">Last 6 Months</string>
+  <string id="refinementtoolbar_select_next_week">Next Week</string>
+  <string id="refinementtoolbar_select_next_month">Next Month</string>
+  <string id="refinementtoolbar_select_next_six_months">Next 6 Months</string>
+  <string id="refinement_toolbar_with">With:</string>
+  <string id="refinement_toolbar_search_count">Results displayed:</string>
+
+
+  <!-- Preferences Dialog Box -->
+  <string id="preferences_title">Options</string>
+  <string id="preferences_interval">Under Receiving Mail, please set the automatic mail checking interval to %s minutes or greater.</string>
+  <string id="preferences_outgoing_phrase">A valid outgoing name is required</string>
+  <string id="preferences_replyto">A valid address is required for the reply/to field</string>
+  <string id="preferences_general_section_title">General</string>
+  <string id="preferences_language_label">Language: </string>
+  <string id="preferences_datetime_label">Date and Time format: </string>
+  <string id="preferences_date_separator_label">Date separator: </string>
+  <string id="preferences_time_separator_label">Time separator: </string>
+  <string id="preferences_short_date_sample">Short date sample: </string>
+  <string id="preferences_long_date_sample">Long date sample: </string>
+  <string id="preferences_autologin_label">Auto Log In</string>
+  <string id="preferences_autologin_text">Automatically log in to this account from this computer</string>
+  <string id="preferences_autologin_warning">We do not recommend this option if you are visiting Scalix Web Access from a public computer (such as in a library or internet cafe).</string>
+  <string id="preferences_change_password">Change password</string>
+  <string id="preferences_composing_section_title">Composing Mail</string>
+  <string id="preferences_composing_default_format">Default format for message composition</string>
+  <string id="preferences_composing_richtext">Rich text (HTML)</string>
+  <string id="preferences_composing_plaintext">Plain text</string>
+  <string id="preferences_composing_display">When composing a message</string>
+  <string id="preferences_composing_display_bcc">Display Bcc field by default</string>
+  <string id="preferences_composing_display_from">Display From field by default</string>
+  <string id="preferences_composing_replying_title">When replying to a message</string>
+  <string id="preferences_composing_replying_quote">Include original message text in reply</string>
+  <string id="preferences_composing_sending_addresses">When sending mail, check names first in</string>
+  <string id="preferences_composing_sending_addresses_system">The SYSTEM address book</string>
+  <string id="preferences_composing_sending_addresses_contacts">My personal contacts</string>
+  <string id="preferences_composing_signature_title">Signature</string>
+  <string id="preferences_composing_signature">Edit signature...</string>
+  <string id="preferences_composing_signature_include_new_messages">Append signature to new messages</string>
+  <string id="preferences_composing_signature_include_replies">Append signature to replies</string>
+  <string id="preferences_composing_signature_include_forwards">Append signature to forwards</string>
+  <string id="preferences_spelling">Spellchecking</string>
+  <string id="preferences_auto_spellcheck">Always check spelling before sending</string>
+  <string id="preferences_receiving_section_title">Receiving Mail</string>
+  <string id="preferences_receiving_interval_1">Automatically check for new messages every</string>
+  <string id="preferences_receiving_interval_2">minutes</string>
+  <string id="preferences_receiving_time_window">Initially retrieve the following time window</string>
+  <string id="preferences_receiving_sound">When new messages arrive, play</string>
+  <string id="preferences_receiving_block_remote_images">Block loading of remote images in mail messages</string>
+  <string id="preferences_receiving_hide_email_address1">Always hide email addresses</string>
+  <string id="preferences_receiving_hide_email_address2">(only show the display name when a display name is provided)</string>
+  <string id="preferences_receiving_auto_acknowledge_read_receipts">Auto-acknowledge read reciepts</string>
+  <string id="preferences_calendar_section_title">Calendar</string>
+  <string id="preferences_calendar_workweek_subtitle">Work week</string>
+  <string id="preferences_calendar_workday_subtitle">Work day</string>
+  <string id="preferences_calendar_start_time_label">Start time: </string>
+  <string id="preferences_calendar_end_time_label">End time: </string>
+  <string id="preferences_calendar_weekstart_label">First day of week: </string>
+  <string id="preferences_calendar_upcoming_appointments_range">Show %s day(s) in the upcoming appointments</string>
+  <string id="preferences_calendar_default_view_label">By default, start in: </string>
+  <string id="preferences_calendar_day_view">Day View</string>
+  <string id="preferences_calendar_work_week_view">Work Week View</string>
+  <string id="preferences_calendar_week_view">Week View</string>
+  <string id="preferences_calendar_month_view">Month View</string>
+  <string id="preferences_freebusy_section_title">Free/Busy</string>
+  <string id="preferences_freebusy_publish_range">Publish %s month(s) of Calendar Free/Busy information on the server</string>
+  <string id="preferences_freebusy_publish_interval">Update Free/Busy information on the server every %s minute(s)</string>
+  <string id="preference_change_logout_required">Some of the changes you have made will be available the next time you log into Scalix Web Access.</string>
+  <string id="preference_invalid_workweek">Your work week selection is invalid</string>
+  <string id="preference_invalid_workday">Your work day selection is invalid</string>
+  <string id="preference_invalid_upcoming_appts_range">The upcoming appointments period you have chosen is invalid</string>
+  <string id="preference_invalid_freebusy_publish_range">The number of months of Free/Busy information you have chosen is invalid [1-6]</string>
+  <string id="preference_invalid_freebusy_publish_interval">The Free/Busy information update interval you have chosen is invalid [1-99]</string>
+  <string id="preferences_restore_default_settings">Restore default settings</string>
+  <string id="preferences_warning_restore_default_settings">Are you sure you want to reset all user-defined options with system default values? This cannot be undone.</string>
+  <string id="preferences_themes_section_title">Themes</string>
+  <string id="preferences_themes_select_theme_subtitle">Select theme.</string>
+  <string id="preferences_themes_please_select_theme">Please select theme from the list.</string>
+
+  <!-- Debugging Options Dialog -->
+  <string id="debug_options_panel_header">Debug Options</string>
+  <string id="debug_options_log_level_label">Log level: </string>
+  <string id="debug_options_log_destination_label">Log destination: </string>
+
+  <!-- Search Filters -->
+  <string id="advanced_search">Advanced Search...</string>
+  <string id="advanced_search_calendar">Advanced Search (Calendar)...</string>
+  <string id="advanced_search_contact">Advanced Search (Contact)...</string>
+  <string id="advanced_search_mail">Advanced Search (Mail)...</string>
+  <string id="advanced_search_tasks">Advanced Search (Tasks)...</string>
+  <string id="search_caption">Search</string>
+  <string id="search_all_mail">Search Mail</string>
+  <string id="search_all_contacts">Search All Contacts</string>
+  <string id="search_all_appointments">Search All Appointments</string>
+  <string id="search_current_folder">Search Current Folder</string>
+  <string id="search_subject_field_in_this_folder">Search Subject Field in This Folder</string>
+  <string id="search_from_field_in_this_folder">Search From Field in This Folder</string>
+  <string id="search_to_field_in_this_folder">Search To Field in This Folder</string>
+  <string id="display_subjects_containing">Display subjects containing</string>
+  <string id="display_messages_from">Display messages from</string>
+  <string id="display_messages_to">Display messages to</string>
+  <string id="display_names_containing">Display names containing</string>
+  <string id="display_companies_containing">Display companies containing</string>
+  <string id="display_email_addresses_containing">Display e-mail addresses containing</string>
+  <string id="subject_filter_caption">Subject</string>
+  <string id="from_filter_caption">Sender</string>
+  <string id="to_filter_caption">Recipient</string>
+  <string id="name_filter_caption">Name</string>
+  <string id="company_filter_caption">Company</string>
+  <string id="email_address_filter_caption">Email address</string>
+  <string id="display_clear_tooltip">Clear Search Filter</string>
+
+  <!-- Contact -->
+  <string id="contacteditor_title">Contact Properties</string>
+  <string id="contacteditor_section_title_general">General</string>
+  <string id="contacteditor_section_title_details">Details</string>
+  <string id="contacteditor_full_name_label">Full Name...</string>
+  <string id="contacteditor_job_title_label">Job title: </string>
+  <string id="contacteditor_company_label">Company: </string>
+  <string id="contacteditor_file_as_label">File as: </string>
+  <string id="contacteditor_phone_numbers">Phone numbers</string>
+  <string id="contacteditor_business_phone_label">Business: </string>
+  <string id="contacteditor_home_phone_label">Home: </string>
+  <string id="contacteditor_business_fax_label">Fax: </string>
+  <string id="contacteditor_mobile_phone_label">Mobile: </string>
+  <string id="contacteditor_addresses">Addresses</string>
+  <string id="contacteditor_address_details_title">Address details</string>
+  <string id="contacteditor_business_address">Business...</string>
+  <string id="contacteditor_home_address">Home...</string>
+  <string id="contacteditor_other_address">Other...</string>
+  <string id="contacteditor_address_selector_business">Business</string>
+  <string id="contacteditor_address_selector_home">Home</string>
+  <string id="contacteditor_address_selector_other">Other</string>
+  <string id="contacteditor_email_label">E-mail %s...</string>
+  <string id="contacteditor_email_selector_label">E-mail %s</string>
+  <string id="contacteditor_email_display_as_label">Display as: </string>
+  <string id="contacteditor_web_page_label">Web page: </string>
+  <string id="contacteditor_im_address_label">IM address: </string>
+  <string id="contacteditor_department_label">Department: </string>
+  <string id="contacteditor_office_label">Office: </string>
+  <string id="contacteditor_profession_label">Profession: </string>
+  <string id="contacteditor_manager_name_label">Manager's name: </string>
+  <string id="contacteditor_assistant_name_label">Assistant's name: </string>
+  <string id="contacteditor_nickname_label">Nickname: </string>
+  <string id="contacteditor_spouse_name_label">Spouse's name: </string>
+  <string id="contacteditor_birthday_label">Birthday: </string>
+  <string id="contacteditor_anniversary_label">Anniversary: </string>
+  <string id="contacteditor_invalid_date">You must specify a valid date.</string>
+  <string id="contacteditor_file_as_format_1">%LAST, %FIRST</string>
+  <string id="contacteditor_file_as_format_2">%FIRST %LAST</string>
+  <string id="contacteditor_file_as_format_3">%COMPANY</string>
+  <string id="contacteditor_file_as_format_4">%LAST, %FIRST (%COMPANY)</string>
+  <string id="contacteditor_file_as_format_5">%FIRST %LAST (%COMPANY)</string>
+  <string id="contacteditor_file_as_format_6">%COMPANY (%LAST, %FIRST)</string>
+  <string id="contacteditor_file_as_format_7">%COMPANY (%FIRST %LAST)</string>
+  <string id="contacteditor_file_as_format_8">%FIRST</string>
+  <string id="contacteditor_file_as_format_9">%LAST</string>
+  <string id="contacteditor_default_mailing_address">This is the mailing address</string>
+  <string id="contacteditor_empty_file_as_warning">The File As for this contact is empty. You may not have entered a name or a company.
+Do you want to save this contact with an empty File As field?</string>
+  <string id="name_details_dlg_title">Name details</string>
+  <string id="name_details_dlg_prefix_label">Prefix: </string>
+  <string id="name_details_dlg_first_name_label">First: </string>
+  <string id="name_details_dlg_middle_name_label">Middle: </string>
+  <string id="name_details_dlg_last_name_label">Last: </string>
+  <string id="name_details_dlg_suffix_label">Suffix: </string>
+  <string id="address_details_dlg_title">Address details</string>
+  <string id="address_details_dlg_street_label">Street: </string>
+  <string id="address_details_dlg_city_label">City: </string>
+  <string id="address_details_dlg_state_label">State: </string>
+  <string id="address_details_dlg_zip_label">ZIP: </string>
+  <string id="address_details_dlg_country_label">Country: </string>
+
+  <string id="contact_display_name_format">%PREFIX%FIRST%MIDDLE%LAST%SUFFIX</string>
+  <string id="contact_email_display_name_format">%FIRST%MIDDLE%LAST%SUFFIX%EMAIL</string>
+
+  <string id="postal_address_street_prefix"></string>
+  <string id="postal_address_street_suffix">
+</string>
+  <string id="postal_address_city_prefix"></string>
+  <string id="postal_address_city_suffix">, </string>
+  <string id="postal_address_state_prefix"></string>
+  <string id="postal_address_state_suffix"> </string>
+  <string id="postal_address_zip_prefix"></string>
+  <string id="postal_address_zip_suffix"></string>
+  <string id="postal_address_country_prefix">
+</string>
+  <string id="postal_address_country_suffix"></string>
+  <string id="postal_address_format">%STREETPREFIX%STREET%STREETSUFFIX%CITYPREFIX%CITY%CITYSUFFIX%STATEPREFIX%STATE%STATESUFFIX%ZIPPREFIX%ZIP%ZIPSUFFIX%COUNTRYPREFIX%COUNTRY%COUNTRYSUFFIX</string>
+
+  <!-- PDL -->
+  <string id="pdleditor_title">Distribution List Properties</string>
+  <string id="pdleditor_name_label">Name: </string>
+  <string id="pdleditor_select_members">Select Members</string>
+  <string id="pdleditor_add_new_member">Add New Member</string>
+  <string id="pdleditor_delete_selected_member">Delete Selected Members</string>
+  <string id="pdleditor_name_header_label">Name</string>
+  <string id="pdleditor_email_header_label">E-mail</string>
+  <string id="pdleditor_add_new_member_title">Add New Member</string>
+  <string id="pdleditor_edit_selected_member">Edit Selected Member</string>
+  <string id="pdleditor_edit_selected_member_title">Edit Selected Member</string>
+  <string id="pdleditor_add_new_member_name_label">Name: </string>
+  <string id="pdleditor_add_new_member_email_label">E-mail: </string>
+  <string id="pdleditor_member_name_empty">A name must be specified to add a member to the list</string>
+  <string id="pdleditor_member_invalid_address">A valid email address must be specified to add a member to the list</string>
+
+  <!-- Task -->
+  <string id="taskeditor_title">Task Properties</string>
+  <string id="taskeditor_section_title_general">General</string>
+  <string id="taskeditor_section_title_details">Details</string>
+  <string id="taskeditor_folder_label">Folder: </string>
+  <string id="taskeditor_start_time_label">Start Time: </string>
+  <string id="taskeditor_end_time_label">End Time: </string>
+  <string id="taskeditor_due_date_label">Due Date: </string>
+  <string id="taskeditor_task_status_label">Task Status: </string>
+  <string id="taskeditor_reminder_time_label">Reminder Time: </string>
+  <string id="taskeditor_duration_label">Duration: </string>
+  <string id="taskeditor_percentage_complete_label">Percentage Complete: </string>
+  <string id="taskeditor_to_label">Assignee(s): </string>
+  <string id="taskeditor_cc_label">FYI: </string>
+  <string id="taskeditor_recurrenece_label">Recurrence Pattern: </string>
+  <string id="taskeditor_empty_subject_warning">The Subject for this task is empty. You may not have entered this information.
+Do you want to save this task with an empty subject field?</string>
+
+  <!-- Folder properties/permissions dialog -->
+  <string id="folder_prop_dlg_title">Folder properties</string>
+  <string id="folder_perm_dlg_title">Folder permissions</string>
+  <string id="folder_prop_dlg_tab_properties">Properties</string>
+  <string id="folder_prop_dlg_tab_permissions">Permissions</string>
+  <string id="folder_prop_dlg_name_label">Name</string>
+  <string id="folder_prop_dlg_type_label">Type</string>
+  <string id="folder_prop_dlg_color_label">Color</string>
+  <string id="folder_prop_dlg_path_label">Location</string>
+  <string id="folder_prop_dlg_description_label">Description</string>
+  <string id="folder_prop_dlg_no_metadata">Unable to retrieve properties</string>
+  <string id="folder_perm_dlg_name_header_label">Name</string>
+  <string id="folder_perm_dlg_role_header_label">Role</string>
+  <string id="folder_perm_dlg_add_btn_caption">Add...</string>
+  <string id="folder_perm_dlg_remove_btn_caption">Remove</string>
+  <string id="folder_perm_dlg_role_label">Role: </string>
+  <string id="folder_perm_dlg_roles_label">Roles: </string>
+  <string id="folder_perm_dlg_roles_owner">Owner</string>
+  <string id="folder_perm_dlg_roles_publishing_editor">Publishing Editor</string>
+  <string id="folder_perm_dlg_roles_editor">Editor</string>
+  <string id="folder_perm_dlg_roles_publishing_author">Publishing Author</string>
+  <string id="folder_perm_dlg_roles_author">Author</string>
+  <string id="folder_perm_dlg_roles_non_editing_author">Non-editing Author</string>
+  <string id="folder_perm_dlg_roles_reviewer">Reviewer</string>
+  <string id="folder_perm_dlg_roles_contributor">Contributor</string>
+  <string id="folder_perm_dlg_roles_none">None</string>
+  <string id="folder_perm_dlg_roles_custom">Custom</string>
+  <string id="folder_perm_dlg_create_items">Create items</string>
+  <string id="folder_perm_dlg_read_items">Read items</string>
+  <string id="folder_perm_dlg_create_subfolders">Create subfolders</string>
+  <string id="folder_perm_dlg_folder_owner">Folder owner</string>
+  <string id="folder_perm_dlg_folder_visible">Folder visible</string>
+  <string id="folder_perm_dlg_edit_items">Edit items</string>
+  <string id="folder_perm_dlg_delete_items">Delete items</string>
+  <string id="folder_perm_dlg_none">None</string>
+  <string id="folder_perm_dlg_own">Own</string>
+  <string id="folder_perm_dlg_all">All</string>
+  <string id="folder_perm_dlg_fetching_msg">Fetching folder permissions...</string>
+  <string id="folder_perm_dlg_default_identifier">Default</string>
+  <string id="folder_perm_dlg_getacl_error">An error occurred while trying to get the access control list of the "%FOLDER" folder.</string>
+  <string id="folder_perm_dlg_setacl_error">An error occurred while trying to set the access control list on the "%FOLDER" folder.</string>
+  <string id="folder_perm_dlg_duplicate_user">One or more users could not be added to the folder access control list.
+One or more users are already specified.</string>
+  <string id="folder_perm_dlg_permissions_summary">You do not have sufficient permissions to view this folder access control list. Your permissions on this folder are:</string>
+  <string id="folder_perm_dlg_permissions_only">You do not have sufficient permissions to view this folder access control list</string>
+  <string id="folder_prop_dlg_permissions">You do not have sufficient permissions to alter this folder's properties</string>
+
+    <!-- Out of office assistant -->
+  <string id="oof_dlg_title">Out of Office</string>
+  <string id="oof_dlg_in_the_office">I am in the office</string>
+  <string id="oof_dlg_out_of_the_office">I am out of the office</string>
+  <string id="oof_dlg_reply_label">Auto-reply once to each sender with the following text:</string>
+  <string id="oof_reminder">You have enabled Out of Office for this mailbox.
+Would you like to view or disable your Out of Office settings?</string>
+
+  <!-- Add additional mailboxes dialog -->
+  <string id="other_users_mailboxes_dlg_title">Additional Mailboxes</string>
+  <string id="other_users_mailboxes_dlg_summary">List these additional mailboxes in the folder tree (Note: Changes to this list will take effect the next time you log into Scalix Web Access)</string>
+  <string id="other_users_mailboxes_dlg_add_btn_caption">Add...</string>
+  <string id="other_users_mailboxes_dlg_remove_btn_caption">Remove</string>
+
+  <!-- Edit delegates dialog -->
+  <string id="edit_delegates_dlg_title">Edit Delegates</string>
+  <string id="edit_delegates_dlg_fetching_msg">Fetching delegates information...</string>
+  <string id="edit_delegates_dlg_add_btn_caption">Add...</string>
+  <string id="edit_delegates_dlg_remove_btn_caption">Remove</string>
+  <string id="edit_delegates_dlg_name_header_label">Name</string>
+  <string id="edit_delegates_dlg_insteadofme_label">Send meeting requests and responses only to my delegates, not to me</string>
+  <string id="edit_delegates_dlg_permissions_summary">The selected delegate has the following permissions:</string>
+  <string id="edit_delegates_dlg_getmeetings_label">Delegate receives copy of meeting-related messages sent to me</string>
+  <string id="edit_delegates_dlg_seeprivate_label">Delegate can see my private items</string>
+  <string id="edit_delegates_dlg_duplicate_user">One or more users could not be added because already specified.</string>
+  <string id="edit_delegates_dlg_setdelegates_error">An error occurred while trying to set the delegates on this mailbox.
+Please notify your system administrator about this problem.</string>
+
+  <string id="mail_search_results_wnd_title">Mail Search Results</string>
+  <string id="mail_search_results_for_mailbox_wnd_title">Mail Search Results For %s</string>
+
+  <string id="message_save_error">An error occurred while trying to save this message.</string>
+  <string id="contact_save_error">An error occurred while trying to save this contact.
+Would you like to reopen the unsaved contact?</string>
+  <string id="dl_save_error">An error occurred while trying to save this distribution list.
+Would you like to reopen the unsaved distribution list?</string>
+  <string id="appt_save_error">An error occurred while trying to save this appointment.
+Would you like to reopen the unsaved appointment?</string>
+
+  <string id="app_name">Scalix Web Access</string>
+  <string id="operation_not_permitted_folder_not_loaded">This operation is not permitted as long as the folder has not been fully loaded.</string>
+  <string id="reserved_folder_conflict">Scalix has determined that you have an existing "%folderName" mailbox in your IMAP account. Because this mailbox name matches the name of a reserved folder in the Scalix client, the data in your "%folderName" mailbox will be ignored during this session. To prevent this message from displaying, use another IMAP client to either delete or rename your "%folderName" mailbox. If you did not explicitly create the "%folderName" mailbox, contact your e-mail administrator to configure Scalix Web Access to prevent this message from displaying.</string>
+  <string id="generic_error">An error has occurred. Contact your e-mail administrator if the problem persists.</string>
+  <string id="special_folder_error">At least one required special folder is missing from your mailbox.
+The required special folders are Inbox, Sent Items and Deleted Items.
+Please notify your system administrator about this problem.</string>
+  <string id="unable_to_determine_attachment_filename">Scalix Web Access cannot determine the filename of the attachment and therefore cannot download the attachment. Contact your e-mail administrator for help.</string>
+  <string id="no_moving_messages_from_outbox">You cannot delete or move messages from the Outbox. If you do not want to send the messages in the Outbox, log out of Scalix Web Access.</string>
+  <string id="inline_attachment">Inline Attachment Follows</string>
+  <string id="attached_message">Inline Message Attached</string>
+  <string id="attachment_download_title">Attachment Download</string>
+  <string id="attachment_download_caption">Downloading attachment. Click OK when finished. Your browser security settings may prevent the attachment from being downloaded successfully. You will need to setup your webmail server as a trusted site or change browser settings to allow file downloads from this location. If you need help on doing this, please consult with your network administrator.</string>
+  <string id="connection_timeout">Cannot complete the last operation because the connection to the server was terminated.
+Reconnect to the server and try the operation again.</string>
+  <string id="http_503_message">Your Scalix server is temporarily unavailable. Please try again later.</string>
+  <string id="loading_folder">Loading folder...</string>
+  <string id="loading_message">Loading message...</string>
+  <string id="loading_message_failed">The message could not be loaded due to connection loss. Please try again later.</string>
+  <string id="sorting_messages">Sorting messages...</string>
+  <string id="sorting_contacts">Sorting contacts...</string>
+  <string id="loading_contacts">Loading contacts...</string>
+  <string id="loading_details">Loading details...</string>
+  <string id="loading_calendar">Loading calendar...</string>
+  <string id="loading_calendar_set">Loading calendar set...</string>
+  <string id="loading_tasks">Loading tasks...</string>
+  <string id="upcoming_events">Upcoming Appointments</string>
+  <string id="todo_list">To Do List</string>
+  <string id="loading_folders">Loading Folders...</string>
+  <string id="filter_view_empty">Filtered view of this folder is empty</string>
+  <string id="checking_inbox">Checking mail</string>
+  <string id="saving_message">Saving draft</string>
+  <string id="sending_mail">Sending mail</string>
+  <string id="folder_header_label">Folders</string>
+  <string id="calendar_header_label">Calendars</string>
+  <string id="task_header_label">Tasks</string>
+  <string id="reply_limit">You cannot reply to more than one message at a time. Select only one message and click Reply.</string>
+  <string id="reply_forward_message_not_allowed">You cannot reply to/forward this type of message.</string>
+  <string id="forward_limit">You cannot forward more than one message at a time. Select only one message and click Forward.</string>
+  <string id="no_message_selected">No message selected.</string>
+  <string id="no_contact_selected">No contact selected.</string>
+  <string id="no_appointment_selected">No calendar item selected.</string>
+  <string id="move_recurring_appointment_to_new_calendar">Moving a recurring appointment to a new calendar will move the entire series. Continue?</string>
+  <string id="popup_stopper">Your computer appears to be using an application that prevents web sites from opening windows. While these utilites (such as Pop-Up Stopper, Pop-Up Killer, and some Norton applications) are effective at blocking unwanted pop-up windows, they can prevent web-based applications like Scalix Web Access from operating correctly. You might need to modify setting in your pop-up window blocking application.</string>
+  <string id="modal_dialog_open">A modal dialog is open in the application main window.
+You must first dismiss that dialog before you can execute this action.</string>
+  <string id="empty_view">There are no messages in this view.</string>
+  <string id="empty_view_contacts">There are no contacts in this view.</string>
+  <string id="please_specify_to">You must specify a recipient for the message in the To:, Cc: or Bcc: field.</string>
+  <string id="too_many_from_addresses">There are too many addresses in the From box.</string>
+  <string id="delegation_not_allowed">You don't seem to have the necessary permissions to send a message on behalf of this person.
+Please contact this person or your e-mail administrator in order to be granted delegate access.</string>
+  <string id="address_parsing_problem">This is not a valid e-mail address: %s.</string>
+  <string id="address_no_match">Cannot find a match for the e-mail address: %s.</string>
+  <string id="ambiguous_contact_selection">There is more than one contact that matches:
+  %s
+  Enter the e-mail address for this contact.</string>
+  <string id="auto_read_request">This is an automatically generated message to notify you about a message that has been read. Your message
+
+        To: %name
+        Subject: %subject
+        Sent: %sent
+
+was read at %time on %date.</string>
+  <string id="send_return_receipt">The sender of this message has asked to be notified when you read this message.
+Do you wish to notify the sender?</string>
+  <string id="send_noRecipients">The recipient list expanded to an empty list</string>
+  <string id="send_notConnected">Due to a failure to establish a connection, the message could not be sent.
+Please try again later. A copy of the message has been placed into your 'Drafts' folder.</string>
+  <string id="subject_label">Subject:</string>
+  <string id="attach_label">Attachments:</string>
+  <string id="post_to_label">Post To:</string>
+  <string id="to_label">To...</string>
+  <string id="to_label2">To: </string>
+  <string id="cc_label">Cc...</string>
+  <string id="cc_label2">Cc: </string>
+  <string id="bcc_label">Bcc...</string>
+  <string id="bcc_label2">Bcc: </string>
+  <string id="posted_to_label">Posted To:</string>
+  <string id="posted_at_label">Posted At:</string>
+  <string id="from_label">From:</string>
+  <string id="replyto_label">Reply-To:</string>
+  <string id="attachments_label">Attachment(s):</string>
+  <string id="date_label">Date:</string>
+  <string id="importance_label">Importance:</string>
+  <string id="importance_value_low">Low</string>
+  <string id="importance_value_high">High</string>
+  <string id="sensitivity_label">Sensitivity:</string>
+  <string id="sensitivity_value_normal">Normal</string>
+  <string id="sensitivity_value_personal">Personal</string>
+  <string id="sensitivity_value_private">Private</string>
+  <string id="sensitivity_value_confidential">Company-Confidential</string>
+  <string id="calendar_view_sections_personal">Personal</string>
+  <string id="calendar_view_sections_public">Public</string>
+  <string id="calendar_view_sections_other_users">Other Users</string>
+  <string id="calendar_view_folder_names_in">in</string>
+  <string id="calendar_view_folder_names_s">'s</string>
+  <string id="calendar_view_folder_names_for">for</string>
+  <string id="calendar_planning_view_availability_bar_title">Availability</string>
+  <string id="html_remote_images_blocked_warning">To help protect your privacy, Scalix Web Access has blocked remote images in this message.</string>
+  <string id="html_show_remote_images">Show Images</string>
+  <string id="empty_deleted_items_folder">Are you sure you want to permanently delete the contents of the Deleted Items folder and its subfolders?</string>
+  <string id="empty_sub_deleted_items_folder">Are you sure you want to permanently delete the contents of this folder, and its subfolders?</string>
+  <string id="delete_in_deleted_items">Are you sure you want to permanently delete the selected message(s)?</string>
+  <string id="unable_to_delete_core_folder">You can only delete folders that you created. You cannot delete system folders.</string>
+  <string id="how_to_add_all_day_event">Double click here to add an appointment with no specific time, such as a vacation day.</string>
+  <string id="rich_text_to_plain_text">Changing the format of this message from Rich Text to Plain Text will remove all the current formatting. Are you sure you wish to continue?</string>
+  <string id="signature_instructions">Append the following text to all outgoing messages:</string>
+  <string id="confirm_folder_delete">Are you sure you want to delete this folder and its contents?</string>
+  <string id="access_denied">Your web-browser has denied access to creating the main application window. Close all browser windows and log in again.</string>
+  <string id="main_application_window_closed_during_composition">The main application window was closed during the creation of this message. Scalix Web Access is therefore unable to send the message. If you want to save the contents of this message, select the text in the message and copy the text to another application. To send the contents of this message, close all browser windows, log into your account, click New Message, and paste the copied text into the message body.</string>
+  <string id="cookies_not_enabled">Scalix Web Access determined that you do not have cookies enabled in your browser. Scalix Web Access requires cookies to operate. Enable cookies and try again.</string>
+  <string id="empty_username_field">The user name field cannot be empty</string>
+  <string id="invalid_xml_from_server">The server failed to send back valid XML. Contact your e-mail administrator and report this message.</string>
+  <string id="confirm_delete_contacts">Are you sure you want to delete the selected items?</string>
+  <string id="confirm_delete_contact">Are you sure you want to delete the selected contact?</string>
+  <string id="confirm_delete_pdl">Are you sure you want to delete the selected distribution list?</string>
+  <string id="invalid_delete_message">You cannot delete a message from a public folder.</string>
+  <string id="invalid_delete_contacts">You cannot delete a Contact or Distribution List from a public folder.</string>
+  <string id="contact_not_exist">This contact or distribution list no longer exists.</string>
+  <string id="contact_format_error">The selected format for filing this contact is %format
+but the following fields are empty [%missing]</string>
+  <string id="set_signature_title">Set Signature</string>
+  <string id="new_message_title">New Message</string>
+  <string id="message_title">Message</string>
+  <string id="new_post_title">New Post</string>
+  <string id="invalid_post_folder">You cannot post to the selected folder</string>
+  <string id="post_folder_error">An error occurred while trying to Post a message to this folder. This may be due to not having valid folder permissions.
+Please contact your e-mail administrator to determine whether you have the correct permissions to access this folder.</string>
+  <string id="processing_attachments">processing attachments...</string>
+  <string id="unpacking_attachments">Scalix Web Access is processing the attachments. Do not edit the attachments or send the message until Scalix Web Access finishes processing the attachments.</string>
+  <string id="error_unpacking_attachments">Scalix Web Access could not process attachments. Continuing forwarding/replying without attachments, or close the window to restart the operation.</string>
+  <string id="bad_sound_url">The URL you entered for your new mail notification sound is invalid. Go to File > Preferences and enter a different URL.</string>
+  <string id="must_be_logged_in">you must be logged in to activate autologin.</string>
+  <string id="activating_autologin_failed">Activating autologin failed.</string>
+  <string id="deactivating_autologin_failed">Deactivating autologin failed.</string>
+  <string id="invalid_username">Invalid username</string>
+  <string id="invalid_password">Invalid password</string>
+  <string id="imap_connect_failed">There was a problem connecting to the mail server. Please try again later.</string>
+  <string id="imap_connect_failed_soap">Unable to connect to IMAP server</string>
+  <string id="imap_id_missing">Missing expected IMAP server extension ID property</string>
+  <string id="user_create_failed">could not create account for user: %name</string>
+  <string id="invalid_login_timestamp">Invalid timestamp returned from login:</string>
+  <string id="invalid_timestamp">Invalid timestamp.</string>
+  <string id="invalid_fugu">Invalid fugu.</string>
+  <string id="trying_to_resolve_addresses">Trying to resolve the addresses. Try again in a moment.</string>
+  <string id="cannot_resolve_address">Unable to resolve the addresses.</string>
+  <string id="message_processing">Your message is being processed.</string>
+  <string id="bad_login_msg">The username or password is incorrect. Note that passwords are case sensitive. Try again.</string>
+  <string id="msg_zero_timestamp_prohibited">An error occurred on the server. Close your browser windows and log into Scalix Web Access again.
+Underlying cause: The timestamp provided is invalid in this context.
+  </string>
+  <string id="msg_session_expired">Your session has expired. This likely occurred because you or another user logged into this account from another system while the session window was open. Scalix Web Access does not support more than one open session. Click the OK button below and exit this Scalix Web Access session. Then, log into Scalix Web Access again.</string>
+  <string id="msg_server_err_send_us_report">An error occurred on the server. Collect the following information and contact your e-mail administrator.</string>
+  <string id="msg_server_err_auth_failure">Authorization failure: You are not authorized to view this content.</string>
+  <string id="account_msg_invalid_user">An error occurred.</string>
+  <string id="genauthimpl_msg_max_eval_seats">Cannot log you in at this time. This is a limited evaluation copy of Scalix Web Access. The maximum number of evaluation accounts has been reached for this system. Contact Scalix if you want to obtain a license for more accounts. The current maximum number of accounts is:</string>
+  <string id="soapfault_msg_server_error"></string>
+  <string id="soapfault_msg_send_error">A message could not be sent, please try again later.  A copy of the message has been placed into your 'Drafts' folder.</string>
+  <string id="soaprequestimpl_malformed_request">Your browser has sent a malformed request.
+This is most likely caused by a problem in the Norton Internet Security or Norton Personal Firewall application. If you are using one of these applications, disable Privacy Control and log into Scalix Web Access again. If this does not resolve the problem, contact your e-mail administrator.</string>
+  <string id="soapmailmessage_msg_invalid_mime">&lt;h4&gt;ERROR:&lt;br/&gt;Scalix Web Access could not correctly parse this message because it is not a valid MIME e-mail message.&lt;/h4&gt;Contact the sender and have them fix their mail application (which is sending out the invalid MIME message.)&lt;br/&gt;Mime Error:&lt;br/&gt;</string>
+  <string id="soapmailmessage_msg_invalid_mime_2">ERROR: *** Scalix could not completely parse this message because it is invalid MIME ***
+  </string>
+  <string id="soapmailmessage_msg_cant_parse_message_part">*** SCALIX IS UNABLE TO PARSE THE MESSAGE PART</string>
+  <string id="soapmailmessage_msg_message_not_found">---------- MESSAGE CANNOT BE FOUND ----------
+
+ . . . . . . . . Close Scalix Web Access
+
+This message cannot be found under the unique ID.</string>
+  <string id="soapmailmessage_msg_message_not_found_end">The message is no longer on the server.
+This can occur if you delete a message using another mail client.
+To resolve this problem, log out of Scalix Web Access and log in again.
+  </string>
+  <string id="welcome_to_scalix">Welcome to Scalix Web Access</string>
+  <string id="javascript_error_prefix_1"></string>
+  <string id="javascript_error_prefix_2">Splash Page Error:</string>
+  <string id="javascript_error_prefix_3">Error Report</string>
+  <string id="javascript_error_prefix_4">Login error:</string>
+  <string id="javascript_error_prefix_5">Could not log in</string>
+  <string id="message_deleted">The original message has been deleted from the server and cannot be operated on.</string>
+  <string id="calendar_response_subjectprefix_accepted">Accepted: </string>
+  <string id="calendar_response_subjectprefix_declined">Declined: </string>
+  <string id="calendar_response_subjectprefix_tentative">Tentative: </string>
+  <string id="calendar_response_subjectprefix_canceled">Canceled: </string>
+  <string id="calendar_response_subjectprefix_updated">Updated: </string>
+  <string id="message_already_opened">This message is already opened in another window.</string>
+  <string id="task_editor_title">Task info</string>
+  <string id="event_editor_title">Appointment info</string>
+  <string id="event_editor_attachments_label">Attachment(s):</string>
+  <string id="event_editor_section_title_appointment">Appointment</string>
+  <string id="event_editor_section_title_task">Task</string>
+  <string id="event_editor_section_title_scheduling">Scheduling</string>
+  <string id="event_editor_section_title_recurrence">Recurrence</string>
+  <string id="event_editor_label_task_folder">Task Folder:</string>
+  <string id="event_editor_label_start_date">Start Date:</string>
+  <string id="event_editor_label_due_date">Due Date:</string>
+  <string id="event_editor_label_status">Status:</string>
+  <string id="event_editor_label_priority">Priority:</string>
+  <string id="event_editor_label_duration">Duration:</string>
+  <string id="event_editor_label_recurrence">Recurrence:</string>
+  <string id="event_editor_label_percentage_complete">% Complete:</string>
+  <string id="event_editor_label_owner">Owner:</string>
+  <string id="event_editor_label_description">Description:</string>
+  <string id="event_editor_label_assign_task">Assign Task:</string>
+  <string id="event_editor_label_fyi">FYI:</string>
+  <string id="event_editor_label_include_in_list">Include an updated copy of this task in my task list:</string>
+  <string id="event_editor_label_status_report_on_complete">Send me a status report when this task is complete:</string>
+  <string id="event_editor_label_description">Description:</string>
+  <string id="event_editor_label_subject">Subject:</string>
+  <string id="event_editor_label_location">Location:</string>
+  <string id="event_editor_label_start_time">Start:</string>
+  <string id="event_editor_label_fb_start_time">Start:</string>
+  <string id="event_editor_label_end_time">End:</string>
+  <string id="event_editor_label_fb_end_time">End:</string>
+  <string id="event_editor_label_all_day_event">All day event</string>
+  <string id="event_editor_label_reminder">Reminder:</string>
+  <string id="event_editor_label_show_time_as">Show time as:</string>
+  <string id="event_editor_label_label">Label:</string>
+  <string id="event_editor_label_private">Private</string>
+  <string id="event_editor_label_recurrence_pattern">Recurrence pattern:</string>
+  <string id="event_editor_label_recurrence_none">None</string>
+  <string id="event_editor_label_recurrence_daily">Daily</string>
+  <string id="event_editor_label_recurrence_weekly">Weekly</string>
+  <string id="event_editor_label_recurrence_monthly">Monthly</string>
+  <string id="event_editor_label_recurrence_yearly">Yearly</string>
+  <string id="event_editor_label_daily_pattern1">Every %INTERVAL day(s)</string>
+  <string id="event_editor_label_every_pattern2">Every weekday</string>
+  <string id="event_editor_label_weekly_pattern">Every %INTERVAL week(s)</string>
+  <string id="event_editor_label_monthly_pattern1">Day %DATE of every %INTERVAL month(s)</string>
+  <string id="event_editor_label_monthly_pattern2">The %EVERY %DAY of every %INTERVAL month(s)</string>
+  <string id="event_editor_label_yearly_pattern1">Day %DATE of %MONTH</string>
+  <string id="event_editor_label_yearly_pattern2">The %EVERY %DAY of %MONTH</string>
+  <string id="event_editor_label_recurrence_range">Range of recurrence:</string>
+  <string id="event_editor_label_recurrence_no_end_date">No end date</string>
+  <string id="event_editor_label_recurrence_end_after">End after %ENDAFTER occurrence(s)</string>
+  <string id="event_editor_label_recurrence_end_by">End by %ENDBY</string>
+  <string id="event_editor_label_recipient_header_name">Name</string>
+  <string id="event_editor_label_recipient_header_response">Response</string>
+  <string id="event_editor_label_click_here_to_add_a_name">Click here to add a name</string>
+  <string id="event_editor_label_occurrences">occurrence(s)</string>
+  <string id="event_editor_label_add_from_address_book">Add From Address Book</string>
+  <string id="event_editor_label_autopick">AutoPick:</string>
+  <string id="event_editor_label_show_only_working_hours">Show Only Working Hours</string>
+  <string id="event_editor_user_bad_address">This user does not have an email address or his email address is invalid.</string>
+  <string id="event_editor_invalid_start_time">The start time you entered is not a recognized time value.
+Please enter a value such as 18:00 or 6:00 PM.</string>
+  <string id="event_editor_invalid_end_time">The end time you entered is not a recognized time value.
+Please enter a value such as 18:00 or 6:00 PM.</string>
+  <string id="event_editor_invalid_reminder_time">The reminder time you entered is not a recognized time value.
+Please enter a value such as 18:00 or 6:00 PM.</string>
+  <string id="event_editor_invalid_percentage_completed">Percentage completed you entered is not a valid value. Please enter value 0-100.</string>
+  <string id="event_editor_invalid_start_date">You must specify a valid start date.</string>
+  <string id="event_editor_invalid_end_date">You must specify a valid end date.</string>
+  <string id="event_editor_invalid_end_by_date">The "End by" date you entered is not a recognized date value.</string>
+  <string id="event_editor_invalid_reminder_date">You must specify a valid reminder date.</string>
+  <string id="event_editor_invalid_due_date">You must specify a valid due date.</string>
+  <string id="event_editor_end_date_before_start_date">The end date you entered occurs before the start date.</string>
+  <string id="event_editor_invalid_interval">Please specify a valid value for the 'Interval' field.</string>
+  <string id="event_editor_invalid_day">Please specify a valid day on which this appointment occurs.</string>
+  <string id="event_editor_invalid_end_after">Please specify a valid value for the 'End after' field.</string>
+  <string id="event_editor_no_day_selected">Please select at least one day of the week on which this appointment occurs.</string>
+  <string id="event_editor_end_by_before_start_date_of_recurrence_pattern">The "End By" date you selected occurs before the start date of the recurrence pattern.</string>
+  <string id="event_editor_warning_meeting_public_folder">Responses to this meeting request will not be tallied because this meeting is in a public calendar</string>
+  <string id="event_editor_warning_day_number_out_of_bounds">Some months have fewer than %s days. For these months, the occurrence will fall on the last day of the month.</string>
+  <string id="event_editor_warning_day_number_out_of_bounds_february">February sometimes has fewer than 29 days. On those years, the occurrence will fall on the last day of February.</string>
+  <string id="event_editor_warning_exceptions_lost">Any exceptions associated with this recurring appointment will be lost.
+If any of the exceptions are meetings, the attendees will not be notified.
+Do you wish to continue?</string>
+  <string id="event_editor_warning_reminder_public_folder">The reminder for this appointment will not appear because the item is in a public calendar.</string>
+  <string id="event_editor_wrong_reminder">The reminder for an occurrence of this recurring appointment
+cannot be set to appear before the previous occurrence.
+Shorten the reminder time or lengthen the recurrence period.</string>
+  <string id="task_editor_wrong_reminder">The reminder for an occurrence of this recurring task
+cannot be set to appear before the previous occurrence.
+Shorten the reminder time or lengthen the recurrence period.</string>
+  <string id="printout_meeting_status">Meeting status:</string>
+  <string id="printout_meeting_canceled">Meeting canceled</string>
+  <string id="printout_meeting_tentatived">Tentative</string>
+  <string id="printout_meeting_accepted">Accepted</string>
+  <string id="printout_meeting_declined">Declined</string>
+  <string id="printout_meeting_not_responded">Not responded</string>
+  <string id="printout_required_recipients">Required recipients:</string>
+  <string id="printout_optional_recipients">Optional recipients:</string>
+  <string id="printout_meeting_resources">Resources:</string>
+  <string id="printout_distribution_list_name">Distribution List Name:</string>
+  <string id="printout_distribution_list_members">Distribution List Members:</string>
+  <string id="printing_not_allowed_on_unsaved_item">This item cannot be printed because it has not been saved yet</string>
+  <string id="reminder_dlg_title">Reminder</string>
+  <string id="reminder_dlg_subject">Subject</string>
+  <string id="reminder_dlg_start_time">Start time: %s</string>
+  <string id="reminder_dlg_due_in">Due in</string>
+  <string id="reminder_dlg_dismiss">Dismiss</string>
+  <string id="reminder_dlg_dismiss_all">Dismiss All</string>
+  <string id="reminder_dlg_dismiss_all_warning">Are you sure you want to dismiss all these reminders?</string>
+  <string id="reminder_dlg_snooze">Snooze</string>
+  <string id="reminder_dlg_click_snooze">Click Snooze to be reminded again in:</string>
+  <string id="reminder_0_minutes">0 minutes</string>
+  <string id="reminder_5_minutes">5 minutes</string>
+  <string id="reminder_10_minutes">10 minutes</string>
+  <string id="reminder_15_minutes">15 minutes</string>
+  <string id="reminder_30_minutes">30 minutes</string>
+  <string id="reminder_1_hour">1 hour</string>
+  <string id="reminder_2_hours">2 hours</string>
+  <string id="reminder_3_hours">3 hours</string>
+  <string id="reminder_4_hours">4 hours</string>
+  <string id="reminder_5_hours">5 hours</string>
+  <string id="reminder_6_hours">6 hours</string>
+  <string id="reminder_7_hours">7 hours</string>
+  <string id="reminder_8_hours">8 hours</string>
+  <string id="reminder_9_hours">9 hours</string>
+  <string id="reminder_10_hours">10 hours</string>
+  <string id="reminder_11_hours">11 hours</string>
+  <string id="reminder_half_day">0.5 days</string>
+  <string id="reminder_18_hours">18 hours</string>
+  <string id="reminder_1_day">1 day</string>
+  <string id="reminder_2_days">2 days</string>
+  <string id="reminder_3_days">3 days</string>
+  <string id="reminder_4_days">4 days</string>
+  <string id="reminder_1_week">1 week</string>
+  <string id="reminder_2_weeks">2 weeks</string>
+  <string id="week_unit">week(s)</string>
+  <string id="day_unit">day(s)</string>
+  <string id="hour_unit">hour(s)</string>
+  <string id="minute_unit">minute(s)</string>
+  <string id="reminder_due_in_x_minutes">%s minute(s)</string>
+  <string id="reminder_due_in_x_hours">%s hour(s)</string>
+  <string id="reminder_due_in_x_days">%s day(s)</string>
+  <string id="reminder_due_in_x_weeks">%s week(s)</string>
+  <string id="reminder_x_minutes_overdue">%s minute(s) overdue</string>
+  <string id="reminder_x_hours_overdue">%s hour(s) overdue</string>
+  <string id="reminder_x_days_overdue">%s day(s) overdue</string>
+  <string id="reminder_x_weeks_overdue">%s week(s) overdue</string>
+  <string id="task_status_not_started">Not Started</string>
+  <string id="task_status_in_progress">In Progress</string>
+  <string id="task_status_completed">Completed</string>
+  <string id="task_status_waiting">Waiting</string>
+  <string id="task_status_deferred">Deferred</string>
+  <string id="task_label_no_label">No Label</string>
+  <string id="task_label_none">None</string>
+  <string id="task_label_important">Important</string>
+  <string id="task_label_business">Business</string>
+  <string id="task_label_personal">Personal</string>
+  <string id="task_label_vacation">Vacation</string>
+  <string id="task_label_must_attend">Must Attend</string>
+  <string id="task_label_travel_required">Travel Required</string>
+  <string id="task_label_needs_preparation">Needs Preparation</string>
+  <string id="task_label_birthday">Birthday</string>
+  <string id="task_label_anniversary">Anniversary</string>
+  <string id="task_label_phone_call">Phone Call</string>
+  <string id="appointment_busy_status_free">Free</string>
+  <string id="appointment_busy_status_tentative">Tentative</string>
+  <string id="appointment_busy_status_busy">Busy</string>
+  <string id="appointment_busy_status_out_of_office">Out of Office</string>
+  <string id="appointment_label_no_label">No Label</string>
+  <string id="appointment_label_none">None</string>
+  <string id="appointment_label_important">Important</string>
+  <string id="appointment_label_business">Business</string>
+  <string id="appointment_label_personal">Personal</string>
+  <string id="appointment_label_vacation">Vacation</string>
+  <string id="appointment_label_must_attend">Must Attend</string>
+  <string id="appointment_label_travel_required">Travel Required</string>
+  <string id="appointment_label_needs_preparation">Needs Preparation</string>
+  <string id="appointment_label_birthday">Birthday</string>
+  <string id="appointment_label_anniversary">Anniversary</string>
+  <string id="appointment_label_phone_call">Phone Call</string>
+  <string id="meeting_accepted">Accepted</string>
+  <string id="meeting_tentative">Tentative</string>
+  <string id="meeting_declined">Declined</string>
+  <string id="meeting_no_response">No response</string>
+  <string id="meeting_recipient_required">Required</string>
+  <string id="meeting_recipient_optional">Optional</string>
+  <string id="meeting_recipient_resource">Resource</string>
+  <string id="meeting_has_been_canceled">This meeting has been canceled.</string>
+  <string id="monday">Monday</string>
+  <string id="tuesday">Tuesday</string>
+  <string id="wednesday">Wednesday</string>
+  <string id="thursday">Thursday</string>
+  <string id="friday">Friday</string>
+  <string id="saturday">Saturday</string>
+  <string id="sunday">Sunday</string>
+  <string id="mon">Mon</string>
+  <string id="tue">Tue</string>
+  <string id="wed">Wed</string>
+  <string id="thu">Thu</string>
+  <string id="fri">Fri</string>
+  <string id="sat">Sat</string>
+  <string id="sun">Sun</string>
+  <string id="weekday">Week day</string>
+  <string id="weekendday">Weekend day</string>
+  <string id="day">Day</string>
+  <string id="january">January</string>
+  <string id="february">February</string>
+  <string id="march">March</string>
+  <string id="april">April</string>
+  <string id="may">May</string>
+  <string id="june">June</string>
+  <string id="july">July</string>
+  <string id="august">August</string>
+  <string id="september">September</string>
+  <string id="october">October</string>
+  <string id="november">November</string>
+  <string id="december">December</string>
+  <string id="today">Today</string>
+  <string id="tomorrow">Tomorrow</string>
+  <string id="upcoming_appointment_in_progress">In Progress</string>
+  <string id="appointment_empty_subject">[no subject]</string>
+  <string id="appt_locked">This operation cannot be executed right now because
+the appointment you are trying to modify is in the
+process of being saved. Please try again in a few moments.</string>
+  <string id="appt_private">This appointment is private and cannot be viewed.</string>
+  <string id="calendar_event_reminder_image_tooltip">A reminder is set for this appointment</string>
+  <string id="calendar_event_recurrence_image_tooltip">This appointment is recurring</string>
+  <string id="calendar_event_private_image_tooltip">This appointment is marked as private</string>
+  <string id="calendar_cannot_move_occurrence_to_another_day">Two occurrences of a recurring appointment cannot occur on the same day</string>
+  <string id="calendar_event_does_not_exist_anymore">This appointment does not exist anymore. It was probably deleted from another client.</string>
+  <string id="calendar_header_sunday">Sunday</string>
+  <string id="calendar_header_monday">Monday</string>
+  <string id="calendar_header_tuesday">Tuesday</string>
+  <string id="calendar_header_wednesday">Wednesday</string>
+  <string id="calendar_header_thursday">Thursday</string>
+  <string id="calendar_header_friday">Friday</string>
+  <string id="calendar_header_saturday">Saturday</string>
+  <string id="calendar_set_save_error">Could not save calendar sets because they were never loaded.</string>
+  <string id="calendar_set_name_empty_error">You must enter a name for the calendar set.</string>
+  <string id="calendar_set_delete_confirm">Are you sure you want to delete this calendar set?</string>
+  <string id="change_occurrence_dlg_title">Change occurrence</string>
+  <string id="change_occurrence_label">This is a repeating appointment. Do you want to change only this occurrence or the whole series?</string>
+  <string id="change_occurrence_radio_button_1">Open this occurrence.</string>
+  <string id="change_occurrence_radio_button_2">Open the series.</string>
+  <string id="delete_occurrence_dlg_title">Delete occurrence</string>
+  <string id="delete_occurrence_label">Do you want to delete all occurrences of the recurring appointment or just this one?</string>
+  <string id="delete_occurrence_radio_button_1">Delete this occurrence.</string>
+  <string id="delete_occurrence_radio_button_2">Delete the series.</string>
+  <string id="cancel_meeting_dlg_title">Cancel meeting</string>
+  <string id="cancel_meeting_label">Are you sure you want to cancel the meeting, notify the attendees of the cancellation and release all resources associated with the meeting?</string>
+  <string id="decline_meeting_dlg_title">Decline meeting</string>
+  <string id="decline_meeting_label">This meeting has been declined and will be permanently deleted. Do you want to send a response to the organizer?</string>
+  <string id="decline_meeting_radio_button_1">Send a response now.</string>
+  <string id="decline_meeting_radio_button_2">Don't send a response.</string>
+  <string id="update_meeting_dlg_title">Update Meeting</string>
+  <string id="update_meeting_label">Would you like to send an update to the attendees regarding the changes you made to this meeting?</string>
+  <string id="update_meeting_radio_button_1">Send an update now.</string>
+  <string id="update_meeting_radio_button_2">Save without sending an update.</string>
+  <string id="send_meeting_response_dlg_title">Send meeting response</string>
+  <string id="send_meeting_response_label">This meeting has been updated and will be moved to your calendar. Do you want to send a response to the organizer?</string>
+  <string id="send_meeting_response_radio_button_1">Send a response now.</string>
+  <string id="send_meeting_response_radio_button_2">Don't send a response.</string>
+  <string id="recurrence_daily_pattern1">Every %INTERVAL day(s) from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_daily_pattern2">Every weekday from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_weekly_pattern">Every %INTERVAL week(s) on %DAY from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_monthly_pattern1">The %EVERY %DAY of every %INTERVAL month(s) from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_monthly_pattern2">Day %DAY of every %INTERVAL month(s) from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_yearly_pattern1">Every %EVERY %DAY of %MONTH from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_yearly_pattern2">Every %MONTH %DAY from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="recurrence_first">first</string>
+  <string id="recurrence_second">second</string>
+  <string id="recurrence_third">third</string>
+  <string id="recurrence_fourth">fourth</string>
+  <string id="recurrence_last">last</string>
+  <string id="when_label">When: </string>
+  <string id="where_label">Where: </string>
+  <string id="localized_when_string">%LOCALIZED_DATE from %START_TIME to %END_TIME %TIME_ZONE</string>
+  <string id="freebusy_fetching">Retrieving Free/Busy information</string>
+  <string id="freebusy_fetch_error">Could not retrieve Free/Busy information for this attendee</string>
+  <string id="freebusy_no_access">You do not have permission to access Free/Busy information. Please contact your system administrator.</string>
+  <string id="folder_tooltip">%s contains %s message(s)</string>
+  <string id="contact_folder_tooltip">%s contains %s contact(s)</string>
+  <string id="rules_wizard_not_installed">Rules Wizard not installed.  Please contact your administrator.</string>
+  <string id="specialfolder_mailbox">Mailbox - %s</string>
+  <string id="specialfolder_inbox">Inbox</string>
+  <string id="specialfolder_outbox">Outbox</string>
+  <string id="specialfolder_calendar">Calendar</string>
+  <string id="specialfolder_contacts">Contacts</string>
+  <string id="specialfolder_deleteditems">Deleted Items</string>
+  <string id="specialfolder_sentitems">Sent Items</string>
+  <string id="specialfolder_journal">Journal</string>
+  <string id="specialfolder_drafts">Drafts</string>
+  <string id="specialfolder_notes">Notes</string>
+  <string id="specialfolder_tasks">Tasks</string>
+  <string id="specialfolder_recovery">Scalix Recovered Items</string>
+  <string id="specialfolder_shared">Public Folders</string>
+  <string id="specialfolder_other_users">Other Users</string>
+  <string id="folder_type_mail">Mail</string>
+  <string id="folder_type_calendar">Calendar</string>
+  <string id="folder_type_contacts">Contacts</string>
+  <string id="folder_type_tasks">Tasks</string>
+  <string id="folder_type_journal">Journal</string>
+  <string id="folder_type_notes">Notes</string>
+  <string id="folder_time_window_one_day">One Day</string>
+  <string id="folder_time_window_three_day">Three Days</string>
+  <string id="folder_time_window_one_week">One Week</string>
+  <string id="folder_time_window_two_weeks">Two Weeks</string>
+  <string id="folder_time_window_one_month">One Month</string>
+  <string id="folder_time_window_three_months">Three Months</string>
+  <string id="folder_time_window_one_year">One Year</string>
+  <string id="folder_time_window_no_limit">No Limit</string>
+  <string id="messageheader_from">From</string>
+  <string id="messageheader_from_name">Name</string>
+  <string id="messageheader_from_address">Address</string>
+  <string id="messageheader_from_replyto">Reply-To</string>
+  <string id="messageheader_to">To</string>
+  <string id="messageheader_cc">Cc</string>
+  <string id="messageheader_bcc">Bcc</string>
+  <string id="messageheader_post_to">Post To</string>
+  <string id="messageheader_subject">Subject</string>
+  <string id="messageheader_title">Title</string>
+  <string id="messageheader_attach">Attach</string>
+  <string id="messageheader_sent">Sent</string>
+  <string id="messageheader_received">Date</string>
+  <string id="messageheader_size">Size</string>
+  <string id="messageheader_modified">Modified</string>
+  <string id="contactheader_name">Name</string>
+  <string id="contactheader_email">Email</string>
+  <string id="contactheader_phone">Phone</string>
+  <string id="contactheader_company">Company</string>
+  <string id="calendarheader_location">Location</string>
+  <string id="calendarheader_start_time">Start Time</string>
+  <string id="calendarheader_end_time">End Time</string>
+  <string id="calendarheader_required_recipients">Required</string>
+  <string id="calendarheader_optional_recipients">Optional</string>
+  <string id="calendarheader_resources">Resources</string>
+  <string id="calendarheader_duration">Duration</string>
+  <string id="calendarheader_busy_status">Busy Status</string>
+  <string id="tasksheader_subject">Task Name</string>
+  <string id="tasksheader_status">Status</string>
+  <string id="tasksheader_dueDate">Due Date</string>
+  <string id="tasksheader_duration">Duration</string>
+  <string id="tasksheader_percentageComplete">% Complete</string>
+  <string id="tasksheader_taskFolder">Task Folder</string>
+  <string id="tasksheader_assignedTo">Assigned To</string>
+  <string id="tasksdefault_percentageComplete">0%</string>
+  <string id="tasksdefault_duration">---</string>
+  <string id="tasksdefault_status">Not Started</string>
+  <string id="tasksdefault_folder">Tasks</string>
+  <string id="tasksdefault_assignedTodefault">---</string>
+  <string id="tasks_event_reminder_image_tooltip">A reminder is set for this task</string>
+  <string id="searchheader_relevance">Relevance</string>
+  <string id="searchheader_folder">Folder</string>
+  <string id="contextmenus_new_message">New Mail Message</string>
+  <string id="contextmenus_new_post">New Post in This Folder</string>
+  <string id="contextmenus_new_folder">New Folder</string>
+  <string id="contextmenus_rename">Rename...</string>
+  <string id="contextmenus_delete">Delete</string>
+  <string id="contextmenus_promote">Promote</string>
+  <string id="contextmenus_mark_all_read">Mark all read</string>
+  <string id="contextmenus_refresh_folder">Auto Refresh</string>
+  <string id="contextmenus_edit_permissions">Edit Permissions...</string>
+  <string id="contextmenus_edit_properties">Edit Properties...</string>
+  <string id="contextmenus_empty_deleted_items">Empty Deleted Items</string>
+  <string id="contextmenus_add_to_addressbook">Add Sender to Address Book</string>
+  <string id="contextmenus_send_email">Send Email</string>
+  <string id="contextmenus_properties">Properties</string>
+  <string id="contextmenus_new_contact">New Contact</string>
+  <string id="contextmenus_new_distribution_list">New Distribution List</string>
+  <string id="contextmenus_search">Search</string>
+  <string id="contextmenus_define">Define</string>
+  <string id="contextmenus_add_to_contacts">Add To Contacts</string>
+  <string id="contextmenus_add_to_dist_list">Add To New Distribution List</string>
+  <string id="contextmenus_appointment_open">Open</string>
+  <string id="contextmenus_appointment_private">Private</string>
+  <string id="contextmenus_appointment_show_time_as">Show time as</string>
+  <string id="contextmenus_appointment_label">Label</string>
+  <string id="contextmenus_appointment_delete">Delete</string>
+  <string id="contextmenus_calendar_new_appointment">New appointment</string>
+  <string id="contextmenus_calendar_new_all_day_event">New all day event</string>
+  <string id="contextmenus_calendar_new_meeting_request">New meeting request</string>
+  <string id="contextmenus_calendar_new_recurring_appointment">New recurring appointment</string>
+  <string id="contextmenus_calendar_new_recurring_event">New recurring event</string>
+  <string id="contextmenus_calendar_new_recurring_meeting">New recurring meeting</string>
+  <string id="contextmenus_calendar_go_to_today">Today</string>
+  <string id="contextmenus_colors_blue">Blue</string>
+  <string id="contextmenus_colors_cyan">Cyan</string>
+  <string id="contextmenus_colors_green">Green</string>
+  <string id="contextmenus_colors_purple">Purple</string>
+  <string id="contextmenus_colors_white">White</string>
+  <string id="contextmenus_colors_yellow">Yellow</string>
+  <string id="contextmenus_colors_pink">Pink</string>
+  <string id="contextmenus_colors_grey">Grey</string>
+  <string id="contextmenus_colors_orange">Orange</string>
+  <string id="contextmenus_colors_more">More...</string>
+  <string id="contextmenus_colors_other">Other</string>
+  <string id="contextmenus_new_task">New Task</string>
+  <string id="forward_original_message">----- Original Message -----</string>
+  <string id="forward_prefix">FW</string>
+  <string id="reply_prefix">RE</string>
+  <string id="return_receipt_prefix">Read: </string>
+  <string id="mailwindow_loading">Loading Scalix Web Access</string>
+  <string id="addressresolution_title">Choose Address</string>
+  <string id="addressresolution_multiple_names">You have more than one address for the name %s. Please select which address you would like to use.</string>
+  <string id="addressresolution_error">An error occurred resolving the addressees of this email.  Please contact your system administrator.</string>
+  <string id="addresssearch_title">Address Search</string>
+  <string id="addresssearch_find">Find Address</string>
+  <string id="addresssearch_search_in_label">Search in:</string>
+  <string id="addresssearch_type_name_label">Type name:</string>
+  <string id="addresssearch_enter_search_pattern">A search pattern must be specified to perform this operation.</string>
+  <string id="addresssearch_no_results">No Search Results Returned</string>
+  <string id="addresssearch_searching">Searching...</string>
+  <string id="addresssearchiframe_loading">Loading...</string>
+  <string id="attach_title">File Attachments</string>
+  <string id="attach_step_1">1. Click <b>Browse</b> to select the file you want to attach.</string>
+  <string id="attach_step_2">2. Click <b>Attach</b>.</string>
+  <string id="attach_step_3">3. Repeat steps 1 and 2 to add more attachments. To remove an attachment, select it below and click <b>Remove</b>.</string>
+  <string id="attach_total_size">Total size=</string>
+  <string id="attach_alert_select">Please select the file you would like to upload by clicking on the browse button.</string>
+  <string id="addressbooksearch_title_system">System Directory</string>
+  <string id="addressbooksearch_title_personal">Personal Contacts</string>
+  <string id="addressbooksearch_button_search">Search</string>
+  <string id="addressbooksearch_button_clear">Clear</string>
+  <string id="addressbooksearch_label_name">Full Name</string>
+  <string id="addressbooksearch_label_email">Email Address</string>
+  <string id="addressbooksearch_label_organization">Organization</string>
+  <string id="addressbooksearch_label_phone">Phone Number</string>
+  <string id="addressbooksearch_label_business">Business Phone</string>
+  <string id="addressbooksearch_label_fax">Fax Phone</string>
+  <string id="addressbooksearch_label_mobile">Mobile Phone</string>
+  <string id="addressbooksearch_label_pager">Pager Phone</string>
+  <string id="addressbooksearch_label_address">Address</string>
+  <string id="addressbooksearch_label_dlname">Name</string>
+  <string id="addressbooksearch_label_dlmembers">Members</string>
+  <string id="addressbooksearch_label_dlmembers_unavailable">Member list unavailable</string>
+  <string id="addressbooksearch_searching">Searching...</string>
+  <string id="addressbooksearch_no_search_results_returned">No Search Results Returned</string>
+  <string id="addressbooksearch_partial_list">Partial list. Please narrow down your search.</string>
+  <string id="contacts_label_name">Name</string>
+  <string id="contacts_label_firstname">First Name</string>
+  <string id="contacts_label_lastname">Last Name</string>
+  <string id="contacts_label_company">Company</string>
+  <string id="contacts_label_first">First</string>
+  <string id="contacts_label_middle">Middle</string>
+  <string id="contacts_label_last">Last</string>
+  <string id="contacts_label_fileas">File As</string>
+  <string id="contacts_label_emailaddresses">Email Addresses</string>
+  <string id="contacts_label_display">Display Name</string>
+  <string id="contacts_label_email">Email Address</string>
+  <string id="contacts_label_email_option_1">Email</string>
+  <string id="contacts_label_email_option_2">Email-2</string>
+  <string id="contacts_label_email_option_3">Email-3</string>
+  <string id="contacts_label_phonenumbers">Phone Numbers</string>
+  <string id="contacts_label_home">Home</string>
+  <string id="contacts_label_work">Work</string>
+  <string id="contacts_label_pager">Pager</string>
+  <string id="contacts_label_mobile">Mobile</string>
+  <string id="contacts_label_fax">Fax</string>
+  <string id="contacts_label_streetaddresses">Street Addresses</string>
+  <string id="contacts_label_streetaddresses_home">Home</string>
+  <string id="contacts_label_streetaddresses_company">Company</string>
+  <string id="contacts_label_street">Street</string>
+  <string id="contacts_label_city">City</string>
+  <string id="contacts_label_zip">Zip</string>
+  <string id="contacts_label_country">Country</string>
+  <string id="contacts_label_state">State/Province</string>
+  <string id="contacts_label_business">Business</string>
+  <string id="contacts_label_office">Office</string>
+  <string id="contacts_label_manager">Manager</string>
+  <string id="contacts_label_title">Job Title</string>
+  <string id="contacts_label_department">Department</string>
+  <string id="contacts_label_profession">Profession</string>
+  <string id="contacts_label_imaddress">IM Address</string>
+  <string id="contacts_label_webaddress">Web Address</string>
+  <string id="contacts_label_fileas_option_1">Last, First</string>
+  <string id="contacts_label_fileas_option_2">First Last</string>
+  <string id="contacts_label_fileas_option_3">Last, First (Company)</string>
+  <string id="contacts_label_fileas_option_4">Company (Last, First)</string>
+  <string id="contacts_label_fileas_option_5">Company</string>
+  <string id="contacts_label_notes">Notes</string>
+  <string id="contacts_create">Create</string>
+  <string id="contacts_update">Update</string>
+  <string id="contacts_label_homeaddress">Home Address:</string>
+  <string id="contacts_label_workaddress">Work Address:</string>
+  <string id="contacts_label_otheraddress">Other Address:</string>
+  <string id="contacts_label_phone">Phone</string>
+  <string id="contacts_label_url">URL</string>
+  <string id="distributionlist_title">Distribution List</string>
+  <string id="distributionlist_view">View Distribution List</string>
+  <string id="distributionlist_name">Name</string>
+  <string id="distributionlist_email">Email</string>
+  <string id="distributionlist_pdl">Personal Distribution List</string>
+  <string id="distributionlistdetails_title">Distribution List Properties</string>
+  <string id="distributionlistdetails_name">Distribution List Name:</string>
+  <string id="distributionlist_addnew">Add New</string>
+  <string id="distributionlist_search">Search Users</string>
+  <string id="distributionlist_remove">Remove User</string>
+  <string id="distributionlist_edit">Edit User</string>
+  <string id="distributionlist_addnewuser_title">Add New Member</string>
+  <string id="distributionlist_edituser_title">Edit Member Information</string>
+  <string id="distributionlist_deleteuser_error">A member must be selected to delete it</string>
+  <string id="distributionlist_name_empty">Please enter a name for this distribution list.</string>
+  <string id="distributionlist_member_name_empty">A name must be specified to add a member to the list</string>
+  <string id="distributionlist_member_email_empty">An email address must be specified to add a member to the list</string>
+  <string id="faq_title">Scalix Web Access Help</string>
+  <string id="fromreplyto_title">Set From/Reply-To</string>
+  <string id="fromreplyto_name">(name)</string>
+  <string id="fromreplyto_address">(address)</string>
+  <string id="fullheaders_title">Full headers</string>
+  <string id="rawmessage_title">Raw Message</string>
+  <string id="spelling_title">Spell Checker</string>
+  <string id="spelling_problem">There was a problem with the spell checker.  Please Try again.</string>
+  <string id="spelling_not_found">Not Found</string>
+  <string id="spelling_replace_with">Replace With</string>
+  <string id="spelling_suggestions">Suggestions</string>
+  <string id="spelling_replace">Replace</string>
+  <string id="spelling_replace_all">Replace All</string>
+  <string id="spelling_add">Add</string>
+  <string id="spelling_ignore">Ignore</string>
+  <string id="spelling_ignore_all">Ignore All</string>
+  <string id="spelling_close">Close</string>
+  <string id="spelling_complete">Spell check complete.</string>
+  <string id="spelling_no_dictionary">There is no dictionary available for your selected language (%s). Spell check cannot be performed.</string>
+  <string id="spelling_no_dictionary_autosend">There is no dictionary available for your selected language (%s). No automatic spell check can be performed.
+
+Send message anyway?</string>
+  <string id="stop_spelling_and_sending">Do you want to stop spelling checking and send this email?</string>
+  <string id="drafts_auto_save_msg">Draft saved at %s</string>
+  <string id="drafts_confirm_title">Confirm Close</string>
+  <string id="drafts_confirm_text">Do you want to save the changes to your 'Drafts' folder?</string>
+  <string id="drafts_confirm_text_mozilla">Do you want to save this message as a draft?
+
+  Press 'OK' to save a draft.
+  Press 'Cancel' to discard the message.</string>
+  <string id="attachments_title">File Attachments</string>
+  <string id="attachment_filename">attachment</string>
+  <string id="upload_window_title">Upload window</string>
+  <string id="attachments_uload_error">An error occurred while trying to upload this file.\nPlease check that the file exists on your computer and try again.</string>
+  <string id="attachments_choose_file">Please select the file you would like to upload by clicking on the browse button.</string>
+  <string id="attachments_upload_step1">1. Click <b>Browse</b> to select the file you want to attach.</string>
+  <string id="attachments_upload_step2">2. Click <b>Attach</b>.</string>
+  <string id="attachments_upload_step3">3. Repeat steps 1 and 2 to add more attachments. To remove an attachment, select it below and click <b>Remove</b>.</string>
+  <string id="attachments_attach">Attach</string>
+  <string id="attachments_remove">Remove</string>
+  <string id="attachments_upload_please_wait">Uploading file. Please wait.</string>
+  <string id="attachments_total_size">Total:</string>
+  <string id="attachments_maximum">Maximum</string>
+  <string id="addresscache_not_loaded">The list of previous recipients is still being loaded. Try again in a moment.</string>
+  <string id="addresscache_clear_confirm">Are you sure you want to remove all entries from the auto-complete list of previous recipients?</string>
+  <string id="addresscache_empty">The list of previous recipients is now empty</string>
+  <string id="email_empty">SWA could not determine the email address for this account.
+The default email address 'invalid@email.com' will be used.
+Please contact your system administrator to remedy this situation.</string>
+  <string id="email_invalid">The email address %addr is not valid</string>
+  <string id="email_addr_incorrect">The email address seems incorrect (check @ and .'s)</string>
+  <string id="email_username_bad">The username portion of the address contains invalid characters.</string>
+  <string id="email_username_invalid">The username portion of this address is not valid</string>
+  <string id="email_domain_bad">The domain portion of the address contains invalid characters.</string>
+  <string id="email_domain_invalid">The domain portion of this address is not valid</string>
+  <string id="email_ip_domain">The domain seems to be an invalid IP address</string>
+  <string id="email_unknown_domain">The domain portion is not well known (e.g. .com, .edu) or a two letter country</string>
+  <string id="email_missing_hostname">This address is missing a hostname</string>
+  <string id="deny_multiple_sessions">You can only have one active SWA session at any time. To log in with a different user quit your existing SWA session first.</string>
+  <string id="ldap_time_exceeded">This search exceeded the time limit allowed. A partial results list is being returned.</string>
+  <string id="ldap_server_error">%type occurred during the search operation. Please notify your system administrator about this problem.</string>
+  <string id="change_password_wnd_title">Change Password</string>
+  <string id="change_password_wnd_old_password_label">Old password: </string>
+  <string id="change_password_wnd_new_password_label">New password: </string>
+  <string id="change_password_wnd_confirm_new_password_label">Confirm new password: </string>
+  <string id="change_password_wnd_passwords_no_match">The new passwords entered did not match. Please enter them again.</string>
+  <string id="change_password_success">Your password has been updated successfully</string>
+  <string id="change_password_error">An error occurred while changing your password.
+Please contact your system administrator.</string>
+  <string id="change_password_invalid_old_password">The password you typed does not match your old password.</string>
+  <string id="change_password_invalid_new_password">Your new password does not match the requirements established by your system administrator.
+Please contact your system administrator.</string>
+  <string id="close_folder_pane_tooltip">Close Folders Pane</string>
+  <string id="close_minicalendar_tooltip">Close Mini Calendar Pane</string>
+  <string id="close_upcoming_events_tooltip">Close Events Pane</string>
+  <string id="about_title">About Scalix Web Access</string>
+  <string id="about_close">Close Window</string>
+  <string id="about_platform_version_unavailable">N/A</string>
+  <string id="about_copyright">Copyright &#xa9; 2002-2014 Scalix Corporation.  All rights reserved.</string>
+  <string id="about_copyright_third_party">Copyright &#xa9; 2003 Oddpost Inc. All rights reserved.  The Logictran R2Net Converter is copyright &#xa9; 2000, Logictran, Inc. Portions of the R2Net Converter are based in part on the work of the University of Toronto.</string>
+  <string id="about_warning">Warning: This software is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe criminal penalites, and will be prosecuted to the maximum extent possible under the law.</string>
+  <string id="meeting_organizer_no_response_expected">As the meeting organizer, you do not need to respond to the meeting.</string>
+  <string id="scheduling_delegation_not_supported">This meeting involves delegation.
+Delegation is supported by Scalix Web Access but is not supported
+by the version of the Scalix server you are currently running.
+Please use Outlook to proceed with this meeting.</string>
+  <string id="on_before_unload_prompt">You were in the middle of composing a message. You will lose your changes if you press OK.</string>
+  <string id="kilobytes_unit"> KB</string>
+  <string id="on_behalf_of">%DELEGATE on behalf of %PRINCIPLE</string>
+  <string id="mark_as_read">Mark As Read</string>
+  <string id="mark_as_unread">Mark As Unread</string>
+  <string id="set_follow_up_flag">Set Follow Up Flag</string>
+  <string id="clear_follow_up_flag">Clear Follow Up Flag</string>
+  <string id="show_full_filename">Show full filename</string>
+  <string id="please_select_text_to_link">Please select text to add link</string>
+
+
+  <!-- Color Picker dialog -->
+  <string id="color_picker_dlg_title">Color Picker</string>
+  <string id="color_picker_red">Red</string>
+  <string id="color_picker_green">Green</string>
+  <string id="color_picker_blue">Blue</string>
+
+  <!-- Calendar Set Pane -->
+  <string id="calendar_sets_title">Calendar Sets</string>
+  <string id="calendar_set_overwrite_warning">A calendar set with this name already exists. Overwrite?</string>
+  <string id="calendar_set_select_set">Select set...</string>
+  <string id="calendar_set_delete_set_tooltip">Delete Set</string>
+
+  <!-- Add Other Users Calendar Link -->
+  <string id="add_other_users_calendar_link">Add other user's calendar</string>
+
+  <!-- Create folder dialog -->
+  <string id="dlg_create_folder_title">Create Folder</string>
+  <string id="dlg_create_folder_name_label">Name:</string>
+  <string id="dlg_create_folder_type_label">Folder contains:</string>
+  <string id="dlg_create_folder_mail_and_post_items">Mail and Post Items</string>
+  <string id="dlg_create_folder_calendar_items">Calendar Items</string>
+  <string id="dlg_create_folder_contact_items">Contact Items</string>
+  <string id="dlg_create_folder_select_parent">Select where to place the folder:</string>
+
+  <!-- Resource booking -->
+  <string id="drb_success">The resources have been successfully processed</string>
+  <string id="drb_conflict">"%s" is already booked for the specified time. You must use another time or find another resource.</string>
+  <string id="drb_generic_error">An error occurred while trying to process the resources.
+Please contact your system administrator.</string>
+  <string id="drb_error">An error occurred while trying to process the resource "%s".
+Please contact your system administrator.</string>
+  <string id="drb_auto_accept_off">The resource "%s" has not been configured to automatically accept meeting requests
+or process cancellations. Please contact your system administrator.</string>
+  <string id="drb_decline_recurring">The resource "%s" has been configured to automatically reject recurring meeting requests.</string>
+
+  <!-- Address selection dialog -->
+  <string id="address_selection_to_label">To -></string>
+  <string id="address_selection_cc_label">Cc -></string>
+  <string id="address_selection_bcc_label">Bcc -></string>
+  <string id="address_selection_required_label">Required -></string>
+  <string id="address_selection_optional_label">Optional -></string>
+  <string id="address_selection_resources_label">Resources -></string>
+  <string id="address_selection_add_label">Add -></string>
+  <string id="address_selection_new_message_button">New Message</string>
+  <string id="address_selection_new_appointment_button">New Appointment</string>
+
+  <!-- Date and time formats section
+   +**********************************************************************+
+   | The DateFormat class uses the same 'format' strings as the           |
+   | java.text.SimpleDateFormat class, with minor exceptions.             |
+   | The format string consists of the following abbreviations:           |
+   |                                                                      |
+   | Field        | Full Form          | Short Form                       |
+   +**************+********************+**********************************+
+   | Year         | yyyy (4 digits)    | yy (2 digits), y (2 or 4 digits) |
+   |              |                    | Y ('Year' suffix)                |
+   | Month        | MMM (name or abbr.)| MM (2 digits), M (1 or 2 digits) |
+   |              | NNN (abbr.)        | L ('Month' suffix)               |
+   | Day of Month | dd (2 digits)      | d (1 or 2 digits)                |
+   |              |                    | D ('Day' suffix)                 |
+   | Day of Week  | EE (name)          | E (abbr)                         |
+   | Hour (1-12)  | hh (2 digits)      | h (1 or 2 digits)                |
+   |              |                    | G ('Hour' suffix)                |
+   | Hour (0-23)  | HH (2 digits)      | H (1 or 2 digits)                |
+   | Minute       | mm (2 digits)      | m (1 or 2 digits)                |
+   |              |                    | P ('Minute' suffix)              |
+   | Second       | ss (2 digits)      | s (1 or 2 digits)                |
+   |              |                    | S ('Second' suffix)              |
+   | AM/PM        | a                  |                                  |
+   |                                                                      |
+   | NOTE THE DIFFERENCE BETWEEN MM and mm! Month=MM, not mm!             |
+   | Examples:                                                            |
+   |  "MMM d, y" matches: January 01, 2000                                |
+   |                      Dec 1, 1900                                     |
+   |                      Nov 20, 00                                      |
+   |  "M/d/yy"   matches: 01/20/00                                        |
+   |                      9/2/00                                          |
+   | "MMM dd, yyyy hh:mm:ssa" matches: "January 01, 2000 12:30:45AM"      |
+   |                                                                      |
+   | "yyyyYMMLddD hhGmmPa" matches: "2000Y01M01D 12H30mAM"                |
+   | (most commonly used with chinese or japanese kanji chars)            |
+   |                                                                      |
+   | Strings in the date format can be escaped by wrapping string         |
+   | in single quotes.                                                    |
+   | In Portuguese "EE, d 'de' MMM 'de' yyyy" will show us as             |
+   |               "Domingo, 3 de Fevereiro de 2007                       |
+   |                                                                      |
+   +**********************************************************************+ -->
+
+  <!-- month/day/year, 12 hour format -->
+  <string id="datetime_format_1">month/day/year, 12 hour format</string>
+
+  <string id="time_format_1">h:mma</string>
+  <string id="short_date_format_1">M/d/yyyy</string>
+  <string id="long_date_format_1">EE, MMM d, yyyy</string>
+  <string id="short_date_time_format_1">M/d/yyyy h:mma</string>
+  <string id="pretty_date_time_format_1">E, M/d/yyyy h:mma</string>
+  <string id="long_date_time_format_1">EE, MMM d, yyyy h:mma</string>
+  <string id="upcoming_appointments_date_format_1">EE, M/d/yyyy</string>
+  <string id="dayweekviewheader_date_format_1">MMM d</string>
+  <string id="freebusy_time_header_date_format_1">h</string>
+  <string id="mini_cal_header_date_format_1">MMM yyyy</string>
+
+  <!-- month/day/year, 24 hour format -->
+  <string id="datetime_format_2">month/day/year, 24 hour format</string>
+
+  <string id="time_format_2">HH:mm</string>
+  <string id="short_date_format_2">M/d/yyyy</string>
+  <string id="long_date_format_2">E, NNN d, yyyy</string>
+  <string id="short_date_time_format_2">M/d/yyyy HH:mm</string>
+  <string id="pretty_date_time_format_2">E, M/d/yyyy HH:mm</string>
+  <string id="long_date_time_format_2">EE, MMM d, yyyy HH:mm</string>
+  <string id="upcoming_appointments_date_format_2">EE, M/d/yyyy</string>
+  <string id="dayweekviewheader_date_format_2">MMM d</string>
+  <string id="freebusy_time_header_date_format_2">HH</string>
+  <string id="mini_cal_header_date_format_2">MMM yyyy</string>
+
+  <!-- day/month/year, 12 hour format -->
+  <string id="datetime_format_3">day/month/year, 12 hour format</string>
+
+  <string id="time_format_3">h:mma</string>
+  <string id="short_date_format_3">d/M/yyyy</string>
+  <string id="long_date_format_3">EE, MMM d, yyyy</string>
+  <string id="short_date_time_format_3">d/M/yyyy h:mma</string>
+  <string id="pretty_date_time_format_3">E, d/M/yyyy h:mma</string>
+  <string id="long_date_time_format_3">EE, MMM d, yyyy h:mma</string>
+  <string id="upcoming_appointments_date_format_3">EE, d/M/yyyy</string>
+  <string id="dayweekviewheader_date_format_3">MMM d</string>
+  <string id="freebusy_time_header_date_format_3">h</string>
+  <string id="mini_cal_header_date_format_3">MMM yyyy</string>
+
+  <!-- day/month/year, 24 hour format -->
+  <string id="datetime_format_4">day/month/year, 24 hour format</string>
+
+  <string id="time_format_4">HH:mm</string>
+  <string id="short_date_format_4">d/M/yyyy</string>
+  <string id="long_date_format_4">EE, MMM d, yyyy</string>
+  <string id="short_date_time_format_4">d/M/yyyy HH:mm</string>
+  <string id="pretty_date_time_format_4">E, d/M/yyyy HH:mm</string>
+  <string id="long_date_time_format_4">EE, MMM d, yyyy HH:mm</string>
+  <string id="upcoming_appointments_date_format_4">EE, d/M/yyyy</string>
+  <string id="dayweekviewheader_date_format_4">MMM d</string>
+  <string id="freebusy_time_header_date_format_4">HH</string>
+  <string id="mini_cal_header_date_format_4">MMM yyyy</string>
+
+  <!-- year/month/day, 12 hour format -->
+  <string id="datetime_format_5">year/month/day, 12 hour format</string>
+
+  <string id="time_format_5">h:mma</string>
+  <string id="short_date_format_5">yyyy/M/d</string>
+  <string id="long_date_format_5">EE, MMM d, yyyy</string>
+  <string id="short_date_time_format_5">yyyy/M/d h:mma</string>
+  <string id="pretty_date_time_format_5">E, yyyy/M/d h:mma</string>
+  <string id="long_date_time_format_5">EE, MMM d, yyyy h:mma</string>
+  <string id="upcoming_appointments_date_format_5">EE, yyyy/M/d</string>
+  <string id="dayweekviewheader_date_format_5">MMM d</string>
+  <string id="freebusy_time_header_date_format_5">h</string>
+  <string id="mini_cal_header_date_format_5">yyyy MMM</string>
+
+  <!-- year/month/day, 24 hour format -->
+  <string id="datetime_format_6">year/month/day, 24 hour format</string>
+
+  <string id="time_format_6">HH:mm</string>
+  <string id="short_date_format_6">yyyy/M/d</string>
+  <string id="long_date_format_6">EE, MMM d, yyyy</string>
+  <string id="short_date_time_format_6">yyyy/M/d HH:mm</string>
+  <string id="pretty_date_time_format_6">E, yyyy/M/d HH:mm</string>
+  <string id="long_date_time_format_6">EE, MMM d, yyyy HH:mm</string>
+  <string id="upcoming_appointments_date_format_6">EE, yyyy/M/d</string>
+  <string id="dayweekviewheader_date_format_6">MMM d</string>
+  <string id="freebusy_time_header_date_format_6">HH</string>
+  <string id="mini_cal_header_date_format_6">yyyy MMM</string>
+
+  <!--  Date Suffixes -->
+  <string id="date_suffix_year">Y</string>
+  <string id="date_suffix_month">M</string>
+  <string id="date_suffix_day">D</string>
+  <string id="date_suffix_hour">H</string>
+  <string id="date_suffix_minute">M</string>
+  <string id="date_suffix_second">S</string>
+  <string id="date_am">am</string>
+  <string id="date_pm">pm</string>
+
+  <string id="status_check_new_messages">Checking for new messages...</string>
+  <string id="status_stat_folder">Checking folder %s for messages...</string>
+  <string id="status_resume_folder_fetch">Receiving message headers</string>
+  <string id="status_folder_fetch_count">Receiving message headers %COUNT of %TOTAL</string>
+  <string id="status_sending_messages">Sending messages...</string>
+
+  <string id="infobar_scheduling_message_not_yet_processed">This message will be processed as soon as the calendar has been fully loaded.</string>
+  <string id="infobar_scheduling_message_not_processed">This message could not be processed properly because the calendar could not be loaded.</string>
+  <string id="infobar_high_importance">This message was sent with High Importance.</string>
+  <string id="infobar_low_importance">This message was sent with Low Importance.</string>
+  <string id="infobar_sensitivity">Please treat this as %sensitivity.</string>
+
+  <!-- Message sensitivity section -->
+  <string id="message_sensitivity_restriction_pp">This message has been marked as %sensitivity and cannot be viewed in the preview pane.</string>
+  <string id="message_sensitivity_blocked_pp">This message has been marked as %sensitivity and is being blocked from the preview pane.</string>
+  <string id="message_sensitivity_restriction">This message has been marked as %sensitivity and cannot be viewed.</string>
+  <string id="message_sensitivity_blocked">This message has been marked as %sensitivity and is being blocked.</string>
+  <string id="message_sensitivity_prompt">This message has been marked as %sensitivity.
+Do you wish to read the message?</string>
+
+  <!-- Miscellaneous errors -->
+  <string id="error_fetching_calendar_folders">An error occurred while fetching the messages in your calendar folder(s)</string>
+  <string id="error_fetching_other_users_calendars">The following users' folders could not be accessed: %s. The folders may not exist, or you may not have permission to access them.</string>
+  <string id="error_fetching_full_headers">An error occurred while fetching the full headers of this message</string>
+  <string id="error_fetching_raw_message">An error occurred while fetching the raw message. Please attempt to reload the message by clicking Send/Receive</string>
+  <string id="error_displaying_headers">Failed to display messages for folder %s. The browser received some data, but it was unable to display it. Click 'Send/Receive' to try again.</string>
+  <string id="error_fetching_oof_info">An error occurred while retrieving the current Out Of Office settings</string>
+  <string id="error_fetching_additional_mailboxes">An error occurred while retrieving the list of additional mailboxes</string>
+  <string id="error_fetching_message_content">An error occurred while fetching the content of this message</string>
+  <string id="error_fetching_metadata">An error occured while retrieving the metadata for folder %s</string>
+  <string id="soap_timeout_retry_prompt">Your request to the server has timed out.  Keep trying?</string>
+  <string id="folder_create_error">An error occurred while trying to create folder [%name]</string>
+  <string id="folder_already_exists">A folder with that name already exists. Enter a different name for the folder.</string>
+  <string id="folder_already_exists_in_deleted_items">A folder with that name already exists in Deleted Items.
+Please empty your Deleted Items folder before continuing with this operation.</string>
+  <string id="folder_name_empty">A folder name cannot be empty. Enter a name for the folder</string>
+  <string id="invalid_folder_name">The folder name contains invalid characters</string>
+  <string id="folder_no_promote">The selected folder is already at the top of the hierarchy</string>
+  <string id="operation_not_allowed_on_special_folder">This operation is not allowed on a special folder</string>
+  <string id="operation_not_allowed_on_virtual_folder">This operation is not allowed on a virtual folder</string>
+  <string id="operation_not_allowed_on_this_folder">This operation is not allowed on this folder</string>
+  <string id="permissions_restriction">You do not have the necessary permissions to perform this operation</string>
+  <string id="get_folder_permissions_error">An error occurred while trying to get the permissions on this folder</string>
+  <string id="no_subfolders_allowed">You cannot create a subfolder beneath this folder.</string>
+  <string id="folder_move_not_allowed">This folder cannot be moved to that location</string>
 </stringlist>

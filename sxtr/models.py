@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
-from sxtr.sx_translations import SacTr
+from sxtr.sx_translations import SacTr, SwaTr
 
 
 class Locales(models.Model):
@@ -30,8 +30,8 @@ class Applications(models.Model):
         if self.abbreviation == 'sac':
             return SacTr
         elif self.abbreviation == 'swa':
-            pass
-        raise Exception('Application not supported')
+            return SwaTr
+        raise NotImplementedError('Application not supported')
 
 
 class Translations(models.Model):

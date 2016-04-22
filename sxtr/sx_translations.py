@@ -4,11 +4,14 @@
 """
 import os
 from collections import OrderedDict
-from copy import deepcopy
+import xml.etree.ElementTree as ET
+
+import io
 
 from . import TEMPLATE_TR_FILES_DIR
 
 SAC_TR_FILE = os.path.join(TEMPLATE_TR_FILES_DIR, 'Strings.js')
+SWA_TR_FILE = os.path.join(TEMPLATE_TR_FILES_DIR, 'strings.xml')
 
 
 class SxTr(object):
@@ -21,16 +24,16 @@ class SxTr(object):
         self._tr = self._parse(None, self._origin.fromkeys(self._origin.keys()))
 
     def _origin_document(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def _parse(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def to_string(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def filename(self):
-        raise NotImplemented
+        raise NotImplementedError
 
     def to_json(self):
         for key, value in self._origin.items():
@@ -98,3 +101,39 @@ class SacTr(SxTr):
 
     def filename(self):
         return 'Strings_{}.js'.format(self._model.locale.locale.split('_')[-1])
+
+
+class SwaTr(SxTr):
+
+    def to_string(self):
+        xml = ET.parse(self._origin_document())
+        root = xml.getroot()
+        for key, value in self._tr.items():
+            if not value:
+                value = ''
+            for elem in root.findall('./string[@id="{0}"]'.format(key)):
+                elem.text = value
+        result = io.BytesIO()
+        xml.write(result, encoding="utf-8", method="xml", xml_declaration=True)
+        return result.getvalue().decode('utf-8')
+
+    def filename(self):
+        return 'strings.xml'
+
+    def _parse(self, data, result=None):
+        if not result:
+            result = OrderedDict()
+
+        if not data:
+            if not self._model.translation:
+                return result
+            xml = ET.fromstring(self._model.translation)
+        else:
+            xml = ET.parse(data).getroot()
+
+        for elem in xml:
+            result[elem.attrib.get('id')] = ''.join(elem.itertext())
+        return result
+
+    def _origin_document(self):
+        return open(SWA_TR_FILE)
