@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
+from sxtr.sx_translations import SacTr
 
 
 class Locales(models.Model):
@@ -25,6 +26,13 @@ class Applications(models.Model):
     class Meta:
         ordering = ('name',)
 
+    def lexer(self):
+        if self.abbreviation == 'sac':
+            return SacTr
+        elif self.abbreviation == 'swa':
+            pass
+        raise Exception('Application not supported')
+
 
 class Translations(models.Model):
     locale = models.ForeignKey(Locales)
@@ -38,3 +46,7 @@ class Translations(models.Model):
             ('edit_tr', 'Edit Translation'),
         )
         unique_together = ('application', 'locale')
+
+    def grammar(self):
+        return self.application.lexer()(self)
+

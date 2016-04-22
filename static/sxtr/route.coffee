@@ -28,6 +28,13 @@ AuthorizedUserResolver.$inject = ['$q', '$location', 'Auth']
 
 config = ($routeProvider, $locationProvider, $httpProvider, $compileProvider) ->
   $routeProvider
+    .when '',
+      title: 'Index'
+      templateUrl: pageUrl("index.html")
+      controller: 'mainController'
+      resolve:
+        translations: ($q, Requests)->
+          return Requests.get 'translations'
     .when '/',
       title: 'Index'
       templateUrl: pageUrl("index.html")

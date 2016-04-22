@@ -10,15 +10,15 @@ from . import TEMPLATE_TR_FILES_DIR
 
 SAC_TR_FILE = os.path.join(TEMPLATE_TR_FILES_DIR, 'Strings.js')
 
+
 class SxTr(object):
+
     content_type = 'text/plain'
 
-    def __init__(self, tr_data):
+    def __init__(self, model):
+        self._model = model
         self._origin = self._parse(self._origin_document())
-        self._tr = self._parse(
-            tr_data,
-            self._origin.fromkeys(self._origin.keys())
-        )
+        self._tr = self._parse(None, self._origin.fromkeys(self._origin.keys()))
 
     def _origin_document(self):
         raise NotImplemented
@@ -27,6 +27,9 @@ class SxTr(object):
         raise NotImplemented
 
     def to_string(self):
+        raise NotImplemented
+
+    def filename(self):
         raise NotImplemented
 
     def to_json(self):
@@ -44,16 +47,15 @@ class SacTr(SxTr):
 
     content_type = 'application/javascript'
 
-    def __init__(self, tr_data):
-        super().__init__(tr_data.split("\n"))
-
     def _origin_document(self):
         yield from open(SAC_TR_FILE)
 
-    def _parse(self, data, default=None):
-        if not default:
-            default = OrderedDict()
-        result = default
+    def _parse(self, data, result=None):
+        if not result:
+            result = OrderedDict()
+        if not data:
+            data = self._model.translation.split("\n")
+
         for line in data:
             if not line.startswith('UIstrings.'):
                 continue
@@ -63,6 +65,7 @@ class SacTr(SxTr):
             if 'regexp' in key.lower() or 'convertCharacter' in key:
                 continue
             result[key] = value
+
         return result
 
     def __parse_line(self, line):
@@ -92,3 +95,6 @@ class SacTr(SxTr):
             parts[-1] = '"{0}"'.format(value.replace('"', '\"'))
             result.append(' = '.join(parts))
         return "\n".join(result)
+
+    def filename(self):
+        return 'Strings_{}.js'.format(self._model.locale.locale.split('_')[-1])

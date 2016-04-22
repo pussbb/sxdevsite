@@ -42,7 +42,16 @@
   AuthorizedUserResolver.$inject = ['$q', '$location', 'Auth'];
 
   config = function($routeProvider, $locationProvider, $httpProvider, $compileProvider) {
-    $routeProvider.when('/', {
+    $routeProvider.when('', {
+      title: 'Index',
+      templateUrl: pageUrl("index.html"),
+      controller: 'mainController',
+      resolve: {
+        translations: function($q, Requests) {
+          return Requests.get('translations');
+        }
+      }
+    }).when('/', {
       title: 'Index',
       templateUrl: pageUrl("index.html"),
       controller: 'mainController',

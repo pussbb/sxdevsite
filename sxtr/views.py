@@ -97,60 +97,56 @@ class TranslationView(View):
         result['application'] = model_to_dict(item.application)
         return result
 
-    def get(self, request, locale_id=None, action=None):
+    def get(self, request, tr_id=None, action=None):
         # JsonResponse(Translations.objects.all(), safe=False)
         # error = [] is not JSON serializable
 
-        if not locale_id:
+        if not tr_id:
             return JsonResponse(self.translation_list(), safe=False)
 
-        model = get_object_or_404(Translations, pk=locale_id)
+        model = get_object_or_404(Translations, pk=tr_id)
         try:
-            translation = self.__get_translation_class(model)
+            translation = model.grammar()
         except Exception as exp:
             return HttpResponseNotFound(exp)
 
-        #  for now we dont care about any additional action name
+        #  for now we don't care about any additional action name
         #  the same behaviour for all actions if not None
         if action:
             response = HttpResponse(translation, translation.content_type)
-            response['Content-Disposition'] = 'attachment; filename=test.js'
+            response['Content-Disposition'] = 'attachment; filename={}'.format(
+                translation.filename()
+            )
             return response
 
         result = self.dump_tr_model(model)
         result['translation'] = list(translation.to_json())
         return JsonResponse(result, safe=False)
 
-    def __get_translation_class(self, model: Translations):
-        if model.application.abbreviation == 'sac':
-            return SacTr(model.translation)
-        elif model.application.abbreviation == 'swa':
-            pass
-        raise Exception('Application not supported')
-
     @method_decorator(login_required)
-    def post(self, request, locale_id=None, action=None):
-        if not locale_id:
+    def post(self, request, tr_id=None, action=None):
+        if not tr_id:
             return self.__create_new_translation(request)
 
-        model = get_object_or_404(Translations, pk=locale_id)
+        model = get_object_or_404(Translations, pk=tr_id)
 
         try:
-            translation = self.__get_translation_class(model)
+            translation = model.grammar()
         except Exception as exp:
             return JsonResponse({'errors': {'__all__': str(exp)}}, status=400)
 
         translation.update(get_post_data(self.request))
         model.translation = translation.to_string()
         model.save()
-        return self.get(request, locale_id)
+        return self.get(request, tr_id)
 
     def __create_new_translation(self, request):
-        translation = Translations(author=request.user, translation='')
-        form = TranslationForm(get_post_data(self.request),
-                               instance=translation)
+        form = TranslationForm(
+            get_post_data(self.request),
+            Translations(author=request.user, translation='')
+        )
         if not form.is_valid():
             return JsonResponse({'errors': form.errors}, status=400)
 
-        translation.save()
-        return JsonResponse(model_to_dict(translation), safe=False)
+        model = form.save()
+        return self.get(request, model.id)
