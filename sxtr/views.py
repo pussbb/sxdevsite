@@ -113,7 +113,8 @@ class TranslationView(View):
         #  for now we don't care about any additional action name
         #  the same behaviour for all actions if not None
         if action:
-            response = HttpResponse(translation, translation.content_type)
+            response = HttpResponse(translation.as_file(),
+                                    translation.content_type)
             response['Content-Disposition'] = 'attachment; filename={}'.format(
                 translation.filename()
             )

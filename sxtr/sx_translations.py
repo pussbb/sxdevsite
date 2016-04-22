@@ -7,6 +7,7 @@ from collections import OrderedDict
 import xml.etree.ElementTree as ET
 
 import io
+from zipfile import ZipFile
 
 from . import TEMPLATE_TR_FILES_DIR
 
@@ -43,6 +44,9 @@ class SxTr(object):
         self._tr.update(data)
 
     def __repr__(self):
+        return self.to_string()
+
+    def as_file(self):
         return self.to_string()
 
 
@@ -105,6 +109,8 @@ class SacTr(SxTr):
 
 class SwaTr(SxTr):
 
+    content_type = 'application/octet-stream'
+
     def to_string(self):
         xml = ET.parse(self._origin_document())
         root = xml.getroot()
@@ -118,7 +124,18 @@ class SwaTr(SxTr):
         return result.getvalue().decode('utf-8')
 
     def filename(self):
-        return 'strings.xml'
+        return 'swa_{}.zip'.format(self._model.locale.locale)
+
+    def as_file(self):
+        buf = io.BytesIO()
+        zip = ZipFile(buf, 'w')
+        zip.writestr(
+            '{0}/strings.xml'.format(self._model.locale.locale),
+            self.to_string()
+        )
+        zip.close()
+        buf.seek(0)
+        return buf
 
     def _parse(self, data, result=None):
         if not result:
