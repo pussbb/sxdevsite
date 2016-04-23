@@ -135,6 +135,12 @@ class TranslationView(View):
 
         model = get_object_or_404(Translations, pk=tr_id)
 
+        if request.user.id != model.author_id:
+            return JsonResponse(
+                {'errors': {'__all__': 'You does not have permissions to edit'
+                                       ' this record.'}}
+                , 400)
+
         try:
             translation = model.grammar()
         except Exception as exp:
