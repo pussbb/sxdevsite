@@ -86,6 +86,7 @@ def apps_list(_):
 class TranslationView(View):
     form_class = TranslationForm
 
+
     def translation_list(self):
         return [self.dump_tr_model(i, exclude=['translation'])
                 for i in Translations.objects.order_by('locale')]
@@ -94,6 +95,9 @@ class TranslationView(View):
         result = model_to_dict(item, exclude=exclude)#, exclude=('password',))
         #result['author'] = model_to_dict(item.author, exclude=('password',))
         result['locale'] = model_to_dict(item.locale)
+        result['canEdit'] = False
+        if self.request.user:
+            result['canEdit'] = self.request.user.id == item.author_id
         result['application'] = model_to_dict(item.application)
         return result
 
@@ -127,7 +131,7 @@ class TranslationView(View):
     @method_decorator(login_required)
     def post(self, request, tr_id=None, action=None):
         if not tr_id:
-            return self.__create_new_translation(request)
+            return self.__create_new_translation()
 
         model = get_object_or_404(Translations, pk=tr_id)
 
@@ -136,19 +140,19 @@ class TranslationView(View):
         except Exception as exp:
             return JsonResponse({'errors': {'__all__': str(exp)}}, status=400)
 
-        translation.update(get_post_data(self.request))
+        translation.update(get_post_data(request))
         model.translation = translation.to_string()
         model.save()
         return self.get(request, tr_id)
 
-    def __create_new_translation(self, request):
+    def __create_new_translation(self):
 
         form = TranslationForm(
             get_post_data(self.request),
-            instance=Translations(author=request.user, translation='')
+            instance=Translations(author=self.request.user, translation='')
         )
         if not form.is_valid():
             return JsonResponse({'errors': form.errors}, status=400)
 
         model = form.save()
-        return self.get(request, model.id)
+        return self.get(self.request, model.id)
