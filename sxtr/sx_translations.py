@@ -128,12 +128,12 @@ class SwaTr(SxTr):
 
     def as_file(self):
         buf = io.BytesIO()
-        zip = ZipFile(buf, 'w')
-        zip.writestr(
+        tmp_zip = ZipFile(buf, 'w')
+        tmp_zip.writestr(
             '{0}/strings.xml'.format(self._model.locale.locale),
             self.to_string()
         )
-        zip.close()
+        tmp_zip.close()
         buf.seek(0)
         return buf
 

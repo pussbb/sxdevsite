@@ -1,7 +1,9 @@
 <div class="jumbotron text-center">
     <a href="#new_translation">Add new translation</a>
     <div class="list-group">
-        <a href="#/translation/{{translation.id}}" class="list-group-item" ng-repeat="translation in translations">
+        <a href="#/translation/{{translation.id}}"
+           class="list-group-item"
+           ng-repeat="translation in translations track by translation.id">
             <h4 class="list-group-item-heading">
                 {{ translation.application.name }} ({{ translation.application.abbreviation }})
 

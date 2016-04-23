@@ -24,7 +24,11 @@
                     <form-group-body>&nbsp;</form-group-body>
                 </form-group>
 
-                <form-group field-errors="errors[value.key]" show-label="false" ng-repeat="value in translation.translation">
+                <form-group
+                        field-errors="errors[value.key]"
+                        show-label="false"
+                        ng-repeat="value in translation.translation track by value.key"
+                        >
                     <form-group-body>
                     <span id="helpBlock" class="help-block well well-sm">
                         {{ value.origin }}
