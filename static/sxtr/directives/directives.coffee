@@ -21,7 +21,8 @@ FormGroup = ->
   restrict: 'E',
   transclude:
     'label': '?formGroupLabel',
-    'body': 'formGroupBody'
+    'body': 'formGroupBody',
+    'footer': '?formGroupFooter'
   scope:
     'fieldErrors': '='
     'showLabel': '=?'
@@ -39,6 +40,7 @@ FormGroup = ->
                   </ul>
               </span>
           </div >
+          <div ng-transclude="footer"></div>
         </div>
   '
 

@@ -2,7 +2,7 @@
 AboutController = ($scope) ->
   # create a message to display in our view
   $scope.title = 'About US'
-  $scope.message = 'Who cares!!!'
+  $scope.message = 'Nothing here for now. Sorry about that.'
 
 
 AccessDeniedController = ($scope)->

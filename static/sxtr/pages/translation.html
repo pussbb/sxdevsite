@@ -15,7 +15,7 @@
             </a>
 
         </div>
-        <form name="login" class="form-horizontal" novalidate method="post" >
+        <form name="translation" class="form-horizontal" novalidate method="post" >
             <fieldset>
                 <legend class="text-center header">
                     {{ translation.application.name }} - {{ translation.locale.name }}
@@ -43,6 +43,10 @@
                                ng-disabled="!canEdit"
                         >
                     </form-group-body>
+                    <form-group-footer>
+                        <hr/>
+                    </form-group-footer>
+
                 </form-group>
 
                 <div class="form-group" ng-show="canEdit">

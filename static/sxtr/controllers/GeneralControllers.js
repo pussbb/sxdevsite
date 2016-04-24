@@ -4,7 +4,7 @@
 
   AboutController = function($scope) {
     $scope.title = 'About US';
-    return $scope.message = 'Who cares!!!';
+    return $scope.message = 'Nothing here for now. Sorry about that.';
   };
 
   AccessDeniedController = function($scope) {

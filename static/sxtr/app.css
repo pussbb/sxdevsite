@@ -13,7 +13,7 @@ form .bigicon {
     position: fixed;
     top: 60px;
     right: 20%;
-    z-index: 99999999;
+    z-index: 1;
     font-size: 25px;
     padding: 5px;
     border: solid 1px #959595;
@@ -24,7 +24,12 @@ form .bigicon {
 .tr-panel a {
     margin: 1px;
 }
+
 .tr-panel a:hover,
 .tr-panel a:hover i{
     text-decoration: none;
+}
+
+.navbar {
+    z-index: 2;
 }
