@@ -21,7 +21,7 @@
                 <form-group
                         field-errors="errors[value.key]"
                         show-label="false"
-                        ng-repeat="value in translation.translation track by value.key">
+                        ng-repeat="value in ::translation.translation track by value.key">
                     <form-group-body>
                     <span id="helpBlock" class="help-block well well-sm">
                         {{ value.origin }}
@@ -34,6 +34,7 @@
                                ng-model="model[value.key]"
                                ng-value="value.tr"
                                ng-disabled="!canEdit"
+                               ng-model-options="{ debounce: 300 }"
                         >
                     </form-group-body>
                     <form-group-footer>
