@@ -24,7 +24,7 @@
 
   NewTranslationController.$inject = ['$scope', 'locales', 'applications', '$location', 'Requests'];
 
-  TranslationController = function($scope, tr_model, $location, $routeParams) {
+  TranslationController = function($scope, tr_model, $location, $routeParams, Requests) {
     if (!($routeParams != null ? $routeParams.id : void 0)) {
       return $location.path('/');
     }
@@ -44,7 +44,7 @@
     };
   };
 
-  TranslationController.$inject = ['$scope', 'tr_model', '$location', '$routeParams'];
+  TranslationController.$inject = ['$scope', 'tr_model', '$location', '$routeParams', 'Requests'];
 
   angular.module('sxTrApp').controller('mainController', MainController).controller('newTranslationController', NewTranslationController).controller('translationController', TranslationController);
 
