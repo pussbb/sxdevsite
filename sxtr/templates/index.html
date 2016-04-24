@@ -12,12 +12,12 @@
     <!-- Bootstrap -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/bootstrap/css/bootstrap-theme.min.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome-4.6.1/css/font-awesome.min.css' %}">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="{% static 'vendor/html5shiv/html5shiv.min.js' %}"></script>
+      <script src="/{% static 'vendor/respond/respond.min.js' %}"></script>
     <![endif]-->
   </head>
   <body >
@@ -63,10 +63,10 @@
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
   <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-  <link async href="{% static 'sxtr/app.css' %}" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-cookies.js"></script>
+  <link href="{% static 'sxtr/app.css' %}" rel="stylesheet">
+    <script src="{% static 'vendor/angular/angular.min.js' %}"></script>
+    <script src="{% static 'vendor/angular/angular-route.min.js' %}"></script>
+    <script src="{% static 'vendor/angular/angular-cookies.min.js' %}"></script>
 
     {% for filename in JS_APP_FILES %}
       <script src="{% static filename %}" defer="defer"></script>
