@@ -23,7 +23,7 @@ NewTranslationController.$inject = [
     '$scope', 'locales', 'applications', '$location', 'Requests'
 ]
 
-TranslationController = ($scope, $location, $routeParams, Requests, $interval, Auth) ->
+TranslationController = ($scope, $location, $routeParams, Requests) ->
   if not $routeParams?.id
     return $location.path '/'
   $scope.loading = true
@@ -36,9 +36,6 @@ TranslationController = ($scope, $location, $routeParams, Requests, $interval, A
     .then (translation)->
       $scope.translation = translation
       $scope.canEdit = translation?.canEdit
-      #$interval ->
-      #
-      #, 600
     , (errors)->
       $scope.errors = errors
     .then -> $scope.loading = false
@@ -50,7 +47,7 @@ TranslationController = ($scope, $location, $routeParams, Requests, $interval, A
         $scope.errors = errors
 
 TranslationController.$inject = [
-    '$scope', '$location', '$routeParams', 'Requests', '$interval', 'Auth'
+    '$scope', '$location', '$routeParams', 'Requests'
 ]
 
 angular

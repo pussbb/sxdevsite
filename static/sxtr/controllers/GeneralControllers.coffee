@@ -1,4 +1,14 @@
 
+AboutController = ($scope) ->
+  # create a message to display in our view
+  $scope.title = 'About US'
+  $scope.message = 'Who cares!!!'
+
+
+AccessDeniedController = ($scope)->
+  $scope.title = 'Access Denied'
+  $scope.message = 'You does not have permissions to this page'
+
 
 ContactController = ($scope, Requests, currentUser) ->
   $scope.errors = {}
@@ -20,6 +30,9 @@ ContactController = ($scope, Requests, currentUser) ->
 
 ContactController.$inject = ['$scope', 'Requests', 'currentUser']
 
+
 angular
   .module 'sxTrApp'
+  .controller 'aboutController', AboutController
+  .controller 'accessDeniedController', AccessDeniedController
   .controller 'contactController', ContactController

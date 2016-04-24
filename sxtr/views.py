@@ -2,10 +2,8 @@
 """
 
 """
-import os
 
 from django.contrib.auth.decorators import login_required
-from django.core import serializers
 from django.forms import model_to_dict
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
@@ -13,24 +11,17 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse, HttpResponseNotFound
 from django.utils.decorators import method_decorator
 from django.views.generic import View
-from django.views.generic.edit import FormView, ModelFormMixin
+from django.views.generic.edit import FormView
 
 from sxdevsite.request.utils import get_post_data
-from sxtr import TEMPLATE_TR_FILES_DIR
 from sxtr.apps import SxTrConfig
 from sxtr.models import Translations, Locales, Applications
-from sxtr.sx_translations import SacTr
 from .forms import ContactForm, TranslationForm
-
-#from django.contrib.auth.mixins import LoginRequiredMixin
-
 
 JS_APP_FILES = [
     'sxtr/application.js',
     'sxtr/directives/directives.js',
-    'sxtr/controllers/AboutController.js',
-    'sxtr/controllers/ContactController.js',
-    'sxtr/controllers/AccessDeniedController.js',
+    'sxtr/controllers/GeneralControllers.js',
     'sxtr/controllers/MainController.js',
     'sxtr/controllers/AuthControllers.js',
     'sxtr/services/AuthInterceptor.js',

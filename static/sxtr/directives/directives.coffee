@@ -12,6 +12,9 @@ NavBarDirective = ($location) ->
         else
           curr = elem.children().first()
       curr.addClass 'active'
+    scope.$on '$routeChangeStart', ->
+      if elem.attr 'aria-expanded'
+        elem.collapse('hide')
 
 
 FormGroup = ->

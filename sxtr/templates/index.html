@@ -61,15 +61,15 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
   <link async href="{% static 'sxtr/app.css' %}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-cookies.js"></script>
 
     {% for filename in JS_APP_FILES %}
-      <script src="{% static filename %}"></script>
+      <script src="{% static filename %}" defer="defer"></script>
     {% endfor %}
   </body>
 </html>

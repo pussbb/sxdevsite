@@ -7,7 +7,7 @@
       restrict: 'A',
       replace: false,
       link: function(scope, elem) {
-        return scope.$on("$routeChangeSuccess", function() {
+        scope.$on("$routeChangeSuccess", function() {
           var curr;
           elem.find('li.active').removeClass('active');
           curr = elem.find("li:has(a[href*='" + ($location.$$url.replace('/', '', 1)) + "'])");
@@ -19,6 +19,11 @@
             }
           }
           return curr.addClass('active');
+        });
+        return scope.$on('$routeChangeStart', function() {
+          if (elem.attr('aria-expanded')) {
+            return elem.collapse('hide');
+          }
         });
       }
     };
