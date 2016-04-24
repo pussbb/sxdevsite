@@ -41,7 +41,7 @@ form .bigicon {
     top: 0;
     bottom: 0;
     right: 0;
-    background: grey;
+    background: transparent;
     opacity: 0.8;
     filter: alpha(opacity=80);
 }

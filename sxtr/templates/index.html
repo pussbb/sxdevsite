@@ -19,8 +19,13 @@
       <script src="{% static 'vendor/html5shiv/html5shiv.min.js' %}"></script>
       <script src="{% static 'vendor/respond/respond.min.js' %}"></script>
     <![endif]-->
+<script type="text/ng-template" id="generalError.html">
+    <div class="alert alert-danger" role="alert">
+        Well this is embarrassing. Some error happened during processing your request. Sorry about that.
+    </div>
+</script>
   </head>
-  <body >
+  <div >
   <div ng-show="pageLoading" id="overlay">
       <img id="loading" src="{% static 'sxtr/preloader.gif' %}">
   </div>
@@ -57,16 +62,13 @@
       </div>
     </nav>
 
-    <div class="container" ng-show="failedChangeRoute">
-      <div class="alert alert-danger" role="alert">
-
-        Well this is embarrassing. Some error happened during processing your request. Sorry about that.
-      </div>
-    </div>
 
     <div class="container" ng-view>
 
     </div><!-- /.container -->
+    <div class="container">
+        <div ng-show="failedChangeRoute" ng-include="'generalError.html'"></div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
