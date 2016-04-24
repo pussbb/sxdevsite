@@ -24,25 +24,18 @@
 
   NewTranslationController.$inject = ['$scope', 'locales', 'applications', '$location', 'Requests'];
 
-  TranslationController = function($scope, $location, $routeParams, Requests) {
+  TranslationController = function($scope, tr_model, $location, $routeParams) {
     if (!($routeParams != null ? $routeParams.id : void 0)) {
       return $location.path('/');
     }
-    $scope.loading = true;
     $scope.model = {};
     $scope.saving = false;
     $scope.errors = {};
-    $scope.canEdit = false;
+    $scope.canEdit = tr_model != null ? tr_model.canEdit : void 0;
     $scope.trUrl = "translations/" + $routeParams.id;
-    Requests.get($scope.trUrl).then(function(translation) {
-      $scope.translation = translation;
-      return $scope.canEdit = translation != null ? translation.canEdit : void 0;
-    }, function(errors) {
-      return $scope.errors = errors;
-    }).then(function() {
-      return $scope.loading = false;
-    });
+    $scope.translation = tr_model;
     return $scope.onSubmit = function() {
+      $scope.saving = true;
       return Requests.post($scope.trUrl, $scope.model).then(function() {
         return $scope.saving = false;
       }, function(errors) {
@@ -51,7 +44,7 @@
     };
   };
 
-  TranslationController.$inject = ['$scope', '$location', '$routeParams', 'Requests'];
+  TranslationController.$inject = ['$scope', 'tr_model', '$location', '$routeParams'];
 
   angular.module('sxTrApp').controller('mainController', MainController).controller('newTranslationController', NewTranslationController).controller('translationController', TranslationController);
 

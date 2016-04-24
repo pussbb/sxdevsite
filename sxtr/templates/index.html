@@ -17,10 +17,14 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="{% static 'vendor/html5shiv/html5shiv.min.js' %}"></script>
-      <script src="/{% static 'vendor/respond/respond.min.js' %}"></script>
+      <script src="{% static 'vendor/respond/respond.min.js' %}"></script>
     <![endif]-->
   </head>
   <body >
+  <div ng-show="pageLoading" id="overlay">
+      <!--<div class="loading">&nbsp;</div>-->
+      <img id="loading" src="{% static 'sxtr/loading.gif' %}">
+  </div>
     <nav class="navbar navbar-inverse ">
       <div class="container">
         <div class="navbar-header">
@@ -54,6 +58,13 @@
       </div>
     </nav>
 
+    <div class="container" ng-show="failedChangeRoute">
+      <div class="alert alert-danger" role="alert">
+
+        Well this is embarrassing. Some error happened during processing your request. Sorry about that.
+      </div>
+    </div>
+
     <div class="container" ng-view>
 
     </div><!-- /.container -->
@@ -67,6 +78,7 @@
     <script src="{% static 'vendor/angular/angular.min.js' %}"></script>
     <script src="{% static 'vendor/angular/angular-route.min.js' %}"></script>
     <script src="{% static 'vendor/angular/angular-cookies.min.js' %}"></script>
+    <!--<script src="{% static 'vendor/angular/angular-animate.min.js' %}"></script>-->
 
     {% for filename in JS_APP_FILES %}
       <script src="{% static filename %}" defer="defer"></script>

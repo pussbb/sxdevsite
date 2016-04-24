@@ -84,15 +84,18 @@ config = ($routeProvider, $locationProvider, $httpProvider, $compileProvider) ->
       title: 'Translation'
       templateUrl: pageUrl("translation.html")
       controller: 'translationController'
+      resolve:
+        tr_model: ($route, Requests)->
+          Requests.get("translations/#{$route.current.params.id}")
     .when '/new_translation',
       title: 'Add new translation'
       templateUrl: pageUrl("new_translation.html")
       controller: 'newTranslationController'
       resolve:
         locales: ($q, Requests)->
-          return Requests.get 'locales'
+          Requests.get 'locales'
         applications: ($q, Requests)->
-          return Requests.get 'apps'
+          Requests.get 'apps'
         auth: AuthorizedUserResolver
     .when '/contact',
       title: 'Contact'
@@ -108,6 +111,7 @@ config = ($routeProvider, $locationProvider, $httpProvider, $compileProvider) ->
     $httpProvider.defaults.xsrfCookieName = 'csrftoken'
     $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken'
     $httpProvider.interceptors.push 'AuthInterceptor'
+    #$locationProvider.html5Mode(true);
     $compileProvider.debugInfoEnabled(false);
 
 angular

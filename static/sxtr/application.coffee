@@ -20,10 +20,20 @@ sxTrApp.run ($rootScope, $http, $injector, $route, Auth, AUTH_EVENTS)->
 
   Auth.init().then -> $rootScope.auth = Auth
 
+  $rootScope.pageLoading = false
+  $rootScope.failedChangeRoute = false
+
   $rootScope.$on '$routeChangeSuccess', (event, current, previous) =>
+    $rootScope.pageLoading = false
     $rootScope.pageTitle = current.title
 
+  $rootScope.$on '$routeChangeError', ->
+    $rootScope.failedChangeRoute = true
+    $rootScope.pageLoading = false
+
   $rootScope.$on '$routeChangeStart', (event, current, previous, $location)->
+    $rootScope.failedChangeRoute = false
+    $rootScope.pageLoading = true
     return unless current?.access?.restricted
     if not Auth.loggedIn()
       event.preventDefault()

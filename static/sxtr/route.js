@@ -108,7 +108,12 @@
     }).when('/translation/:id', {
       title: 'Translation',
       templateUrl: pageUrl("translation.html"),
-      controller: 'translationController'
+      controller: 'translationController',
+      resolve: {
+        tr_model: function($route, Requests) {
+          return Requests.get("translations/" + $route.current.params.id);
+        }
+      }
     }).when('/new_translation', {
       title: 'Add new translation',
       templateUrl: pageUrl("new_translation.html"),

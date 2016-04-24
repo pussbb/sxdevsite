@@ -1,10 +1,4 @@
-
-    <div class="jumbotron text-center" ng-show="loading">
-        Loading ....
-    </div>
-
-
-<div class="row" ng-show="!loading">
+<div class="row" >
     <div class="col-md-12">
         <div class="tr-panel ">
             <a ng-click="onSubmit()" title="Save" ng-show="canEdit">
@@ -15,7 +9,7 @@
             </a>
 
         </div>
-        <form name="translation" class="form-horizontal" novalidate method="post" >
+        <form name="edit_translation" class="form-horizontal" novalidate method="post" >
             <fieldset>
                 <legend class="text-center header">
                     {{ translation.application.name }} - {{ translation.locale.name }}
@@ -27,8 +21,7 @@
                 <form-group
                         field-errors="errors[value.key]"
                         show-label="false"
-                        ng-repeat="value in translation.translation track by value.key"
-                        >
+                        ng-repeat="value in translation.translation track by value.key">
                     <form-group-body>
                     <span id="helpBlock" class="help-block well well-sm">
                         {{ value.origin }}

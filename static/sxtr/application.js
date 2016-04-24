@@ -20,13 +20,22 @@
     Auth.init().then(function() {
       return $rootScope.auth = Auth;
     });
+    $rootScope.pageLoading = false;
+    $rootScope.failedChangeRoute = false;
     $rootScope.$on('$routeChangeSuccess', (function(_this) {
       return function(event, current, previous) {
+        $rootScope.pageLoading = false;
         return $rootScope.pageTitle = current.title;
       };
     })(this));
+    $rootScope.$on('$routeChangeError', function() {
+      $rootScope.failedChangeRoute = true;
+      return $rootScope.pageLoading = false;
+    });
     return $rootScope.$on('$routeChangeStart', function(event, current, previous, $location) {
       var ref;
+      $rootScope.failedChangeRoute = false;
+      $rootScope.pageLoading = true;
       if (!(current != null ? (ref = current.access) != null ? ref.restricted : void 0 : void 0)) {
         return;
       }

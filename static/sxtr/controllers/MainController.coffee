@@ -23,23 +23,17 @@ NewTranslationController.$inject = [
     '$scope', 'locales', 'applications', '$location', 'Requests'
 ]
 
-TranslationController = ($scope, $location, $routeParams, Requests) ->
+TranslationController = ($scope, tr_model, $location, $routeParams) ->
   if not $routeParams?.id
     return $location.path '/'
-  $scope.loading = true
   $scope.model = {}
   $scope.saving = false
   $scope.errors = {}
-  $scope.canEdit = false
+  $scope.canEdit = tr_model?.canEdit
   $scope.trUrl = "translations/#{$routeParams.id}"
-  Requests.get $scope.trUrl
-    .then (translation)->
-      $scope.translation = translation
-      $scope.canEdit = translation?.canEdit
-    , (errors)->
-      $scope.errors = errors
-    .then -> $scope.loading = false
+  $scope.translation = tr_model
   $scope.onSubmit = ->
+    $scope.saving = true
     Requests.post $scope.trUrl, $scope.model
      .then ->
         $scope.saving = false
@@ -47,7 +41,7 @@ TranslationController = ($scope, $location, $routeParams, Requests) ->
         $scope.errors = errors
 
 TranslationController.$inject = [
-    '$scope', '$location', '$routeParams', 'Requests'
+    '$scope', 'tr_model', '$location', '$routeParams',
 ]
 
 angular
