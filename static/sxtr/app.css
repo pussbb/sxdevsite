@@ -36,11 +36,12 @@ form .bigicon {
 
 #overlay {
     position: absolute;
+    z-index: 999999;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    background: black;
+    background: grey;
     opacity: 0.8;
     filter: alpha(opacity=80);
 }
