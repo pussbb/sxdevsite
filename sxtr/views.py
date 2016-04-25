@@ -89,6 +89,10 @@ class TranslationView(View):
         result['canEdit'] = False
         if self.request.user:
             result['canEdit'] = self.request.user.id == item.author_id
+        try:
+            result['statistic'] = item.grammar().statistic()
+        except NotImplementedError as _:
+            pass
         result['application'] = model_to_dict(item.application)
         return result
 
@@ -102,7 +106,7 @@ class TranslationView(View):
         model = get_object_or_404(Translations, pk=tr_id)
         try:
             translation = model.grammar()
-        except Exception as exp:
+        except NotImplementedError as exp:
             return HttpResponseNotFound(exp)
 
         #  for now we don't care about any additional action name
@@ -134,7 +138,7 @@ class TranslationView(View):
 
         try:
             translation = model.grammar()
-        except Exception as exp:
+        except NotImplementedError as exp:
             return JsonResponse({'errors': {'__all__': str(exp)}}, status=400)
 
         translation.update(get_post_data(request))

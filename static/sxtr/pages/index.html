@@ -8,8 +8,9 @@
                 {{ translation.application.name }} ({{ translation.application.abbreviation }})
 
             </h4>
-            <p class="list-group-item-text">
-                Locale: {{ translation.locale.locale }} , {{ translation.locale.name }}
+            <p class="list-group-item-text text-left">
+                Locale: {{ translation.locale.locale }} , {{ translation.locale.name }}<br>
+                Completed: {{ translation.statistic[2] }}%
             </p>
         </a>
         <a href="#" class="list-group-item disabled" ng-hide="translations.length">

@@ -49,6 +49,11 @@ class SxTr(object):
     def as_file(self):
         return self.to_string()
 
+    def statistic(self):
+        total = len(self._origin.keys())
+        complete = len(list(filter(None, self._tr.values())))
+        return total, complete, '{:.2}'.format(complete * 100 / total)
+
 
 class SacTr(SxTr):
 
