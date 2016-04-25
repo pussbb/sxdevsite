@@ -6,6 +6,7 @@
     $scope.errors = {};
     $scope.user = {};
     return $scope.submit = function() {
+      $scope.errors = {};
       return Auth.login($scope.user).then(function() {
         return $location.path('/');
       }, function(data) {
@@ -20,6 +21,7 @@
     $scope.errors = {};
     $scope.user = {};
     return $scope.submit = function() {
+      $scope.errors = {};
       return Requests.post('/account/reset', $scope.user).then(function() {
         return $location.path('login');
       }, function(errors) {
@@ -36,6 +38,7 @@
     $scope.user = {};
     return $scope.submit = function() {
       $scope.isDisabled = true;
+      $scope.errors = {};
       return Requests.post('/account/change_password', $scope.user).then(function() {
         return $location.path('profile');
       }, function(errors) {
@@ -54,6 +57,7 @@
     $scope.user = {};
     return $scope.submit = function() {
       $scope.isDisabled = true;
+      $scope.errors = {};
       return Requests.post('/account/register', $scope.user).then(function() {
         return $location.path('login');
       }, function(errors) {
@@ -72,6 +76,7 @@
     $scope.isDisabled = false;
     $scope.user = currentUser.data;
     return $scope.submit = function() {
+      $scope.errors = {};
       $scope.isDisabled = true;
       return Auth.updateUser($scope.user).then(function() {
         return $scope.success = true;

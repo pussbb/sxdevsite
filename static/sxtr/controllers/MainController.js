@@ -14,6 +14,7 @@
     $scope.errors = {};
     $scope.applications = applications;
     return $scope.submit = function() {
+      $scope.errors = {};
       return Requests.post('translations/', $scope.model).then(function(data) {
         return $location.path("/translation/" + data.id);
       }, function(errors) {
@@ -36,6 +37,7 @@
     $scope.translation = tr_model;
     return $scope.onSubmit = function() {
       $scope.saving = true;
+      $scope.errors = {};
       return Requests.post($scope.trUrl, $scope.model).then(function() {
         return $scope.saving = false;
       }, function(errors) {

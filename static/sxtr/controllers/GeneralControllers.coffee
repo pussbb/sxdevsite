@@ -20,6 +20,7 @@ ContactController = ($scope, Requests, currentUser) ->
   $scope.submit = ()->
     $scope.isDisabled = true
     $scope.internalError = false
+    $scope.errors = {}
     Requests.post('./contact/', $scope.contact)
       .then -> # success callback
         $scope.success = true

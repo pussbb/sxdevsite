@@ -12,6 +12,7 @@ NewTranslationController = ($scope, locales, applications, $location, Requests) 
   $scope.errors = {}
   $scope.applications = applications
   $scope.submit = ->
+    $scope.errors = {}
     Requests.post 'translations/', $scope.model
      .then (data)->
         $location.path "/translation/#{data.id}"
@@ -34,6 +35,7 @@ TranslationController = ($scope, tr_model, $location, $routeParams, Requests) ->
   $scope.translation = tr_model
   $scope.onSubmit = ->
     $scope.saving = true
+    $scope.errors = {}
     Requests.post $scope.trUrl, $scope.model
      .then ->
         $scope.saving = false

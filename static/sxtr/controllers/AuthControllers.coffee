@@ -3,6 +3,7 @@ LoginController = ($scope, Auth, $location)->
   $scope.errors = {}
   $scope.user = {}
   $scope.submit = ->
+    $scope.errors = {}
     Auth.login $scope.user
      .then ->
        $location.path '/'
@@ -15,6 +16,7 @@ ResetPasswordController = ($scope, Requests, $location) ->
   $scope.errors = {}
   $scope.user = {}
   $scope.submit = ->
+    $scope.errors = {}
     Requests.post '/account/reset', $scope.user
       .then ->
         $location.path 'login'
@@ -29,6 +31,7 @@ ChangePasswordController = ($scope, Requests, $location) ->
   $scope.user = {}
   $scope.submit = ->
     $scope.isDisabled = true
+    $scope.errors = {}
     Requests.post '/account/change_password', $scope.user
       .then -> # success callback
         $location.path 'profile'
@@ -45,6 +48,7 @@ RegisterController = ($scope, Requests, $location) ->
   $scope.user = {}
   $scope.submit = ->
     $scope.isDisabled = true
+    $scope.errors = {}
     Requests.post '/account/register', $scope.user
       .then -> # success callback
         $location.path 'login'
@@ -61,6 +65,7 @@ ProfileController = ($scope, currentUser, Auth) ->
   $scope.isDisabled = false
   $scope.user = currentUser.data
   $scope.submit = ->
+    $scope.errors = {}
     $scope.isDisabled = true
     Auth.updateUser $scope.user
       .then -> $scope.success = true

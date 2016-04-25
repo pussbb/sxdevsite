@@ -62,13 +62,12 @@
       </div>
     </nav>
 
-
-    <div class="container" ng-view>
-
-    </div><!-- /.container -->
-    <div class="container">
+    <div class="container" ng-cloak>
         <div ng-show="failedChangeRoute" ng-include="'generalError.html'"></div>
     </div>
+    <div class="container" ng-cloak ng-show="!failedChangeRoute" ng-view>
+    </div><!-- /.container -->
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

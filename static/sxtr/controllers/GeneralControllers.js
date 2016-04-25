@@ -23,6 +23,7 @@
     return $scope.submit = function() {
       $scope.isDisabled = true;
       $scope.internalError = false;
+      $scope.errors = {};
       return Requests.post('./contact/', $scope.contact).then(function() {
         return $scope.success = true;
       }, function(errors) {
